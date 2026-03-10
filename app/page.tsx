@@ -11,57 +11,79 @@ import { comparisons } from "@/lib/data";
 
 // Client-side animations
 import { HomeClient } from "@/HomeClient";
+import TrustSection from "@/components/TrustSection";
 
 export const metadata: Metadata = {
-  title: "TheHomeVersus | Honest Home Product Comparisons",
-  description: "Real-world, side-by-side product comparisons tested in real homes. We help families find the best vacuums, kitchen gadgets, baby gear, and pet supplies.",
-  keywords: ["product comparison", "home reviews", "Dyson vs Shark", "best home products", "family product tests"],
+  title: "TheHomeVersus | Expert Home Product Comparisons & Real-World Reviews",
+  description: "Honest, side-by-side product comparisons for North American families. Tested by real moms in real US & Canadian homes — from Dyson vs Shark to baby essentials.",
+  keywords: [
+    "product comparison US Canada", 
+    "home product reviews for moms", 
+    "Dyson vs Shark reviews", 
+    "best vacuum for pet hair Canada", 
+    "kitchen appliance comparisons USA", 
+    "baby gear reviews 2024",
+    "real home testing North America"
+  ],
+  alternates: {
+    canonical: "https://thehomeversus.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "TheHomeVersus | Honest Home Product Comparisons",
-    description: "Real-world, side-by-side product comparisons tested in real homes.",
+    description: "Real-world, side-by-side product comparisons tested in real homes. Honest reviews for families.",
     type: "website",
     url: "https://thehomeversus.com",
-    images: [{ url: "/og-image.jpg" }],
+    images: [{ 
+      url: "/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "TheHomeVersus - Real Product Comparisons for Real Homes"
+    }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "TheHomeVersus | Honest Home Product Comparisons",
+    description: "Real-world, side-by-side product comparisons tested in real homes.",
+    images: ["/og-image.jpg"],
+  }
 };
 
-
-
 const categories = [
-  { name: "🧹 Cleaning", count: 12 },
-  { name: "🍳 Kitchen", count: 18 },
-  { name: "👶 Baby & Kids", count: 9 },
-  { name: "🐾 Pets", count: 7 },
+  { name: "Cleaning", icon: "🧹", slug: "cleaning", count: 12 },
+  { name: "Kitchen", icon: "🍳", slug: "kitchen", count: 18 },
+  { name: "Baby & Kids", icon: "👶", slug: "baby-kids", count: 9 },
+  { name: "Pets", icon: "🐾", slug: "pets", count: 7 },
 ];
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TheHomeVersus",
+    "url": "https://thehomeversus.com",
+    "description": "Expert home product comparisons and real-world reviews tested in real homes.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://thehomeversus.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/30">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
 
       <HomeClient categories={categories} comparisons={comparisons} heroImage={heroImage} />
 
-      {/* Trust Section */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="container py-20 text-center">
-          <h2 className="font-display text-4xl font-bold mb-6">Why Families Trust Us</h2>
-          <p className="max-w-2xl mx-auto text-primary-foreground/80 text-lg mb-12">
-            We're moms, pet parents, and homeowners — just like you. Every product is tested in our homes, not a lab.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
-            {[
-              { num: "200+", label: "Products Compared" },
-              { num: "50K+", label: "Monthly Readers" },
-              { num: "100%", label: "Honest Reviews" },
-            ].map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center">
-                <span className="font-display text-5xl font-bold text-accent mb-2">{stat.num}</span>
-                <span className="text-primary-foreground/70 font-medium text-lg">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TrustSection />
 
       <SiteFooter />
     </div>
