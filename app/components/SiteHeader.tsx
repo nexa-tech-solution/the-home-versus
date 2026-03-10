@@ -1,0 +1,82 @@
+"use client";
+
+import Link from "next/link";
+import { Search, Menu, X } from "lucide-react";
+import { useState } from "react";
+import SearchOverlay from "@/components/SearchOverlay";
+
+
+const categories = [
+  { name: "Cleaning", path: "/category/cleaning" },
+  { name: "Kitchen", path: "/category/kitchen" },
+  { name: "Baby & Kids", path: "/category/baby" },
+  { name: "Pets", path: "/category/pets" },
+];
+
+const SiteHeader = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+
+  return (
+    <>
+      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
+      <div className="container flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <span className="font-display text-xl font-bold tracking-tight text-primary">
+            The<span className="text-accent">Home</span>Versus
+          </span>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-8">
+          {categories.map((cat) => (
+            <Link
+              key={cat.name}
+              href={cat.path}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {cat.name}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="p-2 rounded-lg hover:bg-secondary transition-colors"
+            aria-label="Search"
+          >
+            <Search className="h-4 w-4 text-muted-foreground" />
+          </button>
+
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Menu"
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
+
+      {mobileOpen && (
+        <div className="md:hidden border-t border-border bg-background pb-4">
+          {categories.map((cat) => (
+            <Link
+              key={cat.name}
+              href={cat.path}
+              className="block px-6 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              {cat.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </header>
+    <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+    </>
+  );
+};
+
+export default SiteHeader;
