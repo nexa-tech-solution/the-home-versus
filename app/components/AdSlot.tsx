@@ -26,17 +26,20 @@ export default function AdSlot({
   const adRef = useRef<HTMLModElement>(null);
   
   useEffect(() => {
-    // Kiểm tra xem đã có quảng cáo được push chưa để tránh lỗi trên Next.js
-    if (adRef.current && adRef.current.innerHTML === "") {
-      try {
-        if (typeof window !== "undefined") {
+    const initializeAd = () => {
+      if (adRef.current && !adRef.current.getAttribute("data-ad-status")) {
+        try {
+          adRef.current.setAttribute("data-ad-status", "initialized");
           (window.adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (err) {
+          console.debug("AdSense info:", "Slot not ready yet");
         }
-      } catch (err) {
-        // Bắt lỗi im lặng để không gây crash app
-        console.log("AdSense info:", "Waiting for next available slot");
       }
-    }
+    };
+
+    // Small delay to ensure DOM is fully ready and avoid race conditions in dev mode
+    const timer = setTimeout(initializeAd, 300);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
