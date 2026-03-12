@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { categories } from "@/lib/data";
 
 const SiteFooter = () => {
   return (
@@ -16,13 +17,13 @@ const SiteFooter = () => {
           <div>
             <p className="font-semibold text-sm text-foreground mb-3">Categories</p>
             <div className="space-y-2">
-              {["Cleaning", "Kitchen", "Baby & Kids", "Pets"].map((c) => (
+              {categories.map((cat) => (
                 <Link
-                  key={c}
-                  href={`/category/${c.toLowerCase().replace(/ & /g, "-")}`}
+                  key={cat.slug}
+                  href={`/category/${cat.slug}`}
                   className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {c}
+                  {cat.name}
                 </Link>
               ))}
             </div>

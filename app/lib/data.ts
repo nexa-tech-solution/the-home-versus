@@ -1,3 +1,42 @@
+export interface Category {
+  name: string;
+  slug: string;
+  icon: string;
+  count: number;
+  description: string;
+}
+
+export const categories: Category[] = [
+  { 
+    name: "Cleaning", 
+    icon: "🧹", 
+    slug: "cleaning", 
+    count: 12,
+    description: "Keep your home spotless with our expert-tested vacuum, mop, and cleaning supply comparisons."
+  },
+  { 
+    name: "Kitchen", 
+    icon: "🍳", 
+    slug: "kitchen", 
+    count: 18,
+    description: "From air fryers to coffee makers, we test the heart of the home so you can cook like a pro."
+  },
+  { 
+    name: "Baby & Kids", 
+    icon: "👶", 
+    slug: "baby-kids", 
+    count: 9,
+    description: "Safety and comfort for your little ones. We compare strollers, monitors, and essentials."
+  },
+  { 
+    name: "Pets", 
+    icon: "🐾", 
+    slug: "pets", 
+    count: 7,
+    description: "Because they're family too. Find the best automatic feeders, litter boxes, and more."
+  },
+];
+
 export const comparisons = [
   {
     slug: "dyson-v15-vs-shark-stratos",

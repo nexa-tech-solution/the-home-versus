@@ -5,13 +5,7 @@ import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
 import SearchOverlay from "@/components/SearchOverlay";
 
-
-const categories = [
-  { name: "Cleaning", path: "/category/cleaning" },
-  { name: "Kitchen", path: "/category/kitchen" },
-  { name: "Baby & Kids", path: "/category/baby" },
-  { name: "Pets", path: "/category/pets" },
-];
+import { categories } from "@/lib/data";
 
 const SiteHeader = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -32,7 +26,7 @@ const SiteHeader = () => {
           {categories.map((cat) => (
             <Link
               key={cat.name}
-              href={cat.path}
+              href={`/category/${cat.slug}`}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {cat.name}
@@ -64,7 +58,7 @@ const SiteHeader = () => {
           {categories.map((cat) => (
             <Link
               key={cat.name}
-              href={cat.path}
+              href={`/category/${cat.slug}`}
               className="block px-6 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
               onClick={() => setMobileOpen(false)}
             >

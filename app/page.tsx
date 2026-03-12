@@ -6,8 +6,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ComparisonCard from "@/components/ComparisonCard";
 import heroImage from "@/assets/hero-illustration.jpg";
-import { comparisons } from "@/lib/data";
-
+import { comparisons, categories } from "@/lib/data";
 
 // Client-side animations
 import { HomeClient } from "@/HomeClient";
@@ -51,13 +50,6 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   }
 };
-
-const categories = [
-  { name: "Cleaning", icon: "🧹", slug: "cleaning", count: 12 },
-  { name: "Kitchen", icon: "🍳", slug: "kitchen", count: 18 },
-  { name: "Baby & Kids", icon: "👶", slug: "baby-kids", count: 9 },
-  { name: "Pets", icon: "🐾", slug: "pets", count: 7 },
-];
 
 export default function Home() {
   const jsonLd = {

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { searchArticlesByTitle, comparisons } from "@/lib/data";
+import { searchArticlesByTitle, comparisons, categories } from "@/lib/data";
 
 interface SearchOverlayProps {
   isOpen: boolean;
@@ -122,16 +122,16 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
                       Popular Categories
                     </p>
                     <div className="flex flex-wrap gap-2 px-3 pb-2">
-                      {["Cleaning", "Kitchen", "Baby Gear"].map((cat) => (
+                      {categories.map((cat) => (
                         <button
-                          key={cat}
+                          key={cat.slug}
                           onClick={() => {
-                            setQuery(cat);
-                            setResults(searchArticlesByTitle(cat));
+                            setQuery(cat.name);
+                            setResults(searchArticlesByTitle(cat.name));
                           }}
                           className="px-3 py-1.5 rounded-lg bg-secondary/50 text-xs font-semibold hover:bg-accent hover:text-white transition-all"
                         >
-                          {cat}
+                          {cat.name}
                         </button>
                       ))}
                     </div>

@@ -7,6 +7,7 @@ import ComparisonTable from "@/components/ComparisonTable";
 import ProsConsList from "@/components/ProsConsList";
 import VerdictSection from "@/components/VerdictSection";
 import ProductMediaGallery from "@/components/ProductMediaGallery";
+import AdSlot from "@/components/AdSlot";
 
 // Client-side animations
 import { ArticleClient } from "@/compare/[slug]/ArticleClient";
@@ -246,6 +247,11 @@ export default async function ComparisonArticlePage({
       <article className="container max-w-4xl py-12 md:py-20">
         <ArticleClient article={article} />
 
+        {/* Ad Slot - Post Intro */}
+        <div className="my-12">
+            <AdSlot label="Trending Picks" />
+        </div>
+
         {/* Product Media Showcases */}
         <div className="my-16 grid grid-cols-1 md:grid-cols-2 gap-12">
           {article.productA.media && (
@@ -308,6 +314,11 @@ export default async function ComparisonArticlePage({
               cons={article.consB}
             />
           </div>
+        </div>
+
+        {/* Ad Slot - Pre-Verdict */}
+        <div className="my-20">
+            <AdSlot label="Editor's Choice" />
         </div>
 
         {/* Verdict */}
