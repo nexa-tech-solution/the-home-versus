@@ -318,7 +318,7 @@ export default async function ProductPage({
                     />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors leading-tight">
+                    <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors leading-tight line-clamp-2">
                       {comp.title}
                     </h3>
                     <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mt-2">

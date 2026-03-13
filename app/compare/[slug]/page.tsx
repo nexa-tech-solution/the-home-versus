@@ -219,7 +219,7 @@ export default async function ComparisonArticlePage({
                     <img src={comp.imageB} alt={comp.productB} className="max-w-full max-h-full object-contain" />
                   </div>
                 </div>
-                <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors leading-tight mb-2">
+                <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors leading-tight mb-2 line-clamp-2">
                   {comp.title}
                 </h3>
                 <div className="mt-auto flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-widest">
