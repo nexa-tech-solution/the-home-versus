@@ -34,7 +34,7 @@ export const INSTANT_POT_PRO_CRISP_PRODUCT: SingleProductData = {
     },
     {
       type: "video",
-      url: "https://www.youtube.com/embed/fTshEOfXv3A",
+      url: "https://www.youtube.com/watch?v=vMREd0avuK0",
       caption: "How to use Instant Pot Pro Crisp",
     },
   ],
