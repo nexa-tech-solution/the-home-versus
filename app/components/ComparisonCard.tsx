@@ -48,14 +48,14 @@ const ComparisonCard = ({
 
         <div className="flex items-center justify-center gap-4 py-6 px-4">
           <div className="text-center flex-1">
-            <img src={imageA} alt={productA} className="w-24 h-24 mx-auto object-contain mb-2" />
+            <img src={imageA} alt={`${productA} product`} className="w-24 h-24 mx-auto object-contain mb-2" />
             <p className="text-xs font-medium text-foreground truncate">{productA}</p>
           </div>
           <div className="shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-display font-bold text-sm">VS</span>
           </div>
           <div className="text-center flex-1">
-            <img src={imageB} alt={productB} className="w-24 h-24 mx-auto object-contain mb-2" />
+            <img src={imageB} alt={`${productB} product`} className="w-24 h-24 mx-auto object-contain mb-2" />
             <p className="text-xs font-medium text-foreground truncate">{productB}</p>
           </div>
         </div>

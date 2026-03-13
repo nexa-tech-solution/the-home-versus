@@ -41,7 +41,7 @@ export default function ProductMediaGallery({ productName, media }: ProductMedia
         ) : (
           <img
             src={activeMedia.url}
-            alt={`${productName} Media`}
+            alt={activeMedia.caption || `${productName} showcase image`}
             className="w-full h-full object-contain p-8 bg-white"
           />
         )}

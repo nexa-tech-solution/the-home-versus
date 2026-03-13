@@ -13,9 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { SITE_CONFIG } from "@/lib/constants";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://thehomeversus.com"),
-  title: "TheHomeVersus | Real Product Comparisons for Real Homes",
+  metadataBase: new URL(SITE_CONFIG.url),
+  title: `${SITE_CONFIG.name} | Real Product Comparisons for Real Homes`,
   description: "Side-by-side product reviews and comparisons for homeowners, parents, and pet owners. Tested in real-world scenarios.",
 };
 
@@ -24,8 +26,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Thay ID tại đây hoặc dùng file .env
-  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-XXXXXXXXXXXXXXXX";
+  const publisherId = SITE_CONFIG.publisherId;
 
   return (
     <html lang="en">

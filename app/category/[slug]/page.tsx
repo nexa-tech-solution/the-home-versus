@@ -7,6 +7,8 @@ import ComparisonCard from "@/components/ComparisonCard";
 import { comparisons, categories } from "@/lib/data";
 import AdSlot from "@/components/AdSlot";
 
+import { SITE_CONFIG } from "@/lib/constants";
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -17,13 +19,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!category) {
     return {
-      title: "Category Not Found | TheHomeVersus",
+      title: `Category Not Found | ${SITE_CONFIG.name}`,
     };
   }
 
   return {
-    title: `${category.name} Comparisons | TheHomeVersus`,
+    title: `${category.name} Comparisons | ${SITE_CONFIG.name}`,
     description: category.description,
+    alternates: {
+      canonical: `${SITE_CONFIG.url}/category/${slug}`,
+    },
   };
 }
 
@@ -73,9 +78,13 @@ export default async function CategoryPage({ params }: Props) {
 
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-5xl md:text-6xl" role="img" aria-label={category.name}>
-                  {category.icon}
-                </span>
+                <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white rounded-2xl p-2 shadow-sm border border-border/40">
+                  {category.icon.startsWith('http') || category.icon.startsWith('/') ? (
+                    <img src={category.icon} alt="" className="w-full h-full object-contain" />
+                  ) : (
+                    <span className="text-5xl" role="img" aria-label={category.name}>{category.icon}</span>
+                  )}
+                </div>
                 <h1 className="font-display text-4xl md:text-6xl font-black text-foreground tracking-tight">
                   {category.name}
                 </h1>

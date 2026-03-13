@@ -75,7 +75,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
       </section>
 
       {/* Category Navigation - Sophisticated & Clean */}
-      <nav className="border-y border-border/40 bg-background/95 sticky top-16 z-40 backdrop-blur-md shadow-sm" aria-label="Browse by category">
+      <nav className="border-y border-border/40 bg-secondary/20 sticky top-16 z-40 backdrop-blur-md shadow-sm" aria-label="Browse by category">
         <div className="container relative">
           {/* Subtle gradient indications for scrolling on mobile */}
           <div className="absolute inset-y-0 left-0 w-12 bg-linear-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
@@ -98,12 +98,16 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
                 )}
                 <Link
                   href={`/category/${cat.slug}`}
-                  className="flex items-center gap-3 px-6 py-2.5 rounded-full bg-secondary/30 border border-transparent hover:border-accent/30 hover:bg-white hover:shadow-xl transition-all duration-300"
+                  className="flex items-center gap-3 px-6 py-2.5 rounded-full bg-white border border-border/60 hover:border-accent/30 shadow-sm hover:shadow-xl transition-all duration-300"
                   title={`View all ${cat.name} comparisons`}
                 >
-                  <span className="text-xl group-hover:rotate-12 transition-transform duration-300" aria-hidden="true">
-                    {cat.icon}
-                  </span>
+                  <div className="w-10 h-10 flex items-center justify-center bg-white rounded-lg overflow-hidden group-hover:rotate-12 transition-transform duration-300">
+                    {cat.icon.startsWith('http') || cat.icon.startsWith('/') ? (
+                      <img src={cat.icon} alt="" className="w-full h-full object-contain" />
+                    ) : (
+                      <span className="text-xl">{cat.icon}</span>
+                    )}
+                  </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-bold tracking-tight text-foreground/90 group-hover:text-accent transition-colors">
                       {cat.name}

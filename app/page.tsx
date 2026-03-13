@@ -12,42 +12,36 @@ import { comparisons, categories } from "@/lib/data";
 import { HomeClient } from "@/HomeClient";
 import TrustSection from "@/components/TrustSection";
 
+import { SITE_CONFIG } from "@/lib/constants";
+
 export const metadata: Metadata = {
-  title: "TheHomeVersus | Expert Home Product Comparisons & Real-World Reviews",
-  description: "Honest, side-by-side product comparisons for North American families. Tested by real moms in real US & Canadian homes — from Dyson vs Shark to baby essentials.",
-  keywords: [
-    "product comparison US Canada", 
-    "home product reviews for moms", 
-    "Dyson vs Shark reviews", 
-    "best vacuum for pet hair Canada", 
-    "kitchen appliance comparisons USA", 
-    "baby gear reviews 2024",
-    "real home testing North America"
-  ],
+  title: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline}`,
+  description: SITE_CONFIG.description,
+  keywords: SITE_CONFIG.keywords,
   alternates: {
-    canonical: "https://thehomeversus.com",
+    canonical: SITE_CONFIG.url,
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "TheHomeVersus | Honest Home Product Comparisons",
+    title: `${SITE_CONFIG.name} | Honest Home Product Comparisons`,
     description: "Real-world, side-by-side product comparisons tested in real homes. Honest reviews for families.",
     type: "website",
-    url: "https://thehomeversus.com",
+    url: SITE_CONFIG.url,
     images: [{ 
-      url: "/og-image.jpg",
+      url: SITE_CONFIG.ogImage,
       width: 1200,
       height: 630,
-      alt: "TheHomeVersus - Real Product Comparisons for Real Homes"
+      alt: `${SITE_CONFIG.name} - Real Product Comparisons for Real Homes`
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TheHomeVersus | Honest Home Product Comparisons",
+    title: `${SITE_CONFIG.name} | Honest Home Product Comparisons`,
     description: "Real-world, side-by-side product comparisons tested in real homes.",
-    images: ["/og-image.jpg"],
+    images: [SITE_CONFIG.ogImage],
   }
 };
 
@@ -55,12 +49,12 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "TheHomeVersus",
-    "url": "https://thehomeversus.com",
-    "description": "Expert home product comparisons and real-world reviews tested in real homes.",
+    "name": SITE_CONFIG.name,
+    "url": SITE_CONFIG.url,
+    "description": SITE_CONFIG.description,
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://thehomeversus.com/search?q={search_term_string}",
+      "target": `${SITE_CONFIG.url}/search?q={search_term_string}`,
       "query-input": "required name=search_term_string"
     }
   };

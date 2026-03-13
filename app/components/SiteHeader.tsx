@@ -6,6 +6,7 @@ import { useState } from "react";
 import SearchOverlay from "@/components/SearchOverlay";
 
 import { categories } from "@/lib/data";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const SiteHeader = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,7 +19,7 @@ const SiteHeader = () => {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <span className="font-display text-xl font-bold tracking-tight text-primary">
-            The<span className="text-accent">Home</span>Versus
+            {SITE_CONFIG.name.split("Home")[0]}<span className="text-accent">Home</span>{SITE_CONFIG.name.split("Home")[1]}
           </span>
         </Link>
 

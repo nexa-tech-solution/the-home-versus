@@ -2,13 +2,10 @@
 
 import { motion } from "framer-motion";
 import StatCounter from "@/components/StatCounter";
+import { TRUST_STATS } from "@/lib/constants";
 
 export default function TrustSection() {
-  const stats = [
-    { val: 200, suffix: "+", label: "Expert Comparisons" },
-    { val: 50, suffix: "K+", label: "Monthly Readers" },
-    { val: 100, suffix: "%", label: "Unbiased Opinions" },
-  ];
+  const stats = TRUST_STATS;
 
   return (
     <section className="bg-primary text-primary-foreground" aria-labelledby="trust-heading">

@@ -65,7 +65,7 @@ export function ArticleClient({ article }: ArticleClientProps) {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-12 p-8 border-l-4 border-accent bg-accent/5 rounded-r-2xl italic text-2xl text-foreground font-medium leading-relaxed"
+          className="mt-8 md:mt-12 p-6 md:p-8 border-l-4 border-accent bg-accent/5 rounded-r-2xl italic text-lg md:text-2xl text-foreground font-medium leading-relaxed"
         >
           "{article.intro}"
         </motion.div>
