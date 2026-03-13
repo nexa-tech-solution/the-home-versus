@@ -4,6 +4,8 @@ import { ArrowLeft, Clock, User, Star, CheckCircle2, XCircle, AlertCircle, Shopp
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import AdSlot from "@/components/AdSlot";
+import ReadingProgress from "@/components/ReadingProgress";
+import { calculateReadTime } from "@/lib/utils";
 import { SITE_CONFIG, PRODUCT_DATA } from "@/lib/constants";
 import { getComparisonsByProductName } from "@/lib/data";
 
@@ -95,6 +97,7 @@ export default async function ProductPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <SiteHeader />
+      <ReadingProgress id={slug} />
 
       <main className="container max-w-5xl py-8 md:py-20 px-4 md:px-0">
         {/* Breadcrumb */}
@@ -139,7 +142,7 @@ export default async function ProductPage({
                 <User className="h-4 w-4" /> {product.author}
               </span>
               <span className="flex items-center gap-2 bg-secondary/50 px-3 py-1.5 rounded-lg">
-                <Clock className="h-4 w-4" /> {product.readTime}
+                <Clock className="h-4 w-4" /> {product.readTime || calculateReadTime(product.intro + " " + product.sections.map(s => s.content).join(" "))}
               </span>
               <span className="opacity-70">{product.date}</span>
             </div>

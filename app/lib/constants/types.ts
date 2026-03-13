@@ -16,6 +16,7 @@ export interface ComparisonSnippet {
   imageB: string;
   snippet: string;
   winner: string;
+  readTime: string;
 }
 
 export interface ArticleSection {
@@ -58,7 +59,7 @@ export interface ArticleData {
   snippet: string; // Short description for cards
   author: string;
   date: string;
-  readTime: string;
+  readTime?: string; // Optional: calculated automatically if not provided
   intro: string;
   winner: string; // Name of the winning product
   productA: ProductDetail;
@@ -87,7 +88,7 @@ export interface SingleProductData {
   reviewCount: number;
   author: string;
   date: string;
-  readTime: string;
+  readTime?: string; // Optional
   highlight: string;
   intro: string;
   pros: string[];

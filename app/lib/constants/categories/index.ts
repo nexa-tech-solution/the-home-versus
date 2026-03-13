@@ -4,7 +4,7 @@ import { BABY_KIDS_CATEGORY } from "./baby-kids";
 import { PETS_CATEGORY } from "./pets";
 import { Category } from "../types";
 
-export const CATEGORIES: Category[] = [
+export const RAW_CATEGORIES: Category[] = [
   CLEANING_CATEGORY,
   KITCHEN_CATEGORY,
   BABY_KIDS_CATEGORY,

@@ -8,6 +8,7 @@ import ProsConsList from "@/components/ProsConsList";
 import VerdictSection from "@/components/VerdictSection";
 import ProductMediaGallery from "@/components/ProductMediaGallery";
 import AdSlot from "@/components/AdSlot";
+import ReadingProgress from "@/components/ReadingProgress";
 
 // Client-side animations
 import { ArticleClient } from "@/compare/[slug]/ArticleClient";
@@ -112,6 +113,7 @@ export default async function ComparisonArticlePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       <SiteHeader />
+      <ReadingProgress id={slug} />
 
       <article className="container max-w-4xl py-8 md:py-20 px-4 md:px-0">
         <ArticleClient article={article} />
