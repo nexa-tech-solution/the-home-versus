@@ -15,6 +15,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import AdSlot from "@/components/AdSlot";
 import ReadingProgress from "@/components/ReadingProgress";
+import ProductMediaGallery from "@/components/ProductMediaGallery";
 import { calculateReadTime } from "@/lib/utils";
 import { SITE_CONFIG, PRODUCT_DATA } from "@/lib/constants";
 import { getComparisonsByProductName } from "@/lib/data";
@@ -119,16 +120,22 @@ export default async function ProductPage({
         </Link>
 
         {/* Product Hero */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-          <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-border shadow-2xl p-8 flex items-center justify-center">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="max-w-full max-h-full object-contain"
-            />
-            <div className="absolute top-6 left-6 bg-accent text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
-              Expert Review
-            </div>
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-start">
+          <div className="w-full">
+            {product.media && product.media.length > 0 ? (
+              <ProductMediaGallery productName={product.name} media={product.media} />
+            ) : (
+              <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-border shadow-2xl p-8 flex items-center justify-center">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="max-w-full max-h-full object-contain"
+                />
+                <div className="absolute top-6 left-6 bg-accent text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
+                  Expert Review
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col justify-center">

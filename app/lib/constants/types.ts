@@ -84,6 +84,7 @@ export interface SingleProductData {
   image: string;
   price: string;
   amazonUrl: string;
+  asin?: string;
   rating: number;
   reviewCount: number;
   author: string;
@@ -91,6 +92,7 @@ export interface SingleProductData {
   readTime?: string; // Optional
   highlight: string;
   intro: string;
+  media?: ProductMedia[];
   pros: string[];
   cons: string[];
   specs: { label: string; value: string }[];
