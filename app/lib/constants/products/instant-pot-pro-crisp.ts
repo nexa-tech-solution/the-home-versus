@@ -5,7 +5,7 @@ export const INSTANT_POT_PRO_CRISP_PRODUCT: SingleProductData = {
   name: "Instant Pot Pro Crisp 11-in-1 Air Fryer and Electric Pressure Cooker Combo",
   category: "Kitchen",
   image: "https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX522_.jpg",
-  price: "$215.00",
+  price: "$175.00",
   amazonUrl: "https://amzn.to/47t3Bz8",
   rating: 4.6,
   reviewCount: 30107,
@@ -77,8 +77,8 @@ export const INSTANT_POT_PRO_CRISP_PRODUCT: SingleProductData = {
   relatedProducts: [
     {
       slug: "ninja-foodi-smart-xl",
-      name: "Ninja Foodi Smart XL Pressure Cooker Steam Fryer",
-      image: "https://m.media-amazon.com/images/I/61H+VvR0QBL._AC_SL1500_.jpg",
+      name: "Ninja OL701 Foodi 14-in-1 SMART XL 8 Qt.",
+      image: "https://m.media-amazon.com/images/I/81erAEB3XtL._AC_SL1500_.jpg",
       price: "$349.99",
     },
   ],

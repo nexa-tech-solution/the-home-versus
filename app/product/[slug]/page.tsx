@@ -327,39 +327,44 @@ export default async function ProductPage({
 
         {/* Related Products */}
         <section className="mb-20">
-          <h2 className="font-display text-3xl font-bold mb-8">
+          <h2 className="font-display text-2xl font-bold mb-10 text-foreground">
             Other Recommended Products
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {product.relatedProducts.map((p) => (
               <div
                 key={p.slug}
-                className="group relative bg-card rounded-3xl border border-border p-6 hover:shadow-2xl transition-all"
+                className="group relative flex flex-col bg-white rounded-[2rem] border border-border/50 p-5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500"
               >
-                <div className="aspect-video bg-white rounded-2xl mb-6 p-6 flex items-center justify-center border border-border/50 overflow-hidden">
+                <div className="aspect-[4/3] bg-secondary/30 rounded-[1.5rem] mb-6 overflow-hidden relative">
                   <img
                     src={p.image}
                     alt={p.name}
-                    className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-black text-accent uppercase tracking-widest shadow-sm">
+                    Top Rated
+                  </div>
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-4">
-                  {p.name}
-                </h3>
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="text-2xl font-bold text-accent">
-                    {p.price}
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                      See more
+                
+                <div className="px-2 flex-1 flex flex-col">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-3 leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+                    {p.name}
+                  </h3>
+                  
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/40">
+                    <span className="text-xl font-bold text-foreground/80">
+                      {p.price}
                     </span>
-                    <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
-                      <ArrowRight className="h-4 w-4" />
+                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-accent/60 group-hover:text-accent transition-colors">
+                      View Review
+                      <div className="h-8 w-8 rounded-full bg-accent/5 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
+                        <ArrowRight className="h-4 w-4" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                {/* Overlay Link - future proofing if we have review pages for all products */}
+
                 <Link
                   href={`/product/${p.slug}`}
                   className="absolute inset-0 z-10"
