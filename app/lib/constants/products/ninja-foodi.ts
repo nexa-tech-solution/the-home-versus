@@ -1,54 +1,80 @@
 import { SingleProductData } from "../types";
 
-export const NINJA_FOODI_PRODUCT: SingleProductData = {
-  slug: "ninja-foodi-smart-xl",
-  name: "Ninja Foodi 10-in-1 Smart XL Air Fryer Oven",
+export const NINJA_IG651_PRODUCT: SingleProductData = {
+  slug: "ninja-ig651-smart-xl-pro-grill-griddle",
+  name: "Ninja IG651 Foodi Smart XL Pro 7-in-1 Indoor Grill/Griddle Combo",
   category: "Kitchen",
-  image: "https://m.media-amazon.com/images/I/61H+VvR0QBL._AC_SL1500_.jpg",
-  price: "$349.99",
-  amazonUrl: "https://www.amazon.com/Ninja-DT251-Foodi-Thermometer-Stainless/dp/B08B6F1N6Y",
-  rating: 4.8,
-  reviewCount: 35000,
+  image: "https://m.media-amazon.com/images/I/81qUHmm7I4L._AC_SL1500_.jpg",
+  price: "$318.99",
+  amazonUrl: "https://amzn.to/4sIGYPh",
+  rating: 4.6,
+  reviewCount: 17505,
   author: "Emma Collins",
-  date: "Jan 12, 2024",
+  date: "Mar 14, 2024",
   readTime: "6 min read",
-  highlight: "The oven that actually air fries at professional speeds.",
-  intro: "The Ninja Foodi Smart XL is more than just an air fryer oven. For many, it's a total replacement for the primary kitchen appliance.",
+  highlight:
+    "An incredibly powerful indoor grill and flat-top griddle that delivers true outdoor searing on your countertop.",
+  intro:
+    "The Ninja IG651 Foodi Smart XL Pro completely upgrades indoor cooking. By introducing an independently powered 500°F grill grate and a flat-top BBQ griddle, it allows you to sear, sizzle, and air fry with authentic char-grilled results—all without the smoke.",
+  media: [
+    {
+      type: "image",
+      url: "https://m.media-amazon.com/images/I/81qUHmm7I4L._AC_SL1500_.jpg",
+      caption: "Ninja Foodi Smart XL Pro Grill & Griddle",
+    },
+    {
+      type: "image",
+      url: "https://m.media-amazon.com/images/I/81MqNeXrOkL._AC_SY450_.jpg",
+      caption: "Independently Powered 500°F Grill Grate",
+    },
+    {
+      type: "image",
+      url: "https://m.media-amazon.com/images/I/81iTIYO16cL._AC_SL1500_.jpg",
+      caption: "12-inch Flat Top BBQ Griddle",
+    },
+    {
+      type: "video",
+      url: "https://www.youtube.com/watch?v=rcGXn85tAi4",
+      caption: "Ninja Foodi Smart XL Pro Getting Started",
+    },
+  ],
   pros: [
-    "Amazing cooking capacity (Fits 12-lb turkey)",
-    "True Surround Convection for crispy results",
-    "90-second preheat time is incredibly fast",
-    "Integrated smart thermometer",
-    "Easy to clean non-stick interior"
+    "500°F independently powered grill grate for authentic, edge-to-edge searing",
+    "Included 12-inch flat top BBQ griddle is perfect for pancakes and fajitas",
+    "Hood-up cooking for direct high heat, or hood-down for surround air frying",
+    "Foodi Smart Thermometer removes all guesswork for perfect meat doneness",
+    "Extra-large capacity can comfortably fit up to 6 steaks at once",
   ],
   cons: [
-    "Takes up significant counter space",
-    "Fan is quite loud during air frying",
-    "Initial cost is high compared to simple air fryers"
+    "Very bulky and heavy (over 27 lbs), taking up significant counter space",
+    "Storing the multiple large plates (grill, griddle, air fry basket) can be difficult",
+    "Premium price point compared to standard air fryers or basic indoor grills",
   ],
   specs: [
-    { label: "Functions", value: "10-in-1" },
-    { label: "Wattage", value: "1800W" },
-    { label: "Preheat time", value: "90 seconds" },
-    { label: "Max Temperature", value: "450°F" },
-    { label: "Safety", value: "Auto shut-off" }
+    { label: "Functions", value: "7-in-1" },
+    { label: "Wattage", value: "1760W" },
+    { label: "Max Temperature", value: "500°F" },
+    { label: "Weight", value: "27.5 lbs" },
+    { label: "Dimensions", value: '15.7" x 17.4" x 11.6"' },
   ],
   sections: [
     {
-      title: "Smart Thermometer Control",
-      content: "The integrated smart thermometer is a hero feature. Whether you are roasting a whole chicken or a thick steak, just set your desired doneness and the Ninja will shut off when the exact internal temp is reached."
+      title: "Hood-Up and Hood-Down Versatility",
+      content:
+        "A major upgrade in the Pro model is the ability to cook with the hood up for intense, direct bottom heat—just like a traditional outdoor grill or diner griddle. If you drop the hood, the system engages cyclonic air technology to rapidly circulate hot air for perfect air-frying, baking, and roasting.",
     },
     {
-      title: "Oven Capacity, Air Fryer Speed",
-      content: "With its XL capacity and True Surround Convection, you can cook multiple levels at once, like fries on top and salmon on the bottom, with no flavor transfer and perfectly crispy results."
-    }
+      title: "Smart Thermometer Precision",
+      content:
+        "Never overcook a steak again. The integrated Foodi Smart Thermometer features 4 smart protein settings and 9 customizable doneness levels. Simply insert the probe, tell the grill how you want your food cooked (from rare to well-done), and the system will automatically stop cooking at the exact right moment.",
+    },
   ],
   relatedProducts: [
     {
-      slug: "instant-pot-pro-crisp",
-      name: "Instant Pot Pro Crisp",
-      image: "https://m.media-amazon.com/images/I/71O3v+XGfBL._AC_SL1500_.jpg",
-      price: "$269.99"
-    }
-  ]
+      slug: "ninja-foodi-smart-xl",
+      name: "Ninja Foodi 10-in-1 Smart XL Air Fryer Oven",
+      image: "https://m.media-amazon.com/images/I/81wjvlr3a1L._AC_SX679_.jpg",
+      price: "$144.49",
+    },
+  ],
 };
