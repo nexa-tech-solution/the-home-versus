@@ -15,9 +15,14 @@ interface MediaItem {
 interface ProductMediaGalleryProps {
   productName: string;
   media: MediaItem[];
+  showTitle?: boolean;
 }
 
-export default function ProductMediaGallery({ productName, media }: ProductMediaGalleryProps) {
+export default function ProductMediaGallery({ 
+  productName, 
+  media, 
+  showTitle = true 
+}: ProductMediaGalleryProps) {
   const [activeMedia, setActiveMedia] = useState(media[0]);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -34,11 +39,13 @@ export default function ProductMediaGallery({ productName, media }: ProductMedia
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h3 className="font-display text-2xl font-bold text-foreground">
-          {productName} <span className="text-muted-foreground font-normal">Showcase</span>
-        </h3>
-      </div>
+      {showTitle && (
+        <div className="flex items-center justify-between">
+          <h3 className="font-display text-2xl font-bold text-foreground">
+            {productName} <span className="text-muted-foreground font-normal">Showcase</span>
+          </h3>
+        </div>
+      )}
 
       <div className="relative aspect-video rounded-3xl overflow-hidden bg-muted group shadow-2xl border border-border">
         {activeMedia.type === "video" ? (

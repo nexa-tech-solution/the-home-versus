@@ -120,64 +120,47 @@ export default async function ProductPage({
         </Link>
 
         {/* Product Hero */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-start">
-          <div className="w-full">
+        <section className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 mb-24 items-start">
+          <div className="lg:sticky lg:top-32">
             {product.media && product.media.length > 0 ? (
-              <ProductMediaGallery productName={product.name} media={product.media} />
+              <ProductMediaGallery productName={product.name} media={product.media} showTitle={false} />
             ) : (
-              <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-border shadow-2xl p-8 flex items-center justify-center">
+              <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-border shadow-2xl p-12 flex items-center justify-center">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="max-w-full max-h-full object-contain"
+                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-6 left-6 bg-accent text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
+                <div className="absolute top-8 left-8 bg-accent text-white px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl">
                   Expert Review
                 </div>
               </div>
             )}
           </div>
 
-          <div className="flex flex-col justify-center">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold uppercase tracking-wider">
+          <div className="flex flex-col">
+            <div className="flex items-center gap-3 mb-8">
+              <span className="px-3 py-1 bg-accent/5 text-accent border border-accent/10 rounded-full text-[10px] font-black uppercase tracking-widest">
                 {product.category}
               </span>
-              <div className="flex items-center text-amber-500 gap-1 ml-auto">
+              <div className="flex items-center text-amber-500 gap-1.5 ml-auto">
                 <Star className="h-4 w-4 fill-current" />
-                <span className="font-bold text-sm">{product.rating}</span>
-                <span className="text-muted-foreground text-xs font-medium">
-                  ({product.reviewCount} reviews)
-                </span>
+                <span className="font-bold text-sm tracking-tight">{product.rating}</span>
+                <span className="text-muted-foreground text-[10px] font-medium opacity-60">({product.reviewCount} verified reviews)</span>
               </div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+            <h1 className="font-display text-4xl lg:text-5xl font-bold text-foreground leading-[1.15] mb-8 tracking-tight">
               {product.name}
             </h1>
 
-            <div className="relative mb-10 overflow-hidden bg-accent/[0.03] p-8 md:p-10 border-l-4 border-accent/40 group">
-              <div className="flex flex-col md:flex-row items-start gap-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white border border-accent/20 text-accent shadow-sm">
-                  <span className="text-lg">✨</span>
-                </div>
-                <div>
-                  <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-accent/60 mb-2">
-                    Editor's Takeaway
-                  </span>
-                  <p className="text-lg md:text-xl font-medium text-foreground leading-relaxed italic">
-                    "{product.highlight}"
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-medium mb-10">
-              <span className="flex items-center gap-2 bg-secondary/50 px-3 py-1.5 rounded-lg">
-                <User className="h-4 w-4" /> {product.author}
-              </span>
-              <span className="flex items-center gap-2 bg-secondary/50 px-3 py-1.5 rounded-lg">
-                <Clock className="h-4 w-4" />{" "}
+            <div className="flex items-center gap-3 text-[11px] font-bold text-muted-foreground/60 uppercase tracking-widest mb-12">
+              <span>By {product.author}</span>
+              <span className="w-1 h-1 rounded-full bg-border" />
+              <span>{product.date}</span>
+              <span className="w-1 h-1 rounded-full bg-border" />
+              <span className="flex items-center gap-1">
+                <Clock className="h-3 w-3" />
                 {product.readTime ||
                   calculateReadTime(
                     product.intro +
@@ -185,23 +168,26 @@ export default async function ProductPage({
                       product.sections.map((s) => s.content).join(" "),
                   )}
               </span>
-              <span className="opacity-70">{product.date}</span>
+            </div>
+            
+            <div className="relative mb-14 pl-8 border-l-2 border-accent/20">
+              <span className="absolute -left-3 -top-4 text-6xl text-accent/10 font-serif">“</span>
+              <p className="text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed italic font-serif">
+                {product.highlight}
+              </p>
+              <span className="block mt-4 text-[10px] font-black uppercase tracking-[0.3em] text-accent/40">The Bottom Line</span>
             </div>
 
-            <div className="flex items-center gap-6 mt-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-8 pt-8 border-t border-border/40">
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">
-                  MSRP
-                </p>
-                <p className="text-3xl font-bold text-accent">
-                  {product.price}
-                </p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/50 mb-1">Current MSRP</p>
+                <p className="text-4xl font-bold text-foreground">{product.price}</p>
               </div>
               <a
                 href={product.amazonUrl}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="flex-1 inline-flex items-center justify-center gap-3 py-4 bg-amazon text-amazon-foreground rounded-2xl font-bold text-lg hover:brightness-105 transition-all shadow-xl active:scale-95"
+                className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 py-5 bg-accent text-white rounded-2xl font-bold text-lg hover:bg-accent/90 transition-all shadow-xl shadow-accent/10 active:scale-95"
               >
                 <ShoppingCart className="h-5 w-5" /> Check Price on Amazon
               </a>
