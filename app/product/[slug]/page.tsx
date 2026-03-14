@@ -16,6 +16,7 @@ import SiteFooter from "@/components/SiteFooter";
 import AdSlot from "@/components/AdSlot";
 import ReadingProgress from "@/components/ReadingProgress";
 import ProductMediaGallery from "@/components/ProductMediaGallery";
+import Image from "next/image";
 import { calculateReadTime } from "@/lib/utils";
 import { SITE_CONFIG, PRODUCT_DATA } from "@/lib/constants";
 import { getComparisonsByProductName } from "@/lib/data";
@@ -126,10 +127,12 @@ export default async function ProductPage({
               <ProductMediaGallery productName={product.name} media={product.media} showTitle={false} />
             ) : (
               <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-border shadow-2xl p-12 flex items-center justify-center">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
-                  className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-700"
+                  fill
+                  className="object-contain p-12 hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute top-8 left-8 bg-accent text-white px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl">
                   Expert Review
@@ -304,10 +307,12 @@ export default async function ProductPage({
                   className="group flex items-center gap-6 p-6 bg-card rounded-3xl border border-border hover:border-accent/40 hover:shadow-xl transition-all"
                 >
                   <div className="w-20 h-20 shrink-0 bg-white rounded-2xl border border-border flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
-                    <img
+                    <Image
                       src={comp.imageA}
                       alt=""
-                      className="max-w-full max-h-full object-contain"
+                      fill
+                      className="object-contain p-2"
+                      sizes="80px"
                     />
                   </div>
                   <div className="flex-1">
@@ -337,10 +342,12 @@ export default async function ProductPage({
                 className="group relative flex flex-col bg-white rounded-[2rem] border border-border/50 p-5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500"
               >
                 <div className="aspect-[4/3] bg-secondary/30 rounded-[1.5rem] mb-6 overflow-hidden relative">
-                  <img
+                  <Image
                     src={p.image}
                     alt={p.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, 40vw"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-black text-accent uppercase tracking-widest shadow-sm">
                     Top Rated

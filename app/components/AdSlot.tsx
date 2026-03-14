@@ -16,11 +16,13 @@ declare global {
   }
 }
 
+import { SITE_CONFIG } from "@/lib/constants";
+
 export default function AdSlot({ 
   label = "Curated Discovery", 
   className = "", 
   position = "horizontal",
-  adClient = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-3012411444875177",
+  adClient = SITE_CONFIG.publisherId,
   adSlot = "XXXXXXXXXX" 
 }: AdSlotProps) {
   const adRef = useRef<HTMLModElement>(null);

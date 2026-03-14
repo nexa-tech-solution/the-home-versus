@@ -1,5 +1,6 @@
 import { type Metadata, type ResolvingMetadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Clock, User, ArrowRight, Layers } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -211,12 +212,24 @@ export default async function ComparisonArticlePage({
                 className="group flex flex-col p-6 bg-card rounded-3xl border border-border hover:border-accent/40 hover:shadow-xl transition-all"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
-                    <img src={comp.imageA} alt={comp.productA} className="max-w-full max-h-full object-contain" />
+                  <div className="relative w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform overflow-hidden">
+                    <Image 
+                        src={comp.imageA} 
+                        alt={comp.productA} 
+                        fill
+                        className="object-contain p-1" 
+                        sizes="48px"
+                    />
                   </div>
                   <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold">VS</div>
-                  <div className="w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
-                    <img src={comp.imageB} alt={comp.productB} className="max-w-full max-h-full object-contain" />
+                  <div className="relative w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform overflow-hidden">
+                    <Image 
+                        src={comp.imageB} 
+                        alt={comp.productB} 
+                        fill
+                        className="object-contain p-1" 
+                        sizes="48px"
+                    />
                   </div>
                 </div>
                 <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors leading-tight mb-2 line-clamp-2">
