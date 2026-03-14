@@ -212,6 +212,10 @@ export default async function ProductPage({
                 <ShoppingCart className="h-5 w-5" /> Check Price on Amazon
               </a>
             </div>
+
+            <p className="mt-4 text-[10px] text-muted-foreground/60 font-medium italic">
+              * Prices are for reference only. Check Amazon for the latest deals and accurate pricing.
+            </p>
           </div>
         </section>
 

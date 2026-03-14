@@ -125,6 +125,13 @@ const ComparisonTable = ({ productA, productB, specs }: ComparisonTableProps) =>
           </a>
         </div>
       </div>
+
+      {/* Price Disclaimer */}
+      <div className="px-4 py-3 bg-secondary/10 border-t border-border text-center">
+        <p className="text-[10px] text-muted-foreground/60 font-medium italic">
+          * Prices are for reference only. Check Amazon for the latest deals and accurate pricing.
+        </p>
+      </div>
     </div>
 
 

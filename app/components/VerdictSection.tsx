@@ -44,6 +44,11 @@ const VerdictSection = ({ overallWinner, summary, options }: VerdictSectionProps
           </div>
         ))}
       </div>
+      <div className="mt-8 pt-6 border-t border-accent/10">
+        <p className="text-[10px] text-muted-foreground/60 font-medium italic text-center">
+          * Prices are for reference only. Check Amazon for the latest deals and accurate pricing.
+        </p>
+      </div>
     </div>
   );
 };
