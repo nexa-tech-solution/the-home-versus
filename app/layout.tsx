@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 const playfair = Playfair_Display({
     variable: "--font-display",
     subsets: ["latin"],
-    weight: ["400", "700", "900"],
+    weight: ["400", "700"],
     style: ["normal", "italic"],
     display: "swap",
 });
@@ -45,6 +45,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://m.media-amazon.com" />
+        <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >

@@ -3,7 +3,11 @@
 import Link from "next/link";
 import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
-import SearchOverlay from "@/components/SearchOverlay";
+import dynamic from "next/dynamic";
+
+const SearchOverlay = dynamic(() => import("@/components/SearchOverlay"), {
+  ssr: false,
+});
 
 import { categories } from "@/lib/data";
 import { SITE_CONFIG } from "@/lib/constants";

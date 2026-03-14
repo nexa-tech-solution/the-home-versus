@@ -134,7 +134,7 @@ export default async function CategoryPage({ params }: Props) {
                     <span className="text-5xl" role="img" aria-label={category.name}>{category.icon}</span>
                   )}
                 </div>
-                <h1 className="font-display text-4xl md:text-6xl font-black text-foreground tracking-tight">
+                <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground tracking-tight">
                   {category.name}
                 </h1>
               </div>

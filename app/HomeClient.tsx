@@ -18,18 +18,14 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
       {/* Hero */}
       <section className="relative overflow-hidden" aria-labelledby="hero-heading">
         <div className="container py-16 md:py-24">
-            <div className="md:grid md:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ x: -20, opacity: 0.01 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <div className="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full mb-6">
-                  Tested by 50,000+ North American Families
-                </div>
-                <h1 id="hero-heading" className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-6">
-                  Real Reviews for <span className="text-accent italic">Real Moms.</span>
-                </h1>
+          <div className="md:grid md:grid-cols-2 gap-12 items-center">
+            <div className="hero-content">
+              <span className="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full mb-6">
+                Tested by 50,000+ North American Families
+              </span>
+              <h1 id="hero-heading" className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-6">
+                Real Reviews for <span className="text-accent italic">Real Moms.</span>
+              </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg mb-10">
                 Side-by-side product comparisons tested by real families across the US and Canada. 
                 We find what actually works for busy households, so you don't have to guess.
@@ -49,18 +45,18 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
                   Browse Kitchen Reviews
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
-              <div className="hidden md:block relative">
-                <div className="absolute -inset-4 bg-accent/5 rounded-4xl -z-10 blur-2xl" />
-                <Image
-                  src={heroImage}
-                  alt="Detailed side-by-side comparison of home appliances in a real family kitchen"
-                  className="rounded-3xl shadow-2xl w-full border border-border"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+            <div className="hidden md:block relative">
+              <div className="absolute -inset-4 bg-accent/5 rounded-4xl -z-10 blur-2xl" />
+              <Image
+                src={heroImage}
+                alt="Detailed side-by-side comparison of home appliances in a real family kitchen"
+                className="rounded-3xl shadow-2xl w-full border border-border"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -73,12 +69,9 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
           <div className="absolute inset-y-0 right-0 w-12 bg-linear-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
           
           <div className="flex items-center gap-6 py-4 overflow-x-auto no-scrollbar justify-start md:justify-center">
-            {categories.map((cat, i) => (
-              <motion.div
+            {categories.map((cat) => (
+              <div
                 key={cat.slug}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * i }}
                 className="shrink-0 relative group"
               >
                 {/* Highlight "Baby & Kids" or a seasonal category */}
@@ -114,7 +107,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
                     </span>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -132,7 +125,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
             <span className="inline-block text-accent font-bold text-xs uppercase tracking-[0.2em] mb-4">
               Editorial Pick · March 2024
             </span>
-            <h2 id="latest-comparisons-heading" className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.1]">
+            <h2 id="latest-comparisons-heading" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1]">
               New This Week <br/><span className="text-muted-foreground/40 italic">In Our Homes</span>
             </h2>
             <p className="text-xl text-muted-foreground mt-6 leading-relaxed">

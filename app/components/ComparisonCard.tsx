@@ -87,7 +87,7 @@ const ComparisonCard = ({
         </div>
 
         <div className="px-8 pb-8 grow flex flex-col">
-          <h3 className="font-display text-2xl font-black text-foreground leading-[1.2] mb-4 group-hover:text-accent transition-colors">
+          <h3 className="font-display text-2xl font-bold text-foreground leading-[1.2] mb-4 group-hover:text-accent transition-colors">
             {title}
           </h3>
           <p className="text-base text-muted-foreground leading-relaxed mb-8 line-clamp-3">
