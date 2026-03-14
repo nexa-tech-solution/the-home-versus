@@ -68,6 +68,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
                 alt="Detailed side-by-side comparison of home appliances in a real family kitchen"
                 className="rounded-3xl shadow-2xl w-full border border-border"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </motion.div>
           </div>

@@ -131,6 +131,7 @@ export default async function ProductPage({
                   src={product.image}
                   alt={product.name}
                   fill
+                  priority
                   className="object-contain p-12 hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
