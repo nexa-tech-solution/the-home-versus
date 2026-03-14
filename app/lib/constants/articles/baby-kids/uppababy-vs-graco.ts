@@ -4,14 +4,18 @@ import { ArticleData } from "../../types";
 
 export const UPPABABY_VS_GRACO: ArticleData = {
   slug: "uppababy-vista-v3-vs-graco-ready2grow-lx-2-0",
-  title: "UPPAbaby Vista V3 vs. Graco Ready2Grow LX 2.0: Luxury vs. Value",
+  title:
+    "UPPAbaby Vista V3 vs. Graco Ready2Grow LX 2.0: Luxury Investment vs. Everyday Value",
   category: "Baby & Kids",
-  snippet: "Is the premium price tag of the UPPAbaby Vista V3 worth it, or does the versatile Graco Ready2Grow offer better value for your growing family?",
+  snippet:
+    "Is the $1,000 premium for the UPPAbaby Vista V3 justified, or does the Graco Ready2Grow LX 2.0 offer everything a growing family actually needs?",
   author: "Sarah Mitchell",
   date: "March 14, 2026",
-  readTime: "10 min read",
-  winner: "UPPAbaby Vista V3",
-  intro: "When choosing a double stroller, parents often find themselves torn between the 'dream' luxury option and a more practical, budget-friendly alternative. The UPPAbaby Vista V3 is the gold standard for luxury convertible strollers, while the Graco Ready2Grow LX 2.0 is a legendary workhorse known for its versatility and incredible value. We compared these two popular options to see if the $1,000 investment in UPPAbaby is truly necessary for most families.",
+  readTime: "12 min read",
+  winner: "UPPAbaby Vista V3 (Best Overall) / Graco Ready2Grow (Best Value)",
+  intro:
+    "Choosing a double stroller is one of the biggest gear decisions for growing families. On one hand, you have the UPPAbaby Vista V3—the 'gold standard' of luxury convertibles. On the other, the Graco Ready2Grow LX 2.0—a versatile, budget-friendly workhorse. We put these two head-to-head to see where the extra $700+ actually goes and if the 'luxury push' is a necessity or just a nice-to-have.",
+
   productA: {
     name: UPPABABY_VISTA_V3_PRODUCT.name,
     image: UPPABABY_VISTA_V3_PRODUCT.image,
@@ -20,6 +24,7 @@ export const UPPABABY_VS_GRACO: ArticleData = {
     slug: UPPABABY_VISTA_V3_PRODUCT.slug,
     media: UPPABABY_VISTA_V3_PRODUCT.media,
   },
+
   productB: {
     name: GRACO_READY2GROW_PRODUCT.name,
     image: GRACO_READY2GROW_PRODUCT.image,
@@ -28,65 +33,110 @@ export const UPPABABY_VS_GRACO: ArticleData = {
     slug: GRACO_READY2GROW_PRODUCT.slug,
     media: GRACO_READY2GROW_PRODUCT.media,
   },
+
   specs: [
-    { label: "Weight", valueA: "27 lbs", valueB: "26 lbs", winner: "B" },
-    { label: "Basket Capacity", valueA: "30 lbs", valueB: "Large Basket", winner: "A" },
-    { label: "Configurations", valueA: "30+", valueB: "Multiple / Bench / Stand", winner: "A" },
-    { label: "Suspension", valueA: "FlexRide All-Wheel", valueB: "Basic Wheel Suspension", winner: "A" },
-    { label: "Folded Size", valueA: "Compact", valueB: "Single-Stroller Size", winner: "B" }
+    {
+      label: "Weight (Single Mode)",
+      valueA: "27 lbs (Chassis + 1 Seat)",
+      valueB: "26 lbs (Total)",
+      winner: "B",
+    },
+    {
+      label: "Weight Capacity",
+      valueA: "50 lbs per seat",
+      valueB: "50 lbs per seat / bench",
+      winner: "Tie",
+    },
+    {
+      label: "Configurations",
+      valueA: "30+ (Modular / Reversible)",
+      valueB: "12+ (Built-in Bench/Stand)",
+      winner: "A",
+    },
+    {
+      label: "Tires/Suspension",
+      valueA: "Polyurethane / FlexRide All-Wheel",
+      valueB: "EVA Plastic / Basic Suspension",
+      winner: "A",
+    },
+    {
+      label: "Fold Mechanism",
+      valueA: "Two-step fold (Bulky)",
+      valueB: "One-step Standing Fold",
+      winner: "B",
+    },
+    {
+      label: "Disney Size Approved",
+      valueA: "Yes",
+      valueB: "Yes",
+      winner: "Tie",
+    },
   ],
+
   prosA: [
-    "Unmatched build quality and premium materials",
-    "Superior maneuverability on all terrains",
-    "Grows from single to triple with ease",
-    "Huge, high-capacity storage basket",
-    "Excellent long-term resale value"
+    "Unmatched 'one-handed' push and maneuverability on uneven terrain",
+    "Premium, non-toxic textiles and REACH-certified leather accents",
+    "Incredible resale value (often 60-70% of MSRP on second-hand markets)",
+    "Huge, easy-access storage basket (30 lbs limit) - 'The grocery getter'",
+    "Extendable UPF 50+ canopies with magnetic peek-a-boo windows",
   ],
+
   prosB: [
-    "Incredible value for the price",
-    "Includes bench seat and standing platform for toddlers",
-    "Lighter than many single-to-double strollers",
-    "Folds down very small for storage",
-    "Removable parent tray and child armbars included"
+    "Unbeatable price-to-utility ratio; no expensive adapters needed",
+    "Built-in bench seat and standing platform for independent toddlers",
+    "One of the lightest double strollers available, easy to lift into SUVs",
+    "Self-standing fold makes garage or hallway storage effortless",
+    "Comes 'ready to roll' with parent tray and child armbars included",
   ],
+
   consA: [
-    "Extremely expensive compared to Graco",
-    "Total cost increases with extra seats/adapters",
-    "Can feel heavy when fully loaded"
+    "Very high initial cost plus expensive accessories (trays, adapters)",
+    "Requires removing the second seat for the most compact fold",
+    "Modular system can feel 'long' and heavy when fully loaded with two kids",
   ],
+
   consB: [
-    "Lower-quality wheels (plastic) and materials",
-    "Not as smooth to push on rough surfaces",
-    "Front seat recline is limited with two children"
+    "Plastic wheels lack vibration damping on bumpy sidewalks or grass",
+    "Front seat recline is very limited when a child is using the rear seat",
+    "Materials and frame feel functional rather than premium/sturdy",
   ],
+
   sections: [
-    { 
-      title: "Value vs. Luxury Experience", 
-      content: "The UPPAbaby Vista V3 offers a 'luxury car' feel with its FlexRide suspension and premium fabrics. However, the Graco Ready2Grow costs nearly $750 less and provides solutions for the same problems. While it won't feel as premium to push, the Graco's inclusion of a bench seat and standing platform makes it a very appealing choice for parents with an older child who wants independence." 
+    {
+      title: "The 'Push' Experience: Pavement vs. All-Terrain",
+      content:
+        "The Vista V3 feels like a high-end SUV—smooth, responsive, and capable of gliding over mulch or cracked sidewalks. The Graco is more like a reliable commuter car; it’s perfect for the mall, paved parks, and flat suburbs. If you live in an urban area with rough sidewalks, the Vista's FlexRide suspension is worth the investment.",
     },
-    { 
-      title: "Maneuverability and Build", 
-      content: "In our side-by-side testing, the Vista V3 glides over uneven terrain where the Graco's plastic wheels might struggle. The Vista's frame feels rock-solid, whereas the Graco has a bit more flex. That said, the Graco is surprisingly light at 26 lbs, making it easier to lift into a car trunk than the loaded Vista V3." 
+    {
+      title: "Seating and Toddler Independence",
+      content:
+        "This is where Graco often wins over parents of toddlers. The built-in bench and standing platform allow an older child to hop on and off easily. With the Vista, you would need to purchase the $135 PiggyBack board to get similar functionality, adding even more to the already premium price tag.",
     },
-    { 
-      title: "Which One is Right for You?", 
-      content: "If you have the budget and want a stroller that feels like a piece of high-end equipment, the Vista V3 is unbeatable. But for families who prioritize practicality and want a stroller that just *works* without a four-digit price tag, the Graco Ready2Grow LX 2.0 is one of the most cost-effective investments you can make." 
-    }
+    {
+      title: "Long-Term Value and Resale",
+      content:
+        "While the Vista's upfront cost is steep, it holds its value better than almost any other baby product. In North America, a well-maintained Vista V3 can be resold quickly for a significant return. The Graco is a 'buy it and use it until it's done' product—great value today, but with little resale footprint later.",
+    },
   ],
+
   verdict: {
-    overallWinner: "UPPAbaby Vista V3 (Quality) / Graco Ready2Grow (Value)",
-    summary: "The UPPAbaby Vista V3 remains our top choice for quality and longevity. However, for parents on a budget, the Graco Ready2Grow LX 2.0 offers nearly the same level of versatility at a fraction of the cost, making it the clear winner for value.",
+    overallWinner:
+      "UPPAbaby Vista V3 (Best for Quality) / Graco Ready2Grow (Best for Budget)",
+    summary:
+      "The UPPAbaby Vista V3 is a premium investment for parents who prioritize ease of use, longevity, and style. However, the Graco Ready2Grow LX 2.0 is a phenomenal 'bang for your buck' option that provides essential double-stroller features for under $250, making it our top recommendation for budget-conscious families.",
     options: [
-      { 
-        product: UPPABABY_VISTA_V3_PRODUCT.name, 
-        reason: "Choose this if you want the best possible materials, suspension, and storage, and plan to use it for multiple years.", 
-        amazonUrl: UPPABABY_VISTA_V3_PRODUCT.amazonUrl
+      {
+        product: UPPABABY_VISTA_V3_PRODUCT.name,
+        reason:
+          "Choose this if you want the best possible suspension, high-end materials, and plan to use it daily for multiple years across all terrains.",
+        amazonUrl: UPPABABY_VISTA_V3_PRODUCT.amazonUrl,
       },
-      { 
-        product: GRACO_READY2GROW_PRODUCT.name, 
-        reason: "Choose this if you need a versatile double stroller that is light on the wallet and includes toddler-friendly features like a bench seat.", 
-        amazonUrl: GRACO_READY2GROW_PRODUCT.amazonUrl
-      }
-    ]
-  }
+      {
+        product: GRACO_READY2GROW_PRODUCT.name,
+        reason:
+          "Choose this if you need a lightweight, versatile double stroller for errands and paved walks without breaking the bank.",
+        amazonUrl: GRACO_READY2GROW_PRODUCT.amazonUrl,
+      },
+    ],
+  },
 };

@@ -6,7 +6,7 @@ interface Spec {
   label: string;
   valueA: string;
   valueB: string;
-  winner?: "A" | "B" | "tie";
+  winner?: "A" | "B" | "Tie";
 }
 
 interface ComparisonTableProps {

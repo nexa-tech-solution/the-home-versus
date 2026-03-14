@@ -43,7 +43,7 @@ export interface Spec {
   label: string;
   valueA: string;
   valueB: string;
-  winner: "A" | "B";
+  winner: "A" | "B" | "Tie";
 }
 
 export interface VerdictOption {
