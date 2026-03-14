@@ -107,11 +107,40 @@ export default async function ComparisonArticlePage({
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_CONFIG.url
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": article.category,
+        "item": `${SITE_CONFIG.url}/category/${article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": `${SITE_CONFIG.url}/compare/${slug}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/30">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <SiteHeader />
       <ReadingProgress id={slug} />

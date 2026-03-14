@@ -37,6 +37,14 @@ export async function generateMetadata(
   return {
     title: `${product.name} Review | ${SITE_CONFIG.name}`,
     description: product.intro,
+    keywords: [
+      product.category,
+      product.name,
+      product.name.split(" ")[0], // Brand name usually
+      "review",
+      "home testing",
+      "best price",
+    ],
     openGraph: {
       title: `${product.name} Review`,
       description: product.intro,
@@ -102,11 +110,40 @@ export default async function ProductPage({
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_CONFIG.url
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": product.category,
+        "item": `${SITE_CONFIG.url}/category/${product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.name,
+        "item": `${SITE_CONFIG.url}/product/${slug}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/30">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <SiteHeader />
       <ReadingProgress id={slug} />
