@@ -38,12 +38,12 @@ export default function PrivacyPage() {
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-4 lowercase">3. Sharing Your Personal Information</h2>
             <p>
-              Chúng tôi không bán thông tin cá nhân của bạn cho bên thứ ba. Chúng tôi chia sẻ Thông tin Cá nhân của bạn với bên thứ ba để giúp chúng tôi sử dụng Thông tin Cá nhân của bạn, như mô tả ở trên. Ví dụ: chúng tôi sử dụng Google Analytics để giúp chúng tôi hiểu cách khách hàng sử dụng Trang web.
+              We do not sell your personal information to third parties. We share your Personal Information with third parties to help us use your Personal Information, as described above. For example, we use Google Analytics to help us understand how our customers use the Site.
             </p>
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-4 lowercase">4. Advertising and Affiliates</h2>
             <p>
-              Chúng tôi có thể sử dụng các mạng quảng cáo của bên thứ ba để hiển thị quảng cáo sau khi bạn truy cập Trang web của chúng tôi. Các mạng này có thể sử dụng cookie để thu thập dữ liệu về các lượt truy cập của bạn nhằm cung cấp quảng cáo về hàng hóa và dịch vụ mà bạn quan tâm. 
+              We may use third-party advertising networks to display advertisements after you visit our Site. These networks may use cookies to collect data about your visits in order to provide advertisements about goods and services of interest to you.
             </p>
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-4 lowercase">5. Behavioral Advertising</h2>
