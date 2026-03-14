@@ -1,14 +1,17 @@
-import { ArticleData } from "../types";
+import { ArticleData } from "../../types";
 
 export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
   slug: "dyson-v15-vs-shark-stratos",
-  title: "Dyson V15 Detect vs. Shark Stratos: Best Cordless Vacuum for Pet Hair",
+  title:
+    "Dyson V15 Detect vs. Shark Stratos: Best Cordless Vacuum for Pet Hair",
   category: "Cleaning",
-  snippet: "Side-by-side test of Dyson's flagship vs. Shark's most powerful cordless vacuum to see which truly handles heavy pet hair and dander.",
+  snippet:
+    "Side-by-side test of Dyson's flagship vs. Shark's most powerful cordless vacuum to see which truly handles heavy pet hair and dander.",
   author: "Sarah Mitchell",
-  date: "March 5, 2026",
-  readTime: "8 min read",
-  intro: "If you have pets — and let's be honest, probably a toddler or two — your vacuum is your best friend. We spent 4 weeks living with both the Dyson V15 Detect and the Shark Stratos to find out which one truly handles the chaos of a real family home.",
+  date: "March 11, 2026",
+  readTime: "10 min read",
+  intro:
+    "If you have pets — and let's be honest, probably a toddler or two — your vacuum is your best friend. We spent 4 weeks living with both the Dyson V15 Detect and the Shark Stratos to find out which one truly handles the chaos of a real family home. From laser light detection to odor neutralization, we tested every feature to see where your money is best spent.",
   winner: "Dyson V15 Detect",
   productA: {
     name: "Dyson V15 Detect",
@@ -18,53 +21,58 @@ export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
     slug: "dyson-v15-detect",
     media: [
       {
-        type: "video",
-        url: "https://www.youtube.com/watch?v=7B3pfS6fqHo",
-        caption: "Official Teaser: The Dyson V15 Detect technology",
-      },
-      {
         type: "image",
         url: "https://m.media-amazon.com/images/I/61nGFa6cXlL._AC_SL1500_.jpg",
-        caption: "Dyson V15 Detect in its sleek, cordless design",
+        caption: "Dyson V15 Detect Cordless Vacuum",
       },
       {
         type: "image",
         url: "https://m.media-amazon.com/images/I/71uK3-M-QXL._AC_SL1500_.jpg",
-        caption: "Illuminated cleaner head reveals hidden dust",
+        caption: "Laser Slim Fluffy™ cleaner head reveals hidden dust",
       },
       {
         type: "image",
         url: "https://m.media-amazon.com/images/I/61m9D-yVwKL._AC_SL1500_.jpg",
-        caption: "Fluffy Optic cleaner head for hard floors",
+        caption: "LCD screen shows scientific proof of a deep clean",
+      },
+      {
+        type: "video",
+        url: "https://www.youtube.com/watch?v=7B3pfS6fqHo",
+        caption: "Dyson V15 Detect technology and features",
       },
     ],
   },
   productB: {
     name: "Shark Stratos",
-    image: "https://m.media-amazon.com/images/I/619jhoAVLjL._AC_SL1500_.jpg",
-    price: "$399.99",
-    amazonUrl: "https://www.amazon.com/dp/B0BPM3KZLC",
+    image: "https://m.media-amazon.com/images/I/41VgaT00HWL._AC_SX679_.jpg",
+    price: "$299.99",
+    amazonUrl: "https://amzn.to/4sLCzv7",
+    slug: "shark-stratos",
     media: [
       {
+        type: "image",
+        url: "https://m.media-amazon.com/images/I/41VgaT00HWL._AC_SX679_.jpg",
+        caption: "Shark Stratos Advanced Cordless System",
+      },
+      {
+        type: "image",
+        url: "https://m.media-amazon.com/images/I/81JGHKIBVjL._AC_SX679_.jpg",
+        caption: "Clean Sense IQ detects dirt and boosts power",
+      },
+      {
+        type: "image",
+        url: "https://m.media-amazon.com/images/I/91Z7Moqs5nL._AC_SL1500_.jpg",
+        caption: "MultiFLEX technology for cleaning under furniture",
+      },
+      {
+        type: "image",
+        url: "https://m.media-amazon.com/images/I/71sXQbaG68L._AC_SL1500_.jpg",
+        caption: "Odor Neutralizer for a fresh-smelling home",
+      },
+      {
         type: "video",
-        url: "https://www.youtube.com/embed/p17i1E7s5q0",
-        caption: "Introducing the Shark Stratos Cordless with Clean Sense IQ",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/619jhoAVLjL._AC_SL1500_.jpg",
-        caption:
-          "Shark Stratos with its powerful suction and odor neutralizer",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/71S-U6m9Z2L._AC_SL1500_.jpg",
-        caption: "Multi-flex technology for easy cleaning under furniture",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/61-u-yX9k1L._AC_SL1500_.jpg",
-        caption: "Clean Sense IQ detects hidden dirt and boosts power",
+        url: "https://www.youtube.com/watch?v=M7fhZ_XTYdM",
+        caption: "Shark Stratos Cordless Stick Vacuum Getting Started",
       },
     ],
   },
@@ -77,93 +85,93 @@ export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
     },
     {
       label: "Runtime",
-      valueA: "60 min",
-      valueB: "50 min",
+      valueA: "Up to 60 min",
+      valueB: "Up to 60 min (Eco)",
       winner: "A",
     },
     {
-      label: "Noise Level",
-      valueA: "Quiet enough (baby naps safe!)",
-      valueB: "Moderate — might wake a light sleeper",
+      label: "Suction Power",
+      valueA: "230 AW",
+      valueB: "High-Performance",
       winner: "A",
     },
     {
-      label: "Pet Hair Pickup",
-      valueA: "Excellent (laser reveals hidden hair)",
-      valueB: "Very Good (anti-hair wrap)",
+      label: "Filtration",
+      valueA: "HEPA (99.99% capture)",
+      valueB: "HEPA (Anti-Allergen)",
       winner: "A",
     },
     {
-      label: "Easy to Clean",
-      valueA: "Moderate",
-      valueB: "Super easy — one-click empty",
-      winner: "B",
+      label: "Smart Tech",
+      valueA: "Laser & Piezo Sensor",
+      valueB: "Clean Sense IQ",
+      winner: "A",
     },
     {
       label: "Price",
       valueA: "$749.99",
-      valueB: "$399.99",
+      valueB: "$299.99",
       winner: "B",
     },
   ],
   prosA: [
-    "Laser reveals hidden dust — oddly satisfying",
-    "Quieter motor — safe during baby naps",
-    "Longer battery life (60 min)",
-    "LCD screen shows particle count",
-    "Excellent for allergy sufferers with HEPA filtration",
+    "Laser reveals microscopic dust you'd otherwise miss",
+    "Quieter motor is safe for baby naps",
+    "LCD screen gives scientific proof of deep clean",
+    "Superior HEPA filtration for allergy sufferers",
+    "Lighter and more maneuverable",
   ],
   consA: [
-    "Almost 2x the price of Shark",
-    "Bin is small — needs frequent emptying",
-    "Heavier attachments can feel bulky",
+    "Significantly more expensive",
+    "Bin emptying can be a bit 'messier' than Shark",
+    "Attachments are pricey to replace",
   ],
   prosB: [
-    "Half the price of Dyson — incredible value",
-    "Anti-hair wrap technology actually works",
-    "One-click dust bin emptying is a game changer",
-    "Odor neutralizer built into the vacuum",
-    "Great suction on carpet and hardwood",
+    "Incredible performance for half the price",
+    "Odor neutralizer keeps the house smelling fresh",
+    "MultiFLEX wand is a back-saver for under furniture",
+    "Clean Sense IQ works fast and reliably",
+    "Anti-hair wrap roll is excellent for pet owners",
   ],
   consB: [
-    "Noticeably louder than Dyson",
-    "Shorter runtime (50 min)",
-    "Heavier to carry up stairs",
-    "No smart dust detection",
+    "Considerably heavier than the Dyson",
+    "Much louder, especially on Max power",
+    "No laser light to reveal hidden dust",
+    "Larger footprint for storage",
   ],
   sections: [
     {
-      title: "🐕 Pet Hair Performance: The Real Test",
+      title: "🐕 Deep Cleaning & Pet Hair Performance",
       content:
-        "We unleashed two golden retrievers in a carpeted living room and waited 24 hours. The Dyson V15's laser literally showed us hair we couldn't see. Its motorbar head picked up 97% of embedded pet hair in one pass. The Shark Stratos did a solid job too — its anti-hair wrap brush roll means you'll never have to cut tangled hair off the roller. But in raw pickup performance, Dyson edges ahead.",
+        "The Dyson V15 Detect uses a piezo sensor to count particles and a laser to reveal them. In our tests, it picked up even the finest cat hair from deep within carpets. The Shark Stratos countered with its DuoClean PowerFins HairPro, which we found slightly better at preventing long human hair from tangling, but in terms of pure suction and microscopic pickup, Dyson takes the crown.",
     },
     {
-      title: "😴 Noise Level: Can You Vacuum During Nap Time?",
+      title: "🏡 Usability & 'Back-Saving' Features",
       content:
-        "This is the question every parent asks. The Dyson V15 on Eco mode is surprisingly quiet — we ran it in the hallway while our 18-month-old napped, and she didn't stir. The Shark Stratos is louder, especially on max power. If nap-time cleaning is your thing, Dyson wins this round.",
+        "Shark's MultiFLEX technology is brilliant — it allows the vacuum to fold 90 degrees to get under sofas and beds without you bending over. Dyson requires more physical effort for the same task. However, the Dyson is over 2 lbs lighter, which makes cleaning stairs and high corners much less of a workout.",
     },
     {
-      title: "💰 Value for Money: Is the Dyson Worth 2x the Price?",
+      title: "💰 The 'Vanish' Test: Is it Worth the Price?",
       content:
-        "Here's the honest truth: the Shark Stratos does about 85% of what the Dyson does for 53% of the price. If your budget is tight and you need a great cordless vacuum, the Shark is an absolute steal. But if you want the best of the best and that laser dust-reveal gives you joy, the Dyson is worth the splurge.",
+        "If you want to *see* the clean, Dyson's green laser is addictive. It turns vacuuming into a video game. But if you just want a clean floor without the technical proof, the Shark Stratos delivers 90% of the cleaning power for under $300. For most budget-conscious families, the Shark is the smarter buy, but for tech-lovers and allergy sufferers, the Dyson remains the gold standard.",
     },
   ],
   verdict: {
     overallWinner: "Dyson V15 Detect",
     summary:
-      "Both are excellent vacuums, but they serve different budgets and priorities. The Dyson V15 Detect wins on performance, quietness, and tech features. The Shark Stratos wins on value and ease of maintenance.",
+      "The Dyson V15 Detect is the better performer, quieter, and more advanced. However, the Shark Stratos offers the best value in the market today and is the better choice for those who hate bending over to clean under furniture.",
     options: [
       {
         product: "Dyson V15 Detect",
         reason:
-          "You have pets with heavy shedding, care about quiet operation during nap time, and don't mind paying premium for the best performance.",
+          "Choose this for the absolute best suction, HEPA filtration, and the satisfaction of 'seeing' the dust with the laser light.",
         amazonUrl: "https://www.amazon.com/dp/B0CK2RJVXW",
       },
       {
         product: "Shark Stratos",
         reason:
-          "You want excellent cleaning at half the price, prefer easy maintenance (one-click empty!), and live in a smaller home.",
-        amazonUrl: "https://www.amazon.com/dp/B0BPM3KZLC",
+          "Choose this for incredible value, better ergonomics under furniture, and built-in odor neutralization.",
+        amazonUrl: "https://amzn.to/4sLCzv7",
       },
     ],
   },
