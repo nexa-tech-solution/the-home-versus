@@ -6,7 +6,6 @@ import { NINJA_FOODI_OVEN_PRODUCT } from "./ninja-foodi-oven";
 import { INSTANT_POT_PRO_CRISP_PRODUCT } from "./instant-pot-pro-crisp";
 import { PETLIBRO_AIR_PRODUCT } from "./litter-robot-4";
 
-import { UPPABABY_VISTA_V2_PRODUCT } from "./uppababy-vista-v2";
 import { UPPABABY_VISTA_V3_PRODUCT } from "./uppababy-vista-v3";
 import { SingleProductData } from "../types";
 
@@ -19,7 +18,6 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "instant-pot-pro-crisp": INSTANT_POT_PRO_CRISP_PRODUCT,
   "petlibro-air-automatic": PETLIBRO_AIR_PRODUCT,
 
-  "uppababy-vista-v2": UPPABABY_VISTA_V2_PRODUCT,
   "uppababy-vista-v3": UPPABABY_VISTA_V3_PRODUCT,
 };
 
@@ -31,5 +29,4 @@ export * from "./ninja-foodi-oven";
 export * from "./instant-pot-pro-crisp";
 export * from "./litter-robot-4";
 
-export * from "./uppababy-vista-v2";
 export * from "./uppababy-vista-v3";

@@ -9,7 +9,7 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
 
   "tineco-floor-one-s5-vs-roborock-dyad-pro": Cleaning.TINECO_S5_VS_ROBOROCK_DYAD_PRO,
   "ninja-foodi-vs-instant-pot-pro-crisp": Kitchen.NINJA_FOODI_VS_INSTANT_POT,
-  "uppababy-vista-v2-vs-nuna-demi-grow": BabyKids.UPPABABY_VS_NUNA,
+  "uppababy-vista-v3-vs-nuna-demi-grow": BabyKids.UPPABABY_VS_NUNA,
 };
 
 
