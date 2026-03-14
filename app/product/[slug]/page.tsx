@@ -124,7 +124,11 @@ export default async function ProductPage({
         <section className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 mb-24 items-start">
           <div className="lg:sticky lg:top-32">
             {product.media && product.media.length > 0 ? (
-              <ProductMediaGallery productName={product.name} media={product.media} showTitle={false} />
+              <ProductMediaGallery
+                productName={product.name}
+                media={product.media}
+                showTitle={false}
+              />
             ) : (
               <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-border shadow-2xl p-12 flex items-center justify-center">
                 <Image
@@ -149,8 +153,12 @@ export default async function ProductPage({
               </span>
               <div className="flex items-center text-amber-500 gap-1.5 ml-auto">
                 <Star className="h-4 w-4 fill-current" />
-                <span className="font-bold text-sm tracking-tight">{product.rating}</span>
-                <span className="text-muted-foreground text-[10px] font-medium opacity-60">({product.reviewCount} verified reviews)</span>
+                <span className="font-bold text-sm tracking-tight">
+                  {product.rating}
+                </span>
+                <span className="text-muted-foreground text-[10px] font-medium opacity-60">
+                  ({product.reviewCount} verified reviews)
+                </span>
               </div>
             </div>
 
@@ -173,19 +181,27 @@ export default async function ProductPage({
                   )}
               </span>
             </div>
-            
+
             <div className="relative mb-14 pl-8 border-l-2 border-accent/20">
-              <span className="absolute -left-3 -top-4 text-6xl text-accent/10 font-serif">“</span>
+              <span className="absolute -left-3 -top-4 text-6xl text-accent/10 font-serif">
+                “
+              </span>
               <p className="text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed italic font-serif">
                 {product.highlight}
               </p>
-              <span className="block mt-4 text-[10px] font-black uppercase tracking-[0.3em] text-accent/40">The Bottom Line</span>
+              <span className="block mt-4 text-[10px] font-black uppercase tracking-[0.3em] text-accent/40">
+                The Bottom Line
+              </span>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-8 pt-8 border-t border-border/40">
               <div>
-                <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/50 mb-1">Current MSRP</p>
-                <p className="text-4xl font-bold text-foreground">{product.price}</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/50 mb-1">
+                  Current MSRP
+                </p>
+                <p className="text-4xl font-bold text-foreground">
+                  {product.price}
+                </p>
               </div>
               <a
                 href={product.amazonUrl}
@@ -307,10 +323,10 @@ export default async function ProductPage({
                   href={`/compare/${comp.slug}`}
                   className="group flex items-center gap-6 p-6 bg-card rounded-3xl border border-border hover:border-accent/40 hover:shadow-xl transition-all"
                 >
-                  <div className="w-20 h-20 shrink-0 bg-white rounded-2xl border border-border flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
+                  <div className="w-20 h-20 relative shrink-0 bg-white rounded-2xl border border-border flex items-center justify-center p-2 group-hover:scale-105 transition-transform overflow-hidden">
                     <Image
                       src={comp.imageA}
-                      alt=""
+                      alt={comp.title}
                       fill
                       className="object-contain p-2"
                       sizes="80px"
@@ -347,19 +363,19 @@ export default async function ProductPage({
                     src={p.image}
                     alt={p.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, 40vw"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-black text-accent uppercase tracking-widest shadow-sm">
                     Top Rated
                   </div>
                 </div>
-                
+
                 <div className="px-2 flex-1 flex flex-col">
                   <h3 className="font-display text-lg font-bold text-foreground mb-3 leading-snug line-clamp-2 group-hover:text-accent transition-colors">
                     {p.name}
                   </h3>
-                  
+
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/40">
                     <span className="text-xl font-bold text-foreground/80">
                       {p.price}

@@ -7,7 +7,7 @@ import { INSTANT_POT_PRO_CRISP_PRODUCT } from "./instant-pot-pro-crisp";
 import { PETLIBRO_AIR_PRODUCT } from "./petlibro-air";
 import { LITTER_ROBOT_4_PRODUCT } from "./litter-robot-4";
 import { UPPABABY_VISTA_V3_PRODUCT } from "./uppababy-vista-v3";
-import { NUNA_DEMI_GROW_PRODUCT } from "./nuna-demi-grow";
+import { GRACO_READY2GROW_PRODUCT } from "./graco-ready2grow-lx-2-0";
 import { SingleProductData } from "../types";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
@@ -20,7 +20,7 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "petlibro-air-automatic": PETLIBRO_AIR_PRODUCT,
   "litter-robot-4": LITTER_ROBOT_4_PRODUCT,
   "uppababy-vista-v3": UPPABABY_VISTA_V3_PRODUCT,
-  "nuna-demi-grow": NUNA_DEMI_GROW_PRODUCT,
+  "graco-ready2grow-lx-2-0": GRACO_READY2GROW_PRODUCT,
 };
 
 export * from "./dyson-v15";
@@ -32,4 +32,4 @@ export * from "./instant-pot-pro-crisp";
 export * from "./petlibro-air";
 export * from "./litter-robot-4";
 export * from "./uppababy-vista-v3";
-export * from "./nuna-demi-grow";
+export * from "./graco-ready2grow-lx-2-0";

@@ -77,10 +77,10 @@ export const UPPABABY_VISTA_V3_PRODUCT: SingleProductData = {
   ],
   relatedProducts: [
     {
-      slug: "nuna-demi-grow",
-      name: "Nuna Demi Grow",
-      image: "https://m.media-amazon.com/images/I/71YyP6o630L._AC_SL1500_.jpg",
-      price: "$950.00",
+      slug: "graco-ready2grow-lx-2-0",
+      name: "Graco Ready2Grow LX 2.0",
+      image: "https://m.media-amazon.com/images/I/81XmS57S7zL._SL1500_.jpg",
+      price: "$233.99",
     },
   ],
 };

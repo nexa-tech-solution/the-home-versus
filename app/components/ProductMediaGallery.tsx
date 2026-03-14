@@ -136,53 +136,54 @@ export default function ProductMediaGallery({
       </div>
 
       {/* Lightbox Overlay */}
-      {mounted && createPortal(
-        <AnimatePresence>
-          {isLightboxOpen && activeMedia.type === "image" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-10000 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-10"
-              onClick={() => setIsLightboxOpen(false)}
-            >
+      {mounted &&
+        createPortal(
+          <AnimatePresence>
+            {isLightboxOpen && activeMedia.type === "image" && (
               <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center pointer-events-none"
-                onClick={(e) => e.stopPropagation()}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-10000 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-10"
+                onClick={() => setIsLightboxOpen(false)}
               >
-                <img
-                  src={activeMedia.url}
-                  alt={activeMedia.caption || ""}
-                  className="max-w-full max-h-[85vh] object-contain shadow-2xl pointer-events-auto"
-                />
-                {activeMedia.caption && (
-                  <p className="mt-8 text-white text-lg md:text-xl font-medium text-center max-w-2xl px-4 pointer-events-auto">
-                    {activeMedia.caption}
-                  </p>
-                )}
-              </motion.div>
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                  className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center pointer-events-none"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <img
+                    src={activeMedia.url}
+                    alt={activeMedia.caption || ""}
+                    className="max-w-full max-h-[85vh] object-contain shadow-2xl pointer-events-auto"
+                  />
+                  {activeMedia.caption && (
+                    <p className="mt-8 text-white text-lg md:text-xl font-medium text-center max-w-2xl px-4 pointer-events-auto">
+                      {activeMedia.caption}
+                    </p>
+                  )}
+                </motion.div>
 
-              <motion.button
-                type="button"
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                className="absolute top-6 right-6 z-10001 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsLightboxOpen(false);
-                }}
-              >
-                <X className="h-6 w-6" />
-              </motion.button>
-            </motion.div>
-          )}
-        </AnimatePresence>,
-        document.body
-      )}
+                <motion.button
+                  type="button"
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  className="absolute top-6 right-6 z-10001 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsLightboxOpen(false);
+                  }}
+                >
+                  <X className="h-6 w-6" />
+                </motion.button>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body,
+        )}
     </div>
   );
 }

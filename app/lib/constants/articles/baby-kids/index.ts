@@ -1,2 +1,2 @@
-import { UPPABABY_VS_NUNA } from "./uppababy-vs-nuna";
-export * from "./uppababy-vs-nuna";
+import { UPPABABY_VS_GRACO } from "./uppababy-vs-graco";
+export * from "./uppababy-vs-graco";
