@@ -45,10 +45,10 @@ export const UPPABABY_VISTA_V2_PRODUCT: SingleProductData = {
   ],
   relatedProducts: [
     {
-      slug: "nuna-demi-grow",
-      name: "Nuna Demi Grow",
-      image: "https://m.media-amazon.com/images/I/71YyP6o630L._AC_SL1500_.jpg",
-      price: "$950.00"
+      slug: "uppababy-vista-v3",
+      name: "UPPAbaby Vista V3",
+      image: "https://m.media-amazon.com/images/I/615uNauOE3L.jpg",
+      price: "$999.99"
     }
   ]
 };

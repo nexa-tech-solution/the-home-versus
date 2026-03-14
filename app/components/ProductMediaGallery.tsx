@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, Image as ImageIcon, X, Maximize2 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { getYoutubeEmbedUrl } from "@/lib/utils";
 
 interface MediaItem {
@@ -18,13 +19,18 @@ interface ProductMediaGalleryProps {
   showTitle?: boolean;
 }
 
-export default function ProductMediaGallery({ 
-  productName, 
-  media, 
-  showTitle = true 
+export default function ProductMediaGallery({
+  productName,
+  media,
+  showTitle = true,
 }: ProductMediaGalleryProps) {
   const [activeMedia, setActiveMedia] = useState(media[0]);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close lightbox on Escape key
   useEffect(() => {
@@ -42,7 +48,8 @@ export default function ProductMediaGallery({
       {showTitle && (
         <div className="flex items-center justify-between">
           <h3 className="font-display text-2xl font-bold text-foreground">
-            {productName} <span className="text-muted-foreground font-normal">Showcase</span>
+            {productName}{" "}
+            <span className="text-muted-foreground font-normal">Showcase</span>
           </h3>
         </div>
       )}
@@ -57,7 +64,7 @@ export default function ProductMediaGallery({
             allowFullScreen
           ></iframe>
         ) : (
-          <div 
+          <div
             className="relative w-full h-full cursor-zoom-in group/main"
             onClick={() => setIsLightboxOpen(true)}
           >
@@ -67,13 +74,13 @@ export default function ProductMediaGallery({
               className="w-full h-full object-contain p-8 bg-white"
             />
             <div className="absolute inset-0 bg-black/0 group-hover/main:bg-black/5 transition-colors flex items-center justify-center opacity-0 group-hover/main:opacity-100">
-               <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg text-accent">
-                 <Maximize2 className="h-6 w-6" />
-               </div>
+              <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg text-accent">
+                <Maximize2 className="h-6 w-6" />
+              </div>
             </div>
           </div>
         )}
-        
+
         {activeMedia.caption && (
           <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-md p-4 text-white text-sm font-medium">
             {activeMedia.caption}
@@ -87,13 +94,19 @@ export default function ProductMediaGallery({
             key={index}
             onClick={() => setActiveMedia(item)}
             className={`relative aspect-square rounded-2xl overflow-hidden border-2 transition-all ${
-              activeMedia === item ? "border-accent ring-2 ring-accent/20 scale-95" : "border-transparent opacity-60 hover:opacity-100"
+              activeMedia === item
+                ? "border-accent ring-2 ring-accent/20 scale-95"
+                : "border-transparent opacity-60 hover:opacity-100"
             }`}
           >
             {item.type === "video" ? (
               <div className="w-full h-full bg-slate-900 flex items-center justify-center relative">
                 {item.thumbnail ? (
-                  <img src={item.thumbnail} alt="" className="w-full h-full object-cover" />
+                  <img
+                    src={item.thumbnail}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Play className="h-8 w-8 text-white fill-white" />
@@ -104,57 +117,64 @@ export default function ProductMediaGallery({
                 </div>
               </div>
             ) : (
-              <img src={item.url} alt="" className="w-full h-full object-cover bg-white p-2" />
+              <img
+                src={item.url}
+                alt=""
+                className="w-full h-full object-cover bg-white p-2"
+              />
             )}
           </button>
         ))}
       </div>
 
       {/* Lightbox Overlay */}
-      <AnimatePresence>
-        {isLightboxOpen && activeMedia.type === "image" && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-10"
-            onClick={() => setIsLightboxOpen(false)}
-          >
+      {mounted && createPortal(
+        <AnimatePresence>
+          {isLightboxOpen && activeMedia.type === "image" && (
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center pointer-events-none"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-10"
+              onClick={() => setIsLightboxOpen(false)}
             >
-              <img
-                src={activeMedia.url}
-                alt={activeMedia.caption || ""}
-                className="max-w-full max-h-[85vh] object-contain shadow-2xl pointer-events-auto"
-              />
-              {activeMedia.caption && (
-                <p className="mt-8 text-white text-lg md:text-xl font-medium text-center max-w-2xl px-4 pointer-events-auto">
-                  {activeMedia.caption}
-                </p>
-              )}
-            </motion.div>
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center pointer-events-none"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img
+                  src={activeMedia.url}
+                  alt={activeMedia.caption || ""}
+                  className="max-w-full max-h-[85vh] object-contain shadow-2xl pointer-events-auto"
+                />
+                {activeMedia.caption && (
+                  <p className="mt-8 text-white text-lg md:text-xl font-medium text-center max-w-2xl px-4 pointer-events-auto">
+                    {activeMedia.caption}
+                  </p>
+                )}
+              </motion.div>
 
-            <motion.button
-              type="button"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="absolute top-6 right-6 z-[210] text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsLightboxOpen(false);
-              }}
-            >
-              <X className="h-6 w-6" />
-            </motion.button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <motion.button
+                type="button"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="absolute top-6 right-6 z-[10001] text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsLightboxOpen(false);
+                }}
+              >
+                <X className="h-6 w-6" />
+              </motion.button>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </div>
   );
 }
