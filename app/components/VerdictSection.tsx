@@ -20,9 +20,10 @@ const VerdictSection = ({ overallWinner, summary, options }: VerdictSectionProps
         <h2 className="font-display text-2xl font-bold text-foreground">The Verdict</h2>
       </div>
 
-      <div className="flex items-center gap-2 mb-4">
-        <span className="px-3 py-1 bg-winner text-winner-foreground rounded-full text-sm font-semibold">
-          🏆 Overall Winner: {overallWinner}
+      <div className="flex items-center gap-2 mb-4 max-w-full">
+        <span className="px-3 py-1.5 bg-winner text-winner-foreground rounded-full text-xs md:text-sm font-semibold inline-flex items-center gap-2 max-w-full overflow-hidden">
+          <span className="shrink-0 text-base">🏆</span>
+          <span className="truncate">Overall Winner: {overallWinner}</span>
         </span>
       </div>
 

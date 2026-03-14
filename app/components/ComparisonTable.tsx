@@ -39,9 +39,9 @@ const ComparisonTable = ({ productA, productB, specs }: ComparisonTableProps) =>
                 sizes="64px"
             />
           </div>
-          <h4 className="font-display font-bold text-[10px] md:text-sm text-foreground leading-tight mb-2 min-h-[2.5em] flex items-center justify-center group-hover/product:text-accent transition-colors">
-            {productA.name}
-            {productA.slug && <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover/product:opacity-100 transition-opacity" />}
+          <h4 className="font-display font-bold text-[10px] md:text-sm text-foreground leading-tight mb-2 min-h-[2.5em] flex items-center justify-center group-hover/product:text-accent transition-colors px-2">
+            <span className="line-clamp-2">{productA.name}</span>
+            {productA.slug && <ArrowRight className="h-3 w-3 ml-1 opacity-0 shrink-0 group-hover/product:opacity-100 transition-opacity" />}
           </h4>
           <p className="text-accent font-bold text-sm md:text-lg">{productA.price}</p>
         </div>
@@ -60,9 +60,9 @@ const ComparisonTable = ({ productA, productB, specs }: ComparisonTableProps) =>
                 sizes="64px"
             />
           </div>
-          <h4 className="font-display font-bold text-[10px] md:text-sm text-foreground leading-tight mb-2 min-h-[2.5em] flex items-center justify-center group-hover/product:text-accent transition-colors">
-            {productB.name}
-            {productB.slug && <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover/product:opacity-100 transition-opacity" />}
+          <h4 className="font-display font-bold text-[10px] md:text-sm text-foreground leading-tight mb-2 min-h-[2.5em] flex items-center justify-center group-hover/product:text-accent transition-colors px-2">
+            <span className="line-clamp-2">{productB.name}</span>
+            {productB.slug && <ArrowRight className="h-3 w-3 ml-1 opacity-0 shrink-0 group-hover/product:opacity-100 transition-opacity" />}
           </h4>
           <p className="text-accent font-bold text-sm md:text-lg">{productB.price}</p>
         </div>

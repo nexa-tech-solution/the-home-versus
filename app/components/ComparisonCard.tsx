@@ -96,9 +96,9 @@ const ComparisonCard = ({
 
           <div className="mt-auto pt-6 border-t border-border/40 flex items-center justify-between gap-4">
             {winner && (
-              <div className="flex items-center gap-2 bg-winner/5 px-4 py-2 rounded-full border border-winner/10">
-                <span className="text-lg">🏆</span>
-                <span className="text-[11px] font-black uppercase tracking-tight text-winner">
+              <div className="flex items-center gap-2 bg-winner/5 px-3 py-1.5 rounded-full border border-winner/10 max-w-[70%] min-w-0">
+                <span className="text-base shrink-0">🏆</span>
+                <span className="text-[10px] md:text-[11px] font-black uppercase tracking-tight text-winner truncate">
                     {winner}
                 </span>
               </div>
