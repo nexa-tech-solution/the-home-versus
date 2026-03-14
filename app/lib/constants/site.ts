@@ -16,4 +16,5 @@ export const SITE_CONFIG = {
   publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-XXXXXXXXXXXXXXXX",
   amazonAffiliateDisclosure: "As an Amazon Associate, we earn from qualifying purchases.",
   copyright: `© ${new Date().getFullYear()} TheHomeVersus.com`,
+  contactEmail: "cs.nexatech@gmail.com",
 };

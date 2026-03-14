@@ -1,3 +1,5 @@
+import { NUNA_DEMI_GROW_PRODUCT } from "../../products/nuna-demi-grow";
+import { UPPABABY_VISTA_V3_PRODUCT } from "../../products/uppababy-vista-v3";
 import { ArticleData } from "../../types";
 
 export const UPPABABY_VS_NUNA: ArticleData = {
@@ -11,47 +13,20 @@ export const UPPABABY_VS_NUNA: ArticleData = {
   winner: "UPPAbaby Vista V3",
   intro: "Choosing a luxury stroller is one of the biggest investments new parents make. The UPPAbaby Vista has long been the market leader, but the recently released V3 model brings significant upgrades like the FlexRide suspension and magnetic harness. The Nuna Demi Grow remains a strong competitor with its premium fabrics and unique 'stacked' double configuration. We spent four weeks testing the new Vista V3 alongside the Demi Grow to see which one handles the reality of parent life better.",
   productA: {
-    name: "UPPAbaby Vista V3",
-    image: "https://m.media-amazon.com/images/I/61DhhRQK0zL._SX679_.jpg",
-    price: "$999.99",
-    amazonUrl: "https://amzn.to/4sIfvgP",
-    slug: "uppababy-vista-v3",
-    media: [
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/61DhhRQK0zL._SX679_.jpg", 
-        caption: "The UPPAbaby Vista V3 in its primary single mode." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/61FECETmmtL._SX679_.jpg", 
-        caption: "Vista V3 supports 30+ configurations for up to 3 children." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/917zGa8ICAL._SX679_.jpg", 
-        caption: "New FlexRide suspension ensures a smooth ride on any surface." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/713y7ymGJwL._SX679_.jpg", 
-        caption: "The magnetic harness buckle makes securing your child effortless." 
-      }
-    ]
+    name: UPPABABY_VISTA_V3_PRODUCT.name,
+    image: UPPABABY_VISTA_V3_PRODUCT.image,
+    price: UPPABABY_VISTA_V3_PRODUCT.price,
+    amazonUrl: UPPABABY_VISTA_V3_PRODUCT.amazonUrl,
+    slug: UPPABABY_VISTA_V3_PRODUCT.slug,
+    media: UPPABABY_VISTA_V3_PRODUCT.media,
   },
   productB: {
-    name: "Nuna Demi Grow",
-    image: "https://m.media-amazon.com/images/I/71YyP6o630L._AC_SL1500_.jpg",
-    price: "$950.00",
-    amazonUrl: "https://amazon.com/nuna-demi-grow",
-    slug: "nuna-demi-grow",
-    media: [
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/71YyP6o630L._AC_SL1500_.jpg", 
-        caption: "The Nuna Demi Grow features a unique stacked double design." 
-      }
-    ]
+    name: NUNA_DEMI_GROW_PRODUCT.name,
+    image: NUNA_DEMI_GROW_PRODUCT.image,
+    price: NUNA_DEMI_GROW_PRODUCT.price,
+    amazonUrl: NUNA_DEMI_GROW_PRODUCT.amazonUrl,
+    slug: NUNA_DEMI_GROW_PRODUCT.slug,
+    media: NUNA_DEMI_GROW_PRODUCT.media,
   },
   specs: [
     { label: "Weight (Single)", valueA: "27 lbs", valueB: "27.4 lbs", winner: "A" },
@@ -103,14 +78,14 @@ export const UPPABABY_VS_NUNA: ArticleData = {
     summary: "The UPPAbaby Vista V3 wins for its superior storage, new magnetic harness, and improved suspension. While the Nuna Demi Grow is a beautiful, high-quality stroller, the Vista V3 is simply more practical for the day-to-day needs of a growing family.",
     options: [
       { 
-        product: "UPPAbaby Vista V3", 
+        product: UPPABABY_VISTA_V3_PRODUCT.name, 
         reason: "Choose this if you want the best storage, easiest harness system, and a stroller that grows effortlessly to three children.", 
-        amazonUrl: "https://amzn.to/4sIfvgP" 
+        amazonUrl: UPPABABY_VISTA_V3_PRODUCT.amazonUrl
       },
       { 
-        product: "Nuna Demi Grow", 
+        product: NUNA_DEMI_GROW_PRODUCT.name, 
         reason: "Choose this if you prefer premium fabrics, a narrower double footprint, and the full-coverage Dream Drape.", 
-        amazonUrl: "https://amazon.com/nuna-demi-grow" 
+        amazonUrl: NUNA_DEMI_GROW_PRODUCT.amazonUrl
       }
     ]
   }

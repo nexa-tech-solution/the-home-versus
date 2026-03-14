@@ -2,7 +2,7 @@ export const FOOTER_LINKS = {
   about: [
     { label: "About Us", href: "/about" },
     { label: "Privacy Policy", href: "/privacy" },
-    { label: "Affiliate Disclosure", href: "/disclosure" },
+    { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
   ],
 };
 

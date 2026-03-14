@@ -1,3 +1,5 @@
+import { ROBOROCK_FLEXI_PRO_PRODUCT } from "../../products/roborock-flexi-pro";
+import { TINECO_S5_PRODUCT } from "../../products/tineco-s5";
 import { ArticleData } from "../../types";
 
 export const TINECO_S5_VS_ROBOROCK_DYAD_PRO: ArticleData = {
@@ -11,42 +13,20 @@ export const TINECO_S5_VS_ROBOROCK_DYAD_PRO: ArticleData = {
   winner: "Roborock Flexi Pro",
   intro: "If you have kids or pets, you know that keeping hard floors clean is a never-ending battle. Wet-dry vacuums have promised to combine vacuuming and mopping into one easy step. We spent 4 weeks testing the legendary Tineco Floor One S5 against the new Roborock Flexi Pro to see which one leaves floors cleaner and drier, especially in those hard-to-reach spots.",
   productA: {
-    name: "Tineco Floor One S5",
-    image: "https://m.media-amazon.com/images/I/61mT-Nti4uL._AC_SX679_.jpg",
-    price: "$279.00",
-    amazonUrl: "https://amzn.to/47Mcsfp",
-    slug: "tineco-floor-one-s5",
-    media: [
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/61mT-Nti4uL._AC_SX679_.jpg", 
-        caption: "The Tineco Floor One S5 is the gold standard for smart wet/dry cleaning." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/8149wzWMvpL._AC_SX679_.jpg", 
-        caption: "iLoop Smart Sensor technology in action." 
-      }
-    ]
+    name: TINECO_S5_PRODUCT.name,
+    image: TINECO_S5_PRODUCT.image,
+    price: TINECO_S5_PRODUCT.price,
+    amazonUrl: TINECO_S5_PRODUCT.amazonUrl,
+    slug: TINECO_S5_PRODUCT.slug,
+    media: TINECO_S5_PRODUCT.media,
   },
   productB: {
-    name: "Roborock Flexi Pro",
-    image: "https://m.media-amazon.com/images/I/61kNBwSaHUL._SL1500_.jpg",
-    price: "$199.00",
-    amazonUrl: "https://amzn.to/4rrEaVN",
-    slug: "roborock-flexi-pro",
-    media: [
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/61kNBwSaHUL._SL1500_.jpg", 
-        caption: "Roborock Flexi Pro with FlatReach™ technology." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/71tcFXNXBjL._SX522_.jpg", 
-        caption: "Lay-flat design for cleaning under low furniture." 
-      }
-    ]
+    name: ROBOROCK_FLEXI_PRO_PRODUCT.name,
+    image: ROBOROCK_FLEXI_PRO_PRODUCT.image,
+    price: ROBOROCK_FLEXI_PRO_PRODUCT.price,
+    amazonUrl: ROBOROCK_FLEXI_PRO_PRODUCT.amazonUrl,
+    slug: ROBOROCK_FLEXI_PRO_PRODUCT.slug,
+    media: ROBOROCK_FLEXI_PRO_PRODUCT.media,
   },
   specs: [
     { label: "Suction Power", valueA: "Smart Optimized", valueB: "17,000 Pa", winner: "B" },
@@ -95,14 +75,14 @@ export const TINECO_S5_VS_ROBOROCK_DYAD_PRO: ArticleData = {
     summary: "While the Tineco Floor One S5 remains a solid and reliable choice, the Roborock Flexi Pro offers better technology, superior reach, and a much better self-drying system for a significantly lower price.",
     options: [
       { 
-        product: "Roborock Flexi Pro", 
+        product: ROBOROCK_FLEXI_PRO_PRODUCT.name, 
         reason: "Choose this for the best value, dual-sided edge cleaning, and the ability to clean under furniture.", 
-        amazonUrl: "https://amzn.to/4rrEaVN" 
+        amazonUrl: ROBOROCK_FLEXI_PRO_PRODUCT.amazonUrl
       },
       { 
-        product: "Tineco Floor One S5", 
+        product: TINECO_S5_PRODUCT.name, 
         reason: "Choose this if you want a proven, reliable machine and primarily clean open floor spaces without low furniture.", 
-        amazonUrl: "https://amzn.to/47Mcsfp" 
+        amazonUrl: TINECO_S5_PRODUCT.amazonUrl
       }
     ]
   }

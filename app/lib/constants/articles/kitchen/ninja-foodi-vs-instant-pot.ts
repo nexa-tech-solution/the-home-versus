@@ -1,3 +1,5 @@
+import { INSTANT_POT_PRO_CRISP_PRODUCT } from "../../products/instant-pot-pro-crisp";
+import { NINJA_FOODI_OVEN_PRODUCT } from "../../products/ninja-foodi-oven";
 import { ArticleData } from "../../types";
 
 export const NINJA_FOODI_VS_INSTANT_POT: ArticleData = {
@@ -11,52 +13,20 @@ export const NINJA_FOODI_VS_INSTANT_POT: ArticleData = {
   winner: "Ninja Foodi Smart XL",
   intro: "Ask any busy family in America, and they'll tell you: a multi-cooker is the heart of the home. But should you go with the air-fryer-optimized Ninja Foodi Smart XL or the pressure-cooking powerhouse Instant Pot Pro Crisp? We spent 4 weeks cooking everything from whole frozen chickens to homemade yogurt to find out which one reigns supreme on your countertop.",
   productA: {
-    name: "Ninja Foodi Smart XL",
-    image: "https://m.media-amazon.com/images/I/81wjvlr3a1L._AC_SX679_.jpg",
-    price: "$144.49",
-    amazonUrl: "https://amzn.to/4rOcuLf",
-    slug: "ninja-foodi-smart-xl",
-    media: [
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/81wjvlr3a1L._AC_SX679_.jpg", 
-        caption: "Ninja Foodi 10-in-1 Smart XL Air Fryer Oven." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/81HXBtdPRdL._AC_SL1500_.jpg", 
-        caption: "True Surround Convection for professional-level air frying." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/81Lyt5YPlsL._AC_SL1500_.jpg", 
-        caption: "Integrated Smart Thermometer for perfect results every time." 
-      }
-    ]
+    name: NINJA_FOODI_OVEN_PRODUCT.name,
+    image: NINJA_FOODI_OVEN_PRODUCT.image,
+    price: NINJA_FOODI_OVEN_PRODUCT.price,
+    amazonUrl: NINJA_FOODI_OVEN_PRODUCT.amazonUrl,
+    slug: NINJA_FOODI_OVEN_PRODUCT.slug,
+    media: NINJA_FOODI_OVEN_PRODUCT.media,
   },
   productB: {
-    name: "Instant Pot Pro Crisp",
-    image: "https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX522_.jpg",
-    price: "$175.00",
-    amazonUrl: "https://amzn.to/47t3Bz8",
-    slug: "instant-pot-pro-crisp",
-    media: [
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/81vc3qXKPpL._AC_SX522_.jpg", 
-        caption: "Instant Pot Pro Crisp with its 11-in-1 versatility." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/815AoxWIPbL._AC_SY450_.jpg", 
-        caption: "Premium stainless steel inner pot with silicone handles." 
-      },
-      { 
-        type: "image", 
-        url: "https://m.media-amazon.com/images/I/91RwaoIVfJL._AC_SL1500_.jpg", 
-        caption: "Interchangeable lids for pressure cooking and air frying." 
-      }
-    ]
+    name: INSTANT_POT_PRO_CRISP_PRODUCT.name,
+    image: INSTANT_POT_PRO_CRISP_PRODUCT.image,
+    price: INSTANT_POT_PRO_CRISP_PRODUCT.price,
+    amazonUrl: INSTANT_POT_PRO_CRISP_PRODUCT.amazonUrl,
+    slug: INSTANT_POT_PRO_CRISP_PRODUCT.slug,
+    media: INSTANT_POT_PRO_CRISP_PRODUCT.media,
   },
   specs: [
     { label: "Functions", valueA: "10-in-1", valueB: "11-in-1", winner: "B" },
@@ -107,8 +77,8 @@ export const NINJA_FOODI_VS_INSTANT_POT: ArticleData = {
     overallWinner: "Ninja Foodi Smart XL",
     summary: "For most modern families who value air frying and speed, the Ninja Foodi Smart XL is the superior choice. However, if you are a pressure-cooking purist who occasionally wants to crisp things up, the Instant Pot Pro Crisp remains the king of the pot.",
     options: [
-      { product: "Ninja Foodi Smart XL", reason: "Choose this if you want absolute speed, professional air frying, and large roasting capacity.", amazonUrl: "https://amzn.to/4rOcuLf" },
-      { product: "Instant Pot Pro Crisp", reason: "Choose this if you prioritize pressure cooking, have limited locker space, and want a stovetop-safe pot.", amazonUrl: "https://amzn.to/47t3Bz8" }
+      { product: NINJA_FOODI_OVEN_PRODUCT.name, reason: "Choose this if you want absolute speed, professional air frying, and large roasting capacity.", amazonUrl: NINJA_FOODI_OVEN_PRODUCT.amazonUrl },
+      { product: INSTANT_POT_PRO_CRISP_PRODUCT.name, reason: "Choose this if you prioritize pressure cooking, have limited locker space, and want a stovetop-safe pot.", amazonUrl: INSTANT_POT_PRO_CRISP_PRODUCT.amazonUrl }
     ]
   }
 };

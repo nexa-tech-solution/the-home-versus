@@ -24,7 +24,19 @@ const SiteHeader = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {categories.map((cat) => (
+          <Link
+            href="/comparisons"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Comparisons
+          </Link>
+          <Link
+            href="/products"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Products
+          </Link>
+          {categories.slice(0, 3).map((cat) => (
             <Link
               key={cat.name}
               href={`/category/${cat.slug}`}
@@ -56,6 +68,20 @@ const SiteHeader = () => {
 
       {mobileOpen && (
         <div className="md:hidden border-t border-border bg-background pb-4">
+          <Link
+            href="/comparisons"
+            className="block px-6 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            All Comparisons
+          </Link>
+          <Link
+            href="/products"
+            className="block px-6 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            All Products
+          </Link>
           {categories.map((cat) => (
             <Link
               key={cat.name}

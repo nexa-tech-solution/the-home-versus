@@ -1,3 +1,5 @@
+import { DYSON_V15_PRODUCT } from "../../products/dyson-v15";
+import { SHARK_STRATOS_PRODUCT } from "../../products/shark-stratos";
 import { ArticleData } from "../../types";
 
 export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
@@ -14,67 +16,20 @@ export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
     "If you have pets — and let's be honest, probably a toddler or two — your vacuum is your best friend. We spent 4 weeks living with both the Dyson V15 Detect and the Shark Stratos to find out which one truly handles the chaos of a real family home. From laser light detection to odor neutralization, we tested every feature to see where your money is best spent.",
   winner: "Dyson V15 Detect",
   productA: {
-    name: "Dyson V15 Detect",
-    image: "https://m.media-amazon.com/images/I/61nGFa6cXlL._AC_SL1500_.jpg",
-    price: "$749.99",
-    amazonUrl: "https://www.amazon.com/dp/B0CK2RJVXW",
-    slug: "dyson-v15-detect",
-    media: [
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/61nGFa6cXlL._AC_SL1500_.jpg",
-        caption: "Dyson V15 Detect Cordless Vacuum",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/71uK3-M-QXL._AC_SL1500_.jpg",
-        caption: "Laser Slim Fluffy™ cleaner head reveals hidden dust",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/61m9D-yVwKL._AC_SL1500_.jpg",
-        caption: "LCD screen shows scientific proof of a deep clean",
-      },
-      {
-        type: "video",
-        url: "https://www.youtube.com/watch?v=7B3pfS6fqHo",
-        caption: "Dyson V15 Detect technology and features",
-      },
-    ],
+    name: DYSON_V15_PRODUCT.name,
+    image: DYSON_V15_PRODUCT.image,
+    price: DYSON_V15_PRODUCT.price,
+    amazonUrl: DYSON_V15_PRODUCT.amazonUrl,
+    slug: DYSON_V15_PRODUCT.slug,
+    media: DYSON_V15_PRODUCT.media,
   },
   productB: {
-    name: "Shark Stratos",
-    image: "https://m.media-amazon.com/images/I/41VgaT00HWL._AC_SX679_.jpg",
-    price: "$299.99",
-    amazonUrl: "https://amzn.to/4sLCzv7",
-    slug: "shark-stratos",
-    media: [
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/41VgaT00HWL._AC_SX679_.jpg",
-        caption: "Shark Stratos Advanced Cordless System",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/81JGHKIBVjL._AC_SX679_.jpg",
-        caption: "Clean Sense IQ detects dirt and boosts power",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/91Z7Moqs5nL._AC_SL1500_.jpg",
-        caption: "MultiFLEX technology for cleaning under furniture",
-      },
-      {
-        type: "image",
-        url: "https://m.media-amazon.com/images/I/71sXQbaG68L._AC_SL1500_.jpg",
-        caption: "Odor Neutralizer for a fresh-smelling home",
-      },
-      {
-        type: "video",
-        url: "https://www.youtube.com/watch?v=M7fhZ_XTYdM",
-        caption: "Shark Stratos Cordless Stick Vacuum Getting Started",
-      },
-    ],
+    name: SHARK_STRATOS_PRODUCT.name,
+    image: SHARK_STRATOS_PRODUCT.image,
+    price: SHARK_STRATOS_PRODUCT.price,
+    amazonUrl: SHARK_STRATOS_PRODUCT.amazonUrl,
+    slug: SHARK_STRATOS_PRODUCT.slug,
+    media: SHARK_STRATOS_PRODUCT.media,
   },
   specs: [
     {
@@ -109,8 +64,8 @@ export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
     },
     {
       label: "Price",
-      valueA: "$749.99",
-      valueB: "$299.99",
+      valueA: DYSON_V15_PRODUCT.price,
+      valueB: SHARK_STRATOS_PRODUCT.price,
       winner: "B",
     },
   ],
@@ -162,16 +117,16 @@ export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
       "The Dyson V15 Detect is the better performer, quieter, and more advanced. However, the Shark Stratos offers the best value in the market today and is the better choice for those who hate bending over to clean under furniture.",
     options: [
       {
-        product: "Dyson V15 Detect",
+        product: DYSON_V15_PRODUCT.name,
         reason:
           "Choose this for the absolute best suction, HEPA filtration, and the satisfaction of 'seeing' the dust with the laser light.",
-        amazonUrl: "https://www.amazon.com/dp/B0CK2RJVXW",
+        amazonUrl: DYSON_V15_PRODUCT.amazonUrl,
       },
       {
-        product: "Shark Stratos",
+        product: SHARK_STRATOS_PRODUCT.name,
         reason:
           "Choose this for incredible value, better ergonomics under furniture, and built-in odor neutralization.",
-        amazonUrl: "https://amzn.to/4sLCzv7",
+        amazonUrl: SHARK_STRATOS_PRODUCT.amazonUrl,
       },
     ],
   },
