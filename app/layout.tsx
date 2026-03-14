@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 const playfair = Playfair_Display({
-    variable: "--font-display",
-    subsets: ["latin"],
-    weight: ["400", "700"],
-    style: ["normal", "italic"],
-    display: "swap",
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
 import { SITE_CONFIG } from "@/lib/constants";
@@ -30,9 +30,10 @@ import { SITE_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: `${SITE_CONFIG.name} | Real Product Comparisons for Real Homes`,
-  description: "Side-by-side product reviews and comparisons for homeowners, parents, and pet owners. Tested in real-world scenarios.",
+  description:
+    "Side-by-side product reviews and comparisons for homeowners, parents, and pet owners. Tested in real-world scenarios.",
   verification: {
-    google: "lqawrr9tntfqcqkhncueldl7_7kbhdugufgfl5b-slo",
+    google: "lqAwRr9TNtFQCQKhncueLDL7_7kBhduGUfgFl5B",
   },
 };
 
@@ -47,7 +48,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="preconnect" href="https://m.media-amazon.com" />
         <link rel="dns-prefetch" href="https://m.media-amazon.com" />
       </head>
