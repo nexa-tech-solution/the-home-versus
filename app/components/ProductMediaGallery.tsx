@@ -19,6 +19,8 @@ interface ProductMediaGalleryProps {
   showTitle?: boolean;
 }
 
+import Image from "next/image";
+
 export default function ProductMediaGallery({
   productName,
   media,
@@ -68,10 +70,12 @@ export default function ProductMediaGallery({
             className="relative w-full h-full cursor-zoom-in group/main"
             onClick={() => setIsLightboxOpen(true)}
           >
-            <img
+            <Image
               src={activeMedia.url}
               alt={activeMedia.caption || `${productName} showcase image`}
-              className="w-full h-full object-contain p-8 bg-white"
+              fill
+              className="object-contain p-8 bg-white"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-black/0 group-hover/main:bg-black/5 transition-colors flex items-center justify-center opacity-0 group-hover/main:opacity-100">
               <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg text-accent">
@@ -102,10 +106,12 @@ export default function ProductMediaGallery({
             {item.type === "video" ? (
               <div className="w-full h-full bg-slate-900 flex items-center justify-center relative">
                 {item.thumbnail ? (
-                  <img
+                  <Image
                     src={item.thumbnail}
                     alt=""
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="150px"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -117,10 +123,12 @@ export default function ProductMediaGallery({
                 </div>
               </div>
             ) : (
-              <img
+              <Image
                 src={item.url}
                 alt=""
-                className="w-full h-full object-cover bg-white p-2"
+                fill
+                className="object-cover bg-white p-2"
+                sizes="150px"
               />
             )}
           </button>

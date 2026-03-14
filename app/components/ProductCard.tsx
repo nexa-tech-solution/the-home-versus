@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Star, ShoppingCart, ArrowRight } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
 
 interface ProductCardProps {
   slug: string;
@@ -53,10 +54,12 @@ const ProductCard = ({
 
             {/* Main Product Image - Centered and Smaller */}
             <div className="absolute inset-0 flex items-center justify-center p-10">
-                <img
+                <Image
                     src={image}
                     alt={name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+                    fill
+                    className="object-contain p-10 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
         </div>

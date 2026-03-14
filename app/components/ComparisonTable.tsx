@@ -1,5 +1,6 @@
 import { ExternalLink, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Spec {
   label: string;
@@ -29,8 +30,14 @@ const ComparisonTable = ({ productA, productB, specs }: ComparisonTableProps) =>
           {productA.slug && (
             <Link href={`/product/${productA.slug}`} className="absolute inset-0 z-10" aria-label={`View ${productA.name} review`} />
           )}
-          <div className="aspect-square w-16 h-16 mx-auto mb-3 bg-white rounded-lg p-1 border border-border/50 flex items-center justify-center group-hover/product:scale-105 transition-transform">
-            <img src={productA.image} alt={`${productA.name} product photo`} className="max-w-full max-h-full object-contain" />
+          <div className="relative aspect-square w-16 h-16 mx-auto mb-3 bg-white rounded-lg p-1 border border-border/50 flex items-center justify-center group-hover/product:scale-105 transition-transform overflow-hidden">
+            <Image 
+                src={productA.image} 
+                alt={`${productA.name} product photo`} 
+                fill
+                className="object-contain p-1" 
+                sizes="64px"
+            />
           </div>
           <h4 className="font-display font-bold text-[10px] md:text-sm text-foreground leading-tight mb-2 min-h-[2.5em] flex items-center justify-center group-hover/product:text-accent transition-colors">
             {productA.name}
@@ -44,8 +51,14 @@ const ComparisonTable = ({ productA, productB, specs }: ComparisonTableProps) =>
           {productB.slug && (
             <Link href={`/product/${productB.slug}`} className="absolute inset-0 z-10" aria-label={`View ${productB.name} review`} />
           )}
-          <div className="aspect-square w-16 h-16 mx-auto mb-3 bg-white rounded-lg p-1 border border-border/50 flex items-center justify-center group-hover/product:scale-105 transition-transform">
-            <img src={productB.image} alt={`${productB.name} product photo`} className="max-w-full max-h-full object-contain" />
+          <div className="relative aspect-square w-16 h-16 mx-auto mb-3 bg-white rounded-lg p-1 border border-border/50 flex items-center justify-center group-hover/product:scale-105 transition-transform overflow-hidden">
+            <Image 
+                src={productB.image} 
+                alt={`${productB.name} product photo`} 
+                fill
+                className="object-contain p-1" 
+                sizes="64px"
+            />
           </div>
           <h4 className="font-display font-bold text-[10px] md:text-sm text-foreground leading-tight mb-2 min-h-[2.5em] flex items-center justify-center group-hover/product:text-accent transition-colors">
             {productB.name}

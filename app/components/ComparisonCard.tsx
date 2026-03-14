@@ -17,6 +17,8 @@ interface ComparisonCardProps {
   index?: number;
 }
 
+import Image from "next/image";
+
 const ComparisonCard = ({
   slug,
   title,
@@ -57,10 +59,12 @@ const ComparisonCard = ({
             {/* Product A */}
             <div className="flex-1 flex flex-col items-center">
               <div className="w-full aspect-square max-w-[120px] relative mb-4 group-hover:-translate-x-2 transition-transform duration-500">
-                <img 
+                <Image 
                     src={imageA} 
                     alt={productA} 
-                    className="w-full h-full object-contain relative z-0" 
+                    fill
+                    className="object-contain relative z-0" 
+                    sizes="120px"
                 />
               </div>
               <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 text-center line-clamp-1 w-full px-2">{productA}</p>
@@ -69,10 +73,12 @@ const ComparisonCard = ({
             {/* Product B */}
             <div className="flex-1 flex flex-col items-center">
               <div className="w-full aspect-square max-w-[120px] relative mb-4 group-hover:translate-x-2 transition-transform duration-500">
-                <img 
+                <Image 
                     src={imageB} 
                     alt={productB} 
-                    className="w-full h-full object-contain relative z-0" 
+                    fill
+                    className="object-contain relative z-0" 
+                    sizes="120px"
                 />
               </div>
               <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 text-center line-clamp-1 w-full px-2">{productB}</p>
