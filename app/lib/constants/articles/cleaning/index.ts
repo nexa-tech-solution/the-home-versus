@@ -1,4 +1,8 @@
 import { TINECO_S5_VS_ROBOROCK_FLEXI_PRO } from "./tineco-s5-vs-roborock-flexi-pro";
 import { DYSON_V15_VS_SHARK_STRATOS } from "./dyson-v15-vs-shark-stratos";
+import { ROBOROCK_VS_DYSON } from "./roborock-vs-dyson";
+import { PINK_STUFF_VS_SPRAYS } from "./pink-stuff-vs-sprays";
 export * from "./tineco-s5-vs-roborock-flexi-pro";
 export * from "./dyson-v15-vs-shark-stratos";
+export * from "./roborock-vs-dyson";
+export * from "./pink-stuff-vs-sprays";

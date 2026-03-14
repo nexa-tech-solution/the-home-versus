@@ -8,6 +8,10 @@ import { PETLIBRO_AIR_PRODUCT } from "./petlibro-air";
 import { LITTER_ROBOT_4_PRODUCT } from "./litter-robot-4";
 import { UPPABABY_VISTA_V3_PRODUCT } from "./uppababy-vista-v3";
 import { GRACO_READY2GROW_PRODUCT } from "./graco-ready2grow-lx-2-0";
+import { ROBOROCK_FLEXI_PRO_PRODUCT } from "./roborock-flexi-pro";
+import { SPLATYPUS_JAR_SCRAPER } from "./ototo-splatypus-jar-scraper";
+import { OXO_SOAP_DISPENSER_STAINLESS } from "./oxo-good-grips-stainless-steel-soap-dispenser";
+import { THE_PINK_STUFF_PASTE } from "./stardrops-the-pink-stuff-cleaning-paste";
 import { SingleProductData } from "../types";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
@@ -21,6 +25,10 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "litter-robot-4": LITTER_ROBOT_4_PRODUCT,
   "uppababy-vista-v3": UPPABABY_VISTA_V3_PRODUCT,
   "graco-ready2grow-lx-2-0": GRACO_READY2GROW_PRODUCT,
+  "roborock-flexi-pro": ROBOROCK_FLEXI_PRO_PRODUCT,
+  "ototo-splatypus-jar-scraper": SPLATYPUS_JAR_SCRAPER,
+  "oxo-good-grips-stainless-steel-soap-dispenser": OXO_SOAP_DISPENSER_STAINLESS,
+  "stardrops-the-pink-stuff-cleaning-paste": THE_PINK_STUFF_PASTE,
 };
 
 export * from "./dyson-v15";
@@ -33,3 +41,7 @@ export * from "./petlibro-air";
 export * from "./litter-robot-4";
 export * from "./uppababy-vista-v3";
 export * from "./graco-ready2grow-lx-2-0";
+export * from "./roborock-flexi-pro";
+export * from "./ototo-splatypus-jar-scraper";
+export * from "./oxo-good-grips-stainless-steel-soap-dispenser";
+export * from "./stardrops-the-pink-stuff-cleaning-paste";

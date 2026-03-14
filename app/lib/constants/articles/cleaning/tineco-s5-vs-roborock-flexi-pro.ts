@@ -104,7 +104,7 @@ export const TINECO_S5_VS_ROBOROCK_FLEXI_PRO: ArticleData = {
     {
       title: "The Hygiene Battle: Drying vs. Odors",
       content:
-        "Anyone who has owned a wet-dry vac knows the 'stink'—that damp, sour smell from a roller that didn't dry properly. Tineco uses centrifugal drying (spinning fast), but in humid environments, it's rarely enough. Roborock’s dock uses 55°C (131°F) hot air, which bone-dries the roller in about 30 minutes. It's the most hygienic system we’ve tested to date.",
+        "Anyone who has owned a wet-dry vac knows the 'stink'—that damp, sour smell from a roller that didn't dry properly. Tineco uses centrifugal drying (spinning fast), but in humid environments, it's rarely enough. Roborock’s dock uses 55°C (131°F) hot air, which bone-dries the roller in about 30 minutes. For deep cleaning the roller housing itself, we recommend a quick scrub with The Pink Stuff Miracle Paste to keep everything smelling fresh.",
     },
     {
       title: "Intelligence: iLoop vs. DirTect",

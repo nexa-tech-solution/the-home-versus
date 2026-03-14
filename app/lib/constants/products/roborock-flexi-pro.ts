@@ -69,5 +69,12 @@ export const ROBOROCK_FLEXI_PRO_PRODUCT: SingleProductData = {
         "The onboard sensor detects how dirty the floor is and automatically increases suction and water flow. The LED bar on the screen changes color to let you know when the floor is officially clean.",
     },
   ],
-  relatedProducts: [],
+  relatedProducts: [
+    {
+      slug: "stardrops-the-pink-stuff-cleaning-paste",
+      name: "The Pink Stuff Miracle Paste",
+      image: "https://m.media-amazon.com/images/I/71JVOV7dQvL._AC_SX679_.jpg",
+      price: "$5.97",
+    },
+  ],
 };

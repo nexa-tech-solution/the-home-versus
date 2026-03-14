@@ -109,7 +109,7 @@ export const NINJA_FOODI_VS_INSTANT_POT: ArticleData = {
     {
       title: "Cleanup and Maintenance",
       content:
-        "The Instant Pot has a slight edge in cleanup—the stainless steel pot and the pressure lid (silicone ring removed) can go straight in the dishwasher. Cleaning the interior of the Ninja oven, especially after air-frying greasy wings, requires more manual scrubbing to keep the heating elements clear of smoke-inducing buildup.",
+        "The Instant Pot has a slight edge in cleanup—the stainless steel pot and the pressure lid (silicone ring removed) can go straight in the dishwasher. Cleaning the interior of the Ninja oven requires more manual scrubbing; we recommend keeping an OXO Good Grips Soap Dispenser nearby for quick palm-access to soap. For getting every bit of marinade or sauce out of your prep jars, the OTOTO Splatypus Jar Scraper is also a lifesaver.",
     },
   ],
 

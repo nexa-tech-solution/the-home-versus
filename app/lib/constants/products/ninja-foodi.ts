@@ -76,5 +76,11 @@ export const NINJA_IG651_PRODUCT: SingleProductData = {
       image: "https://m.media-amazon.com/images/I/81wjvlr3a1L._AC_SX679_.jpg",
       price: "$144.49",
     },
+    {
+      slug: "ototo-splatypus-jar-scraper",
+      name: "OTOTO Splatypus Jar Scraper",
+      image: "https://m.media-amazon.com/images/I/61kSyC6HXDL._AC_SX679_.jpg",
+      price: "$14.95",
+    },
   ],
 };
