@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
     "baby gear reviews 2024",
     "real home testing North America"
   ],
-  publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-XXXXXXXXXXXXXXXX",
+  publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-3012411444875177",
   amazonAffiliateDisclosure: "As an Amazon Associate, we earn from qualifying purchases.",
   copyright: `© ${new Date().getFullYear()} TheHomeVersus.com`,
   contactEmail: "cs.nexatech@gmail.com",

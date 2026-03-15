@@ -144,6 +144,11 @@ export default async function CategoryPage({ params }: Props) {
             </div>
           </div>
         </section>
+        
+        {/* Ad Slot - Post Hero */}
+        <div className="container py-8">
+            <AdSlot label="Curated for You" />
+        </div>
 
         {/* Comparisons List */}
         <section className="container py-16 md:py-24">

@@ -8,6 +8,8 @@ interface AdSlotProps {
   position?: "horizontal" | "vertical" | "inline";
   adClient?: string;
   adSlot?: string;
+  adLayout?: string;
+  adFormat?: string;
 }
 
 declare global {
@@ -23,7 +25,9 @@ export default function AdSlot({
   className = "", 
   position = "horizontal",
   adClient = SITE_CONFIG.publisherId,
-  adSlot = "XXXXXXXXXX" 
+  adSlot = "8250302010",
+  adLayout = "in-article",
+  adFormat = "fluid"
 }: AdSlotProps) {
   const adRef = useRef<HTMLModElement>(null);
   
@@ -67,7 +71,8 @@ export default function AdSlot({
           style={{ display: "block", width: "100%" }}
           data-ad-client={adClient}
           data-ad-slot={adSlot}
-          data-ad-format="auto"
+          data-ad-layout={adLayout}
+          data-ad-format={adFormat}
           data-full-width-responsive="true"
         />
         

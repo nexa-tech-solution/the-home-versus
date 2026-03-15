@@ -264,6 +264,9 @@ export default async function ProductPage({
           </p>
         </section>
 
+        {/* Ad Slot - Post Intro */}
+        <AdSlot label="Curated Discovery" className="mb-20" />
+
         {/* Pros & Cons */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           <div className="rounded-3xl border border-border bg-card overflow-hidden shadow-sm">
@@ -347,7 +350,7 @@ export default async function ProductPage({
           ))}
         </div>
 
-        {/* Ad Slot */}
+        {/* Ad Slot - Post Content */}
         <AdSlot label="Related Deals" className="mb-20" />
 
         {/* Related Comparisons */}

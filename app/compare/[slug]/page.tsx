@@ -192,6 +192,11 @@ export default async function ComparisonArticlePage({
             specs={article.specs}
           />
         </div>
+        
+        {/* Ad Slot - Post Table */}
+        <div className="my-20">
+            <AdSlot label="Recommended for You" />
+        </div>
 
         {/* Pros & Cons */}
         <div className="mb-20 space-y-10">
