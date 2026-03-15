@@ -191,7 +191,7 @@ export default async function CategoryPage({ params }: Props) {
           )}
 
           {/* Ad Slot - Strategically placed at the end of the list for better UX */}
-          <div className="mt-24 max-w-4xl mx-auto">
+          <div className="mt-24 mx-auto">
             <AdSlot label="Home Essentials" />
           </div>
         </section>
