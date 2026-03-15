@@ -27,10 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${category.name} Comparisons | ${SITE_CONFIG.name}`,
     description: category.description,
     keywords: [
-        category.name,
-        `${category.name} reviews`,
-        `${category.name} comparisons`,
-        "best home products",
+      category.name,
+      `${category.name} reviews`,
+      `${category.name} comparisons`,
+      "best home products",
     ],
     alternates: {
       canonical: `${SITE_CONFIG.url}/category/${slug}`,
@@ -41,9 +41,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
   const category = categories.find((c) => c.slug === slug);
-  
+
   const categoryComparisons = comparisons.filter(
-    (comp) => comp.category.toLowerCase() === category?.name.toLowerCase()
+    (comp) => comp.category.toLowerCase() === category?.name.toLowerCase(),
   );
 
   if (!category) {
@@ -69,36 +69,36 @@ export default async function CategoryPage({ params }: Props) {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": SITE_CONFIG.url
+        position: 1,
+        name: "Home",
+        item: SITE_CONFIG.url,
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": category.name,
-        "item": `${SITE_CONFIG.url}/category/${slug}`
-      }
-    ]
+        position: 2,
+        name: category.name,
+        item: `${SITE_CONFIG.url}/category/${slug}`,
+      },
+    ],
   };
 
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": `${category.name} Comparisons`,
-    "description": category.description,
-    "url": `${SITE_CONFIG.url}/category/${slug}`,
-    "mainEntity": {
+    name: `${category.name} Comparisons`,
+    description: category.description,
+    url: `${SITE_CONFIG.url}/category/${slug}`,
+    mainEntity: {
       "@type": "ItemList",
-      "itemListElement": categoryComparisons.map((comp, index) => ({
+      itemListElement: categoryComparisons.map((comp, index) => ({
         "@type": "ListItem",
-        "position": index + 1,
-        "url": `${SITE_CONFIG.url}/compare/${comp.slug}`
-      }))
-    }
+        position: index + 1,
+        url: `${SITE_CONFIG.url}/compare/${comp.slug}`,
+      })),
+    },
   };
 
   return (
@@ -118,7 +118,10 @@ export default async function CategoryPage({ params }: Props) {
         <section className="bg-secondary/30 border-b border-border/50 py-16 md:py-24">
           <div className="container">
             <nav className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-8">
-              <Link href="/" className="hover:text-foreground transition-colors flex items-center gap-1">
+              <Link
+                href="/"
+                className="hover:text-foreground transition-colors flex items-center gap-1"
+              >
                 <Home className="h-4 w-4" /> Home
               </Link>
               <span>/</span>
@@ -128,10 +131,21 @@ export default async function CategoryPage({ params }: Props) {
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white rounded-2xl p-2 shadow-sm border border-border/40">
-                  {category.icon.startsWith('http') || category.icon.startsWith('/') ? (
-                    <img src={category.icon} alt="" className="w-full h-full object-contain" />
+                  {category.icon.startsWith("http") ||
+                  category.icon.startsWith("/") ? (
+                    <img
+                      src={category.icon}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />
                   ) : (
-                    <span className="text-5xl" role="img" aria-label={category.name}>{category.icon}</span>
+                    <span
+                      className="text-5xl"
+                      role="img"
+                      aria-label={category.name}
+                    >
+                      {category.icon}
+                    </span>
                   )}
                 </div>
                 <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground tracking-tight">
@@ -144,17 +158,13 @@ export default async function CategoryPage({ params }: Props) {
             </div>
           </div>
         </section>
-        
-        {/* Ad Slot - Post Hero */}
-        <div className="container py-8">
-            <AdSlot label="Curated for You" />
-        </div>
 
         {/* Comparisons List */}
         <section className="container py-16 md:py-24">
           <div className="flex items-center justify-between mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
-              {categoryComparisons.length} {categoryComparisons.length === 1 ? "Review" : "Reviews"} Found
+              {categoryComparisons.length}{" "}
+              {categoryComparisons.length === 1 ? "Review" : "Reviews"} Found
             </h2>
           </div>
 
@@ -167,13 +177,15 @@ export default async function CategoryPage({ params }: Props) {
           ) : (
             <div className="max-w-xl mx-auto text-center py-12 bg-card border border-dashed border-border rounded-3xl">
               <p className="text-lg text-muted-foreground mb-6">
-                We're currently testing products in this category. Check back soon for our expert side-by-side reviews!
+                We're currently testing products in this category. Check back
+                soon for our expert side-by-side reviews!
               </p>
               <Link
                 href="/"
                 className="inline-flex items-center gap-2 text-accent font-bold hover:underline"
               >
-                Browse other categories <ArrowLeft className="h-4 w-4 rotate-180" />
+                Browse other categories{" "}
+                <ArrowLeft className="h-4 w-4 rotate-180" />
               </Link>
             </div>
           )}
