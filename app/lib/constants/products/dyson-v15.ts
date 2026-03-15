@@ -19,7 +19,7 @@ export const DYSON_V15_PRODUCT: SingleProductData = {
   media: [
     {
       type: "image",
-      url: "https://m.media-amazon.com/images/I/61nGFa6cXlL._AC_SL1500_.jpg",
+      url: "https://m.media-amazon.com/images/I/61p+FdEl5UL._AC_SX679_.jpg",
       caption: "Dyson V15 Detect Cordless Vacuum",
     },
     {

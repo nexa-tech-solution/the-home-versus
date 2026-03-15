@@ -86,10 +86,17 @@ export default async function ComparisonArticlePage({
     itemReviewed: {
       "@type": "Product",
       name: article.verdict.overallWinner,
-      image: article.productA.image, // Use one of the product images
+      image: article.productA.image,
       brand: {
         "@type": "Brand",
-        name: article.verdict.overallWinner.split(" ")[0], // Extract brand from winner name
+        name: article.verdict.overallWinner.split(" ")[0],
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "USD",
+        price: article.productA.price.replace("$", "").replace(",", ""),
+        availability: "https://schema.org/InStock",
+        url: article.productA.amazonUrl,
       },
     },
     author: {
