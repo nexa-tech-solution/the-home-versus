@@ -86,6 +86,11 @@ export default async function ComparisonArticlePage({
     itemReviewed: {
       "@type": "Product",
       name: article.verdict.overallWinner,
+      image: article.productA.image, // Use one of the product images
+      brand: {
+        "@type": "Brand",
+        name: article.verdict.overallWinner.split(" ")[0], // Extract brand from winner name
+      },
     },
     author: {
       "@type": "Person",
@@ -142,6 +147,25 @@ export default async function ComparisonArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {article.faqs && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: article.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
       <SiteHeader />
       <ReadingProgress id={slug} />
 

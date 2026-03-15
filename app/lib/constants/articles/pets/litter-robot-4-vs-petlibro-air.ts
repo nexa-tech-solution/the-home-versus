@@ -132,4 +132,18 @@ export const LITTER_ROBOT_VS_PETLIBRO: ArticleData = {
       },
     ],
   },
+  faqs: [
+    {
+      question: "Is the Litter-Robot 4 better than the PETLIBRO Air for odor control?",
+      answer: "Yes, the Litter-Robot 4 features a fully enclosed globe and a sealed waste drawer, which is more effective at containing odors than the open-top design of the PETLIBRO Air.",
+    },
+    {
+      question: "Which smart litter box is better for skittish cats?",
+      answer: "The PETLIBRO Air is generally better for skittish cats due to its open-top design, which feels less intimidating and restrictive than the enclosed globe of the Litter-Robot 4.",
+    },
+    {
+      question: "Does PETLIBRO Air require a subscription?",
+      answer: "While basic features are free, advanced AI health monitoring and cloud storage for the camera footage typically require a monthly subscription.",
+    },
+  ],
 };

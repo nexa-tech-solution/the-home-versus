@@ -139,4 +139,18 @@ export const UPPABABY_VS_GRACO: ArticleData = {
       },
     ],
   },
+  faqs: [
+    {
+      question: "Does the UPPAbaby Vista V3 come with a second seat?",
+      answer: "No, the Vista V3 is sold as a single stroller. To use it as a double, you must purchase the 'RumbleSeat' attachment and appropriate adapters separately.",
+    },
+    {
+      question: "Is the Graco Ready2Grow good for tall parents?",
+      answer: "The Graco Ready2Grow is functional, but its handle is not adjustable. Taller parents often prefer the UPPAbaby Vista V3 because it has a telescoping handlebar that extends for a better ergonomic stride.",
+    },
+    {
+      question: "Which stroller is easier to fold with two kids?",
+      answer: "The Graco Ready2Grow features a one-step standing fold that is generally faster. The UPPAbaby Vista V3 usually requires removing the second seat for its most compact fold, making it a two-step process.",
+    },
+  ],
 };

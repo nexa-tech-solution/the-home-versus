@@ -113,26 +113,26 @@ export default async function ProductPage({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": SITE_CONFIG.url
+        position: 1,
+        name: "Home",
+        item: SITE_CONFIG.url,
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": product.category,
-        "item": `${SITE_CONFIG.url}/category/${product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`
+        position: 2,
+        name: product.category,
+        item: `${SITE_CONFIG.url}/category/${product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": product.name,
-        "item": `${SITE_CONFIG.url}/product/${slug}`
-      }
-    ]
+        position: 3,
+        name: product.name,
+        item: `${SITE_CONFIG.url}/product/${slug}`,
+      },
+    ],
   };
 
   return (
@@ -145,6 +145,25 @@ export default async function ProductPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {product.faqs && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: product.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
       <SiteHeader />
       <ReadingProgress id={slug} />
 
@@ -251,7 +270,8 @@ export default async function ProductPage({
             </div>
 
             <p className="mt-4 text-[10px] text-muted-foreground/60 font-medium italic">
-              * Prices are for reference only. Check Amazon for the latest deals and accurate pricing.
+              * Prices are for reference only. Check Amazon for the latest deals
+              and accurate pricing.
             </p>
           </div>
         </section>
@@ -263,9 +283,6 @@ export default async function ProductPage({
             {product.intro}
           </p>
         </section>
-
-        {/* Ad Slot - Post Intro */}
-        <AdSlot label="Curated Discovery" className="mb-20" />
 
         {/* Pros & Cons */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">

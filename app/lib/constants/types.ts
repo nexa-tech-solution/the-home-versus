@@ -75,6 +75,10 @@ export interface ArticleData {
     summary: string;
     options: VerdictOption[];
   };
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
 }
 
 export interface SingleProductData {
@@ -102,5 +106,9 @@ export interface SingleProductData {
     name: string;
     image: string;
     price: string;
+  }[];
+  faqs?: {
+    question: string;
+    answer: string;
   }[];
 }

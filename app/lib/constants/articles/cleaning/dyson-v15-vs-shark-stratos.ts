@@ -138,4 +138,18 @@ export const DYSON_V15_VS_SHARK_STRATOS: ArticleData = {
       },
     ],
   },
+  faqs: [
+    {
+      question: "Is the Dyson V15 laser better than Shark's dust detection?",
+      answer: "Yes, Dyson's Fluffy Optic™ green laser makes microscopic dust visible on hard floors, whereas Shark's Clean Sense IQ only detects dust via infrared sensors and increases suction power without visual feedback.",
+    },
+    {
+      question: "Which vacuum is better for pet hair, Dyson or Shark?",
+      answer: "Both are excellent, but the Shark Stratos has an edge for pet owners thanks to its Odor Neutralizer Technology, which keeps the vacuum exhaust smelling fresh even after picking up pet dander.",
+    },
+    {
+      question: "Is the Shark Stratos easier to move than the Dyson V15?",
+      answer: "The Shark Stratos is heavier (8.9 lbs vs 6.8 lbs), but its MultiFLEX wand bends to reach under furniture without you needing to kneel, which many users find more ergonomic for floor cleaning.",
+    },
+  ],
 };
