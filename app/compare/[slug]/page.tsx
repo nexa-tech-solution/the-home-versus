@@ -81,55 +81,55 @@ export default async function ComparisonArticlePage({
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    "headline": article.title,
-    "description": article.intro,
-    "itemReviewed": {
+    headline: article.title,
+    description: article.intro,
+    itemReviewed: {
       "@type": "Product",
-      "name": article.verdict.overallWinner,
+      name: article.verdict.overallWinner,
     },
-    "author": {
+    author: {
       "@type": "Person",
-      "name": article.author
+      name: article.author,
     },
-    "datePublished": article.date,
-    "reviewRating": {
+    datePublished: article.date,
+    reviewRating: {
       "@type": "Rating",
-      "ratingValue": "4.5",
-      "bestRating": "5"
+      ratingValue: "4.5",
+      bestRating: "5",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": SITE_CONFIG.name,
-      "logo": {
+      name: SITE_CONFIG.name,
+      logo: {
         "@type": "ImageObject",
-        "url": SITE_CONFIG.ogImage
-      }
-    }
+        url: SITE_CONFIG.ogImage,
+      },
+    },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": SITE_CONFIG.url
+        position: 1,
+        name: "Home",
+        item: SITE_CONFIG.url,
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": article.category,
-        "item": `${SITE_CONFIG.url}/category/${article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`
+        position: 2,
+        name: article.category,
+        item: `${SITE_CONFIG.url}/category/${article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": article.title,
-        "item": `${SITE_CONFIG.url}/compare/${slug}`
-      }
-    ]
+        position: 3,
+        name: article.title,
+        item: `${SITE_CONFIG.url}/compare/${slug}`,
+      },
+    ],
   };
 
   return (
@@ -192,10 +192,10 @@ export default async function ComparisonArticlePage({
             specs={article.specs}
           />
         </div>
-        
+
         {/* Ad Slot - Post Table */}
         <div className="my-20">
-            <AdSlot label="Recommended for You" />
+          <AdSlot label="Recommended for You" />
         </div>
 
         {/* Pros & Cons */}
@@ -217,11 +217,6 @@ export default async function ComparisonArticlePage({
           </div>
         </div>
 
-        {/* Ad Slot - Pre-Verdict */}
-        <div className="my-20">
-            <AdSlot label="Editor's Choice" />
-        </div>
-
         {/* Verdict */}
         <VerdictSection
           overallWinner={article.verdict.overallWinner}
@@ -237,43 +232,50 @@ export default async function ComparisonArticlePage({
               Similar Comparisons you might like
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {COMPARISONS.filter(c => c.category === article.category && c.slug !== slug).slice(0, 2).map((comp) => (
-              <Link 
-                key={comp.slug} 
-                href={`/compare/${comp.slug}`}
-                className="group flex flex-col p-6 bg-card rounded-3xl border border-border hover:border-accent/40 hover:shadow-xl transition-all"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="relative w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform overflow-hidden">
-                    <Image 
-                        src={comp.imageA} 
-                        alt={comp.productA} 
+            {COMPARISONS.filter(
+              (c) => c.category === article.category && c.slug !== slug,
+            )
+              .slice(0, 2)
+              .map((comp) => (
+                <Link
+                  key={comp.slug}
+                  href={`/compare/${comp.slug}`}
+                  className="group flex flex-col p-6 bg-card rounded-3xl border border-border hover:border-accent/40 hover:shadow-xl transition-all"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="relative w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform overflow-hidden">
+                      <Image
+                        src={comp.imageA}
+                        alt={comp.productA}
                         fill
-                        className="object-contain p-1" 
+                        className="object-contain p-1"
                         sizes="48px"
-                    />
-                  </div>
-                  <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold">VS</div>
-                  <div className="relative w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform overflow-hidden">
-                    <Image 
-                        src={comp.imageB} 
-                        alt={comp.productB} 
+                      />
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold">
+                      VS
+                    </div>
+                    <div className="relative w-12 h-12 bg-white rounded-xl border border-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform overflow-hidden">
+                      <Image
+                        src={comp.imageB}
+                        alt={comp.productB}
                         fill
-                        className="object-contain p-1" 
+                        className="object-contain p-1"
                         sizes="48px"
-                    />
+                      />
+                    </div>
                   </div>
-                </div>
-                <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors leading-tight mb-2 line-clamp-2">
-                  {comp.title}
-                </h3>
-                <div className="mt-auto flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-widest">
-                  View Comparison <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            ))}
+                  <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors leading-tight mb-2 line-clamp-2">
+                    {comp.title}
+                  </h3>
+                  <div className="mt-auto flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-widest">
+                    View Comparison{" "}
+                    <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              ))}
           </div>
         </section>
       </article>
