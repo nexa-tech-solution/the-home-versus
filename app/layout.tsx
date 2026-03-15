@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   description:
     "Side-by-side product reviews and comparisons for homeowners, parents, and pet owners. Tested in real-world scenarios.",
   verification: {
-    google: "lqAwRr9TNtFQCQKhncueLDL7_7kBhduGUfgFl5B",
+    google: "lqAwRr9TNtFQCQKhncueLDL7_7kBhduGUfgFl5B-SLo",
   },
 };
 
