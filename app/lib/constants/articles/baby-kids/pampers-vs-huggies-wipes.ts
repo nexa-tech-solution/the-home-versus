@@ -132,4 +132,18 @@ export const PAMPERS_VS_HUGGIES_WIPES: ArticleData = {
       },
     ],
   },
+  faqs: [
+    {
+      question: "Are Pampers Sensitive or Huggies Natural Care better for eczema?",
+      answer: "Huggies Natural Care has the National Eczema Association seal of acceptance, making it a safer bet for babies with clinically diagnosed eczema, though Pampers is also very mild.",
+    },
+    {
+      question: "Why do my baby wipes always pull out in a chain?",
+      answer: "Pampers wipes sometimes chain together due to their quilted texture. Huggies uses 'EZ Pull' fold technology which is design to reliably dispense exactly one wipe at a time.",
+    },
+    {
+      question: "Can I use these wipes on a newborn's face?",
+      answer: "Yes, both Pampers Sensitive and Huggies Natural Care are fragrance-free, alcohol-free, and 99% water, making them safe for hands, face, and bottoms.",
+    },
+  ],
 };

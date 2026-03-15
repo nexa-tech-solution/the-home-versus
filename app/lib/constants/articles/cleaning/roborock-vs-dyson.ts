@@ -134,4 +134,18 @@ export const ROBOROCK_VS_DYSON: ArticleData = {
       },
     ],
   },
+  faqs: [
+    {
+      question: "Should I buy a Dyson V15 or a Roborock Flexi Pro for carpets?",
+      answer: "For homes with significant carpet or area rugs, the Dyson V15 is far superior. The Roborock Flexi Pro is strictly for hard floors and should not be used on carpets.",
+    },
+    {
+      question: "Is the Roborock Flexi Pro self-cleaning?",
+      answer: "Yes, the Roborock Flexi Pro has a self-cleaning dock that uses hot water to wash the roller and 55°C hot air to dry it, preventing mold and odors.",
+    },
+    {
+      question: "Can the Dyson V15 detect invisible dust?",
+      answer: "Yes, the Dyson V15 uses a Fluffy Optic™ green laser to reveal microscopic dust on hard floors and a Piezo sensor to count particles and prove a deep clean.",
+    },
+  ],
 };

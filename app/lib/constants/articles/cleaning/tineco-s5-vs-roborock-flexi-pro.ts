@@ -132,4 +132,18 @@ export const TINECO_S5_VS_ROBOROCK_FLEXI_PRO: ArticleData = {
       },
     ],
   },
+  faqs: [
+    {
+      question: "Can the Roborock Flexi Pro clean under low furniture better than Tineco S5?",
+      answer: "Yes, the Roborock Flexi Pro is designed with 180° FlatReach™ technology, allowing it to lay completely flat to clean under furniture as low as 6 inches, which the Tineco S5 cannot do.",
+    },
+    {
+      question: "Is hot water washing better for wet-dry vacuums?",
+      answer: "Roborock's 55°C hot water wash is more effective at breaking down oily kitchen stains and sanitizing the roller compared to the room-temperature cleaning used by the Tineco S5.",
+    },
+    {
+      question: "Does the Tineco S5 have a better battery life?",
+      answer: "In our tests, Tineco's iLoop battery management is slightly more efficient, providing a more consistent runtime for large homes, though both machines last around 35-45 minutes.",
+    },
+  ],
 };

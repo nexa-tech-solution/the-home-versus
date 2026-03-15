@@ -129,4 +129,18 @@ export const NINJA_GRILL_VS_OVEN: ArticleData = {
       },
     ],
   },
+  faqs: [
+    {
+      question: "Does the Ninja Foodi Smart XL Grill smoke when used indoors?",
+      answer: "No, Ninja uses a multi-layered smoke management system including a temperature-controlled heating element and splatter shield to keep 99% of smoke out of your kitchen.",
+    },
+    {
+      question: "Can I fit a whole pizza in the Ninja 10-in-1 Oven?",
+      answer: "Yes, the Ninja 10-in-1 Oven's wide design is specifically built to accommodate a standard 12-inch pizza or up to 2 sheet pans of food at once.",
+    },
+    {
+      question: "Is the Ninja Grill or Oven better for steak?",
+      answer: "The Ninja Smart XL Grill is much better for steak as it uses a directly heated grill grate to achieve 500°F char marks, whereas the Oven relies purely on hot air convection.",
+    },
+  ],
 };
