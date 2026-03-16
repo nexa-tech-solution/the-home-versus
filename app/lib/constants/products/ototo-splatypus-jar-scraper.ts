@@ -12,9 +12,10 @@ export const SPLATYPUS_JAR_SCRAPER: SingleProductData = {
   author: "Sarah Mitchell",
   date: "Mar 14, 2026",
   readTime: "4 min read",
-  highlight: "The quack-tastic jar scraper that leaves no jam behind.",
+  highlight:
+    "The duck-billed hero your pantry didn't know it needed—say goodbye to wasted Nutella and stuck peanut butter.",
   intro:
-    "If you've ever felt the heartbreak of seeing a tablespoon of Nutella trapped in the bottom 'shoulders' of a jar, meet your new best friend. Splatypus by OTOTO isn't just another 'cute' kitchen trinket; it's a double-duty tool designed to reach every curve and corner, making sure you get every penny's worth of your favorite spreads.",
+    "If you've ever felt the sheer heartbreak of leaving a final tablespoon of Nutella trapped in the 'shoulders' of a jar, you’ve experienced a specific kind of kitchen grief. Meet Splatypus by OTOTO. It’s not just another whimsical kitchen trinket; it’s a double-duty precision tool designed to reach every awkward curve, ensuring you get every penny's worth of your favorite spreads.",
   media: [
     {
       type: "image",
@@ -39,42 +40,42 @@ export const SPLATYPUS_JAR_SCRAPER: SingleProductData = {
     },
   ],
   pros: [
-    "Flexible silicone 'beak' contours to jar walls better than a knife",
-    "Long neck reaches the bottom of standard 16oz jars with ease",
-    "Flat back is perfect for smooth, Instagram-worthy toast spreading",
-    "Dishwasher safe (top rack) and 100% BPA-free",
-    "The perfect 'Stocking Stuffer' or White Elephant gift for foodies",
+    "Flexible silicone 'beak' contours perfectly to the inner rim of jars where standard knives fail",
+    "Extra-long neck effortlessly reaches the bottom of standard 16oz jars without getting your knuckles messy",
+    "Flat back design allows for smooth, 'Instagram-worthy' spreading on toast and bagels",
+    "100% BPA-free and top-rack dishwasher safe, making cleanup a total breeze",
+    "An ideal 'Stocking Stuffer' or White Elephant gift that people will actually use every morning",
   ],
+
   cons: [
-    "Not long enough for giant 'Costco-sized' industrial jars",
-    "Silicone tip is a bit too soft for rock-hard cold butter",
-    "Prone to staining if left in tomato sauce or turmeric-heavy dips",
+    "A bit too short for those massive 'Costco-sized' industrial peanut butter tubs",
+    "The silicone tip is designed for flexibility, so it struggles with rock-hard cold butter straight from the fridge",
+    "Light-colored silicone can pick up stains if left sitting in tomato-based sauces or turmeric-heavy dips",
   ],
+
   specs: [
-    { label: "Material", value: "Silicone & Plastic" },
-    { label: "Dimensions", value: "8.35 x 1.32 x 0.88 in" },
-    { label: "Weight", value: "2.12 ounces" },
-    {
-      label: "Heat Resistance",
-      value: "Food Safe (Not for high-heat cooking)",
-    },
-    { label: "Safety", value: "BPA-Free, Phthalate-Free" },
+    { label: "Material", value: "BPA-Free Silicone & Food-Grade Plastic" },
+    { label: "Length", value: "8.35 inches (Standard Jar Reach)" },
+    { label: "Cleaning", value: "Dishwasher Safe (Top Rack)" },
+    { label: "Heat Limit", value: "Food Safe (Cold to Warm use only)" },
+    { label: "Design", value: "Double-Sided Scraper & Spreader" },
   ],
+
   sections: [
     {
-      title: "Design with a Purpose",
+      title: "Whimsy Meets Hardcore Utility",
       content:
-        "OTOTO is known for turning everyday chores into playful moments. Splatypus features a stiff handle for control and a soft, flexible silicone beak. This flexibility is key—it can bend into the 'shoulders' of a jar where standard spatulas fail. Whether it's the last bit of mayonnaise or a deep jar of almond butter, Splatypus makes sure no spread is left behind.",
+        "OTOTO is the master of turning chores into playful moments, but don't let the cute platypus face fool you—this is a serious scraper. The stiff plastic handle gives you the leverage needed to dig into thick almond butter, while the soft silicone beak flexes into the tightest corners. It's especially effective for 'shoulder jars' (the ones that narrow at the top), retrieving that hidden treasure that usually ends up in the trash.",
     },
     {
-      title: "Kid-Friendly & Safe",
+      title: "The Ultimate PB&J Sidekick",
       content:
-        "Since there are no sharp edges, Splatypus is a fantastic way to let toddlers help with making their own PB&J sandwiches. The ergonomic grip is easy for small hands to hold, and the bright colors make it easy to find in a cluttered kitchen drawer.",
+        "Since it has no sharp edges, Splatypus is a fantastic way to involve kids in the kitchen. The ergonomic grip is perfect for small hands to master the art of the PB&J without the safety concerns of a butter knife. Plus, the dual-sided nature means you can scrape with the beak and flip to the flat side for a perfectly even layer of jam in one seamless motion.",
     },
     {
-      title: "Real-World Maintenance",
+      title: "Pro-Tip for Maintenance",
       content:
-        "Unlike cheap wooden spatulas that can harbor bacteria, Splatypus is non-porous and dishwasher safe. Pro-tip: To prevent the silicone beak from picking up odors from garlic-heavy dips, give it a quick rinse with cold water right after use.",
+        "To keep your Splatypus looking pristine in a North American kitchen where coffee and sauces are king, we recommend a quick rinse immediately after use with oily or pigmented foods. While it's durable and dishwasher safe, treating the silicone with a little care will ensure your duck-billed friend stays stain-free and ready for the next breakfast battle.",
     },
   ],
   relatedProducts: [

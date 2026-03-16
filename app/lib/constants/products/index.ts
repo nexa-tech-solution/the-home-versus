@@ -19,6 +19,7 @@ import { SCRUB_DADDY_DYE_FREE } from "./scrub-daddy-dye-free-scratch-free-scrubb
 import { SCRUB_MOMMY } from "./scrub-mommy-dual-sided-scrubber";
 import { GENERIC_SPONGE } from "./generic-cellulose-scrub-sponge";
 import { SingleProductData } from "../types";
+import { INSPIRE_HEAVY_DUTY_NITRILE_GLOVES } from "./inspire-heavy-duty-nitrile-gloves-6mil-8mil";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "dyson-v15-detect": DYSON_V15_PRODUCT,
@@ -41,6 +42,7 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "scrub-daddy-dye-free-scratch-free-scrubber": SCRUB_DADDY_DYE_FREE,
   "scrub-mommy-dual-sided-scrubber": SCRUB_MOMMY,
   "generic-cellulose-scrub-sponge": GENERIC_SPONGE,
+  "inspire-heavy-duty-nitrile-gloves-6mil-8mil": INSPIRE_HEAVY_DUTY_NITRILE_GLOVES,
 };
 
 export * from "./dyson-v15";
@@ -63,3 +65,4 @@ export * from "./lysol-disinfectant-cleaning-wipes-lemon-lime";
 export * from "./scrub-daddy-dye-free-scratch-free-scrubber";
 export * from "./scrub-mommy-dual-sided-scrubber";
 export * from "./generic-cellulose-scrub-sponge";
+export * from "./inspire-heavy-duty-nitrile-gloves-6mil-8mil";

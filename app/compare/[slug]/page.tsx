@@ -10,6 +10,7 @@ import VerdictSection from "@/components/VerdictSection";
 import ProductMediaGallery from "@/components/ProductMediaGallery";
 import AdSlot from "@/components/AdSlot";
 import ReadingProgress from "@/components/ReadingProgress";
+import ReviewDisclaimer from "@/components/ReviewDisclaimer";
 
 // Client-side animations
 import { ArticleClient } from "@/compare/[slug]/ArticleClient";
@@ -201,6 +202,7 @@ export default async function ComparisonArticlePage({
 
       <article className="container max-w-4xl py-8 md:py-20 px-4 md:px-0">
         <ArticleClient article={article} />
+        <ReviewDisclaimer />
 
         {/* Product Media Showcases */}
         <div className="my-16 grid grid-cols-1 md:grid-cols-2 gap-12">

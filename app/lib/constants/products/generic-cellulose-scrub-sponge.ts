@@ -4,7 +4,7 @@ export const GENERIC_SPONGE: SingleProductData = {
   slug: "generic-cellulose-scrub-sponge",
   name: "Generic Cellulose Scrub Sponges (6-Pack)",
   category: "Cleaning Supplies",
-  image: "https://m.media-amazon.com/images/I/71YyM7VSuFL._AC_SX679_.jpg",
+  image: "https://m.media-amazon.com/images/I/619wP5245EL._AC_SY450_.jpg",
   price: "$5.99",
   amazonUrl: "https://amzn.to/4cPwJ7f", // Updated for consistency
   rating: 4.4,
@@ -13,9 +13,9 @@ export const GENERIC_SPONGE: SingleProductData = {
   date: "March 16, 2026",
   readTime: "4 min read",
   highlight:
-    "The budget-friendly staple of every kitchen sink, providing basic cleaning at a fraction of the cost.",
+    "The ultimate 'one-and-done' cleaning essential for the messes you don't want to save a sponge for.",
   intro:
-    "Before viral 'CleanTok' sensations and temperature-controlled foams, there was the humble cellulose sponge. Found in every grocery store across North America, these sponges are the reliable—if unglamorous—workhorses of the American kitchen. They are cheap, compostable, and do exactly what they say on the tin: they absorb water and they scrub. But in a world of high-tech sponges, is 'basic' still enough for your sink?",
+    "Before viral 'CleanTok' sensations and high-tech foams, there was the humble yellow-and-green cellulose sponge. It’s the unglamorous backbone of the American kitchen—cheap, biodegradable, and dependable. While it lacks the fancy temperature-responsive tech of modern rivals, its brute-force absorbency and disposable price point make it a mandatory staple for every North American under-sink cabinet.",
   media: [
     {
       type: "image",
@@ -43,40 +43,42 @@ export const GENERIC_SPONGE: SingleProductData = {
     },
   ],
   pros: [
-    "Unbeatable budget-friendliness; typically costs less than $1 per unit when bought in bulk",
-    "Superior absorbency: The cellulose side holds up to 10x its weight in liquid",
-    "Naturally biodegradable fibers (the yellow side) are a win for the eco-conscious",
-    "The 'disposable' price tag makes them perfect for gross jobs you don't want to save a sponge for",
-    "Soft texture when wet ensures it won't scratch ceramic or glass (yellow side only)",
+    "Unbeatable value-for-money: At less than $1 per sponge, you can toss it after a 'disaster clean' without guilt",
+    "Extreme Absorbency: The porous cellulose side drinks up spills—like a tipped glass of milk—much faster than foam scrubbers",
+    "Dual-Action utility: The heavy-duty green scouring side tackles burnt-on lasagna and stubborn stove-top grease",
+    "Eco-Friendly core: The plant-based yellow material is fully compostable once the scouring pad is detached",
+    "Snag-Free on Basics: Perfect for scrubbing non-delicate items like cast iron skillets or muddy gardening tools",
   ],
+
   cons: [
-    "The infamous 'stinky sponge' syndrome: Develops sour odors in as little as a week",
-    "Abrasive green scouring pad can permanently scratch non-stick pans and stainless steel",
-    "Low durability: Fibers begin to pill and crumble after just a few heavy-duty scrubbing sessions",
-    "No texture change; remains soft and floppy regardless of water temperature",
+    "The 'Sour Sponge' Syndrome: Highly porous cellulose becomes a luxury hotel for bacteria if not replaced every 1-2 weeks",
+    "Abrasive Danger: The green scouring side is NOT scratch-free; it will permanently mar your high-end non-stick pans",
+    "Low Durability: Expect the green pad to begin pilling and detaching after just a few sessions of intense elbow grease",
   ],
+
   specs: [
     { label: "Material", value: "Plant-based Cellulose & Recycled PET" },
-    { label: "Sides", value: "Dual-Action (Scrub & Wipe)" },
-    { label: "Scratch-Free", value: "No (Green side is highly abrasive)" },
-    { label: "Odor Resistant", value: "No (Propense to bacteria growth)" },
-    { label: "Compostable", value: "Partial (Cellulose side only)" },
+    { label: "Quantity", value: "6 Sponges per Pack" },
+    { label: "Scratch-Free", value: "No (Scouring side is highly abrasive)" },
+    { label: "Texture", value: "Soft & Absorbent / Firm Scouring Pad" },
+    { label: "Odor Resistance", value: "Low (Requires frequent replacement)" },
   ],
+
   sections: [
     {
-      title: "The Absorbency King",
+      title: "The Absorbency King of the Kitchen",
       content:
-        "Where these generic sponges still hold the crown is in liquid management. A standard 4-inch cellulose sponge is an absorption powerhouse. If you've spilled a glass of milk or need to 'mop' a soaking wet quartz counter, a Scrub Daddy will just push the water around. The cellulose sponge sucks it up, making it an essential secondary tool for post-dish wipe-downs.",
+        "Where high-tech foam scrubbers (like Scrub Daddy) fail is in actual liquid management. If you've spilled a quart of juice on a white quartz counter, you don't need a scrubber—you need a mop. A standard cellulose sponge can hold up to 10x its weight in liquid. It’s the essential secondary tool for 'post-dish wipe-downs,' ensuring your counters are bone-dry and streak-free in a single pass.",
     },
     {
-      title: "The Hygiene Hurdle",
+      title: "The Hygiene Hustle: Replace, Don't Sanitize",
       content:
-        "The biggest drawback is the lifespan. Because cellulose is so porous, it acts like a luxury hotel for bacteria. Most North American households have experienced the dreaded 'sour sponge' smell. Unlike high-end foam alternatives that stay fresh for 8 weeks, these generic workhorses typically need to be tossed every 7 to 14 days to keep your kitchen sanitary.",
+        "Let’s be honest: every North American home knows that dreaded sour smell of an old sponge. Because cellulose is so porous, it traps organic matter deep inside. While you can microwave them to sanitize, Sarah’s Pro Tip is simpler: at this price point, don't risk it. Use it for a week of heavy dishes, then retire it to the 'floor cleaning' bin for one last use before tossing it. It’s a cheap way to keep your family’s kitchen truly sanitary.",
     },
     {
-      title: "Budget vs. Reality",
+      title: "The Perfect 'Gross Job' Companion",
       content:
-        "At the end of the day, you aren't buying a generic 6-pack for the technology. You're buying it for the utility. For 'one-and-done' messy jobs—like cleaning up after a pet, scrubbing a muddy boot, or wiping down a greasy BBQ grill base—there is no beating the value here. It's the perfect companion to your high-end scrubbers: use the fancy one for the dishes and the cheap one for the grime.",
+        "There are some cleaning tasks you simply don't want to subject a $4 designer sponge to. Whether it’s scrubbing the grime behind a toilet, cleaning up a pet accident, or scouring a greasy BBQ grill base, these generic 6-packs are your best friend. They are disposable by design, allowing you to tackle the grimiest, most stomach-turning messes with the knowledge that you can toss the evidence immediately afterward.",
     },
   ],
   relatedProducts: [

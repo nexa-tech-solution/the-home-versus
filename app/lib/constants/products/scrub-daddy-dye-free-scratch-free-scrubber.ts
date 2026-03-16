@@ -13,9 +13,9 @@ export const SCRUB_DADDY_DYE_FREE: SingleProductData = {
   date: "March 15, 2026",
   readTime: "5 min read",
   highlight:
-    "The iconic FlexTexture scrubber, now in a clean, dye-free version for the eco-conscious home.",
+    "The iconic smiling scrubber, stripped of synthetic dyes for a cleaner, minimalist kitchen aesthetic.",
   intro:
-    "Everyone knows the smiling face of Scrub Daddy, but the Dye-Free version is the hidden gem for those who prefer a minimalist aesthetic and zero synthetic colors. It still packs the same temperature-controlled 'magic'—firm in cold water for tough scrubbing and soft in warm water for light cleaning. If you're tired of bright neon sponges clashing with your modern kitchen, this is the upgrade you've been waiting for.",
+    "Everyone knows the vibrant yellow face of Scrub Daddy, but the Dye-Free version is the hidden gem for those who prefer a 'clean-label' lifestyle. It packs the exact same temperature-controlled 'magic'—firm in cold water for heavy-duty scrubbing and soft in warm water for light cleaning—without the synthetic colorants. If you're tired of neon sponges clashing with your modern quartz countertops, this is the sleek upgrade your sink has been waiting for.",
   media: [
     {
       type: "image",
@@ -40,39 +40,42 @@ export const SCRUB_DADDY_DYE_FREE: SingleProductData = {
     },
   ],
   pros: [
-    "Dye-free and colorant-free, making it a safer, more natural choice for your dishes",
-    "FlexTexture® material never scratches high-end non-stick pans or stainless steel",
-    "Odor-resistant for up to 8 weeks—no more 'stinky sponge' smell in the sink",
-    "Ergonomic 'eyes' and 'smile' design allows for 360-degree cleaning of utensils and glasses",
-    "Rinses clean easily and is dishwasher safe for deep sanitization",
+    "Dye-free and colorant-free: A safer, more natural choice for families focused on clean-label products",
+    "FlexTexture® Engineering: Lab-tested to be 100% scratch-free on high-end non-stick pans and stainless steel",
+    "Extreme Odor Resistance: Stays fresh and odor-free for up to 8 weeks—no more 'stinky sponge' smell",
+    "Ergonomic Multi-Tool: Use the 'eyes' for a 360-degree grip and the 'smile' to clean both sides of utensils at once",
+    "Dishwasher Safe: Rinses clean of debris easily and can be tossed in the top rack for a deep sanitize",
   ],
+
   cons: [
-    "The dye-free white material shows stains (like tomato sauce) faster than the original yellow",
-    "Firmness decreases over time with heavy use in very hot water",
-    "Slightly higher price point so it's best to buy in bulk packs",
+    "The pristine white material shows food stains (like tomato sauce or turmeric) more quickly than the yellow version",
+    "The foam will eventually soften and lose structural integrity after months of heavy-duty use in very hot water",
+    "Premium investment: While it lasts longer, the upfront cost is higher than generic cellulose multi-packs",
   ],
+
   specs: [
-    { label: "Material", value: "Exclusive FlexTexture® Foam" },
-    { label: "Color", value: "White (Dye-Free)" },
-    { label: "Scratch-Free", value: "Yes (Lab Tested)" },
-    { label: "Odor Resistant", value: "Yes" },
-    { label: "Special Feature", value: "Temperature-Controlled Firmness" },
+    { label: "Material", value: "Exclusive FlexTexture® Polymer" },
+    { label: "Color", value: "Natural White (Dye-Free)" },
+    { label: "Scratch-Free", value: "Yes (Safe for all surfaces)" },
+    { label: "Durability", value: "Stays Fresh for 8+ Weeks" },
+    { label: "Special Tech", value: "Water Temperature Responsive" },
   ],
+
   sections: [
     {
-      title: "The Science of FlexTexture",
+      title: "The Magic of Temperature Control",
       content:
-        "What sets Scrub Daddy apart is its responsiveness to temperature. In cold water, the foam cells stay tightly packed and rigid, giving you the 'scrubbing power' of a heavy-duty pad. In warm water, the cells soften, turning it into a gentle sponge for light wiping. It's like having two different tools in one smiling face.",
+        "What sets Scrub Daddy apart in the North American market is its responsiveness. Under cold tap water, the polymer cells stay rigid, giving you the abrasive power of a heavy-duty scouring pad without the risk of scratching. Flip the faucet to warm, and the cells soften into a malleable, absorbent sponge. It’s effectively two different cleaning tools built into one smiling face, allowing you to move from scrubbing burnt cheese to wiping delicate crystal in seconds.",
     },
     {
       title: "Why Dye-Free is the New Gold Standard",
       content:
-        "Many modern families in North America are moving away from synthetic dyes in their cleaning products. This Dye-Free version offers the exact same performance as the Original, but without any added colorants. It fits perfectly into a 'Clean-Label' household and looks much sleeker on a white quartz countertop.",
+        "Modern families are increasingly concerned about the 'extras' in their household products. This Dye-Free version offers the same legendary performance as the Original but fits perfectly into a minimalist, color-neutral kitchen. It looks sophisticated on a white marble or gray quartz countertop, proving that you don't need bright neon colors to have a professional-grade cleaning experience.",
     },
     {
-      title: "More Than Just a Cute Face",
+      title: "Design with a Purpose",
       content:
-        "The smile isn't just for branding. Slide your fingers through the eyes to reach the bottom of tall glasses, or use the smile to clean both sides of a spoon simultaneously. After 4 weeks of testing on everything from cast iron to delicate crystal, this scrubber remained our #1 choice for versatility and hygiene.",
+        "The smile isn't just a gimmick. During our testing, we found the eyes provide a perfect 360-degree grip for reaching the bottom of tall protein shakers and wine glasses. The mouth is perfectly sized to clean both sides of a spoon, fork, or knife simultaneously. It’s a masterclass in ergonomic design that makes the tedious job of dishwashing feel significantly more efficient and, dare we say, a little more fun.",
     },
   ],
   relatedProducts: [

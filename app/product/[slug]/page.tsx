@@ -20,6 +20,7 @@ import Image from "next/image";
 import { calculateReadTime } from "@/lib/utils";
 import { SITE_CONFIG, PRODUCT_DATA } from "@/lib/constants";
 import { getComparisonsByProductName } from "@/lib/data";
+import ReviewDisclaimer from "@/components/ReviewDisclaimer";
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
@@ -301,6 +302,8 @@ export default async function ProductPage({
           </p>
         </section>
 
+        <ReviewDisclaimer />
+
         {/* Pros & Cons */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           <div className="rounded-3xl border border-border bg-card overflow-hidden shadow-sm">
@@ -436,7 +439,7 @@ export default async function ProductPage({
                 key={p.slug}
                 className="group relative flex flex-col bg-white rounded-[2rem] border border-border/50 p-5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500"
               >
-                <div className="aspect-[4/3] bg-secondary/30 rounded-[1.5rem] mb-6 overflow-hidden relative">
+                <div className="aspect-4/3 bg-secondary/30 rounded-3xl mb-6 overflow-hidden relative">
                   <Image
                     src={p.image}
                     alt={p.name}

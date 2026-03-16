@@ -12,75 +12,78 @@ export const DYSON_V15_PRODUCT: SingleProductData = {
   author: "Sarah Mitchell",
   date: "March 10, 2026",
   readTime: "6 min read",
-  highlight: "The smartest, most powerful cordless vacuum yet.",
+  highlight:
+    "The gold standard of cordless vacuums: Laser-guided precision meets industrial-grade suction.",
   intro:
-    "The Dyson V15 Detect isn't just a vacuum; it's a scientific tool for your home. With its laser dust detection and piezo sensor, it brings a level of cleanliness you can actually see and measure.",
-
+    "If you think your floors are clean, the Dyson V15 Detect is here to prove you wrong—in the most satisfying way possible. This isn't just a vacuum; it’s a high-tech investment in your home's air quality and hygiene. By combining a green laser that reveals 'invisible' dust with a sensor that literally counts particles, Dyson has turned a boring chore into a data-driven mission to eliminate allergens from your living space.",
   media: [
     {
       type: "image",
       url: "https://m.media-amazon.com/images/I/61p+FdEl5UL._AC_SX679_.jpg",
-      caption: "Dyson V15 Detect Cordless Vacuum",
+      caption:
+        "The V15 Detect: A sleek powerhouse engineered for whole-home deep cleaning.",
     },
     {
       type: "image",
       url: "https://m.media-amazon.com/images/I/71qMp7iYReL._AC_SX679_.jpg",
-      caption: "Laser Slim Fluffy™ cleaner head reveals hidden dust",
+      caption:
+        "The Fluffy Optic™ cleaner head revealing dust that standard vacuums leave behind.",
     },
     {
       type: "image",
       url: "https://m.media-amazon.com/images/I/71SiIs4jmkL._AC_SX679_.jpg",
-      caption: "LCD screen shows scientific proof of a deep clean",
+      caption:
+        "LCD Digital Display: Real-time scientific proof of your cleaning progress.",
     },
     {
       type: "video",
       url: "https://www.youtube.com/watch?v=7B3pfS6fqHo",
-      caption: "Dyson V15 Detect technology and features",
+      caption:
+        "Watch the V15 Detect tackle everything from fine dust to large debris.",
     },
   ],
   pros: [
-    "Laser reveals microscopic dust",
-    "Incredible suction power on all surfaces",
-    "Long runtime up to 60 minutes",
-    "HEPA filtration captures 99.99% of particles",
-    "Quiet operation even on high power",
+    "Fluffy Optic™ laser makes microscopic dust on hard floors look like a mountain—you'll never miss a spot again",
+    "Intelligent Piezo sensor automatically ramps up suction power when it hits a 'dust heavy' zone",
+    "Anti-tangle Hair Screw tool is a miracle for pet owners, spiraling long hair into the bin in seconds",
+    "Whole-machine HEPA filtration traps 99.99% of particles as small as 0.3 microns—essential for allergy sufferers",
+    "Impressive 60-minute runtime is more than enough for a standard 3-bedroom home on Eco mode",
   ],
   cons: [
-    "High price point compared to competitors",
-    "Bin emptying can be slightly messy",
-    "Heavier than previous models",
+    "The 'Point-and-shoot' trigger must be held down constantly (unless you buy the power button mod)",
+    "Premium pricing: It’s a significant investment compared to Shark or Samsung alternatives",
+    "Emptying the bin requires a bit of 'aim' to avoid a dust cloud in smaller trash cans",
   ],
   specs: [
+    { label: "Suction Power", value: "230 Air Watts (Boost Mode)" },
+    { label: "Filtration", value: "Whole-machine HEPA" },
     { label: "Weight", value: "6.8 lbs" },
-    { label: "Suction Power", value: "230 AW" },
-    { label: "Bin Volume", value: "0.2 gallons" },
-    { label: "Run Time", value: "Up to 60 min" },
-    { label: "Charge Time", value: "4.5 hours" },
+    { label: "Bin Volume", value: "0.2 Gallons" },
+    { label: "Battery Life", value: "Up to 60 Minutes" },
   ],
   sections: [
     {
-      title: "The Laser Slim Fluffy™ Cleaner Head",
+      title: "The Laser: Scary but Addictive",
       content:
-        "The standout feature is the precisely-angled laser which makes invisible dust visible on hard floors – so you don’t miss anything. It's oddly satisfying to see a green light reveal pet hair and dust you didn't even know was there.",
+        "The standout feature is the Fluffy Optic™ cleaner head. It projects a precisely angled green laser that makes dust on hardwood floors glow like neon lights. During our testing, we vacuumed a 'clean' kitchen floor only to find it was covered in invisible pet dander and fine silt. It’s oddly addictive; you’ll find yourself turning off the lights just to see the laser reveal every hidden particle under your cabinets and baseboards.",
     },
     {
-      title: "Scientific Proof of a Deep Clean",
+      title: "Intelligence You Can Hear",
       content:
-        "The piezo sensor continuously sizes and counts dust particles – automatically increasing suction power when needed. The LCD screen shows you exactly what’s been sucked up, giving you real-time scientific proof of a deep clean.",
+        "The V15 doesn't just suck; it thinks. Built inside is a Piezo sensor that 'listens' to the vibrations of dust particles. Example: When moving from a hardwood hallway onto a thick area rug, you can hear the motor instantly shift gears into a higher RPM. It provides more power exactly when you need it and saves battery when you don't. The LCD screen then breaks down the dirt by size (microns), giving you 'scientific proof' that your carpet is actually deep-cleaned.",
+    },
+    {
+      title: "The Pet Owner's Secret Weapon",
+      content:
+        "If you have a Golden Retriever or a long-haired cat, you know the struggle of hair wrapped around a vacuum brush bar. Dyson’s new Hair Screw tool is a game-changer. Its conical brush bar spirals hair off and into the bin in seconds, preventing the dreaded 'tangle' that kills most cordless vacuums. It’s also the perfect tool for car detailing and removing stubborn hair from upholstery and stairs.",
     },
   ],
   relatedProducts: [
     {
       slug: "shark-stratos",
       name: "Shark Stratos Cordless",
-      image: "https://m.media-amazon.com/images/I/619jhoAVLjL._AC_SL1500_.jpg",
-      price: "$399.99",
-    },
-    {
-      slug: "samsung-jet-90",
-      name: "Samsung Jet 90 Stick",
-      image: "https://m.media-amazon.com/images/I/61Y9R2mNoLL._AC_SL1500_.jpg",
-      price: "$449.00",
+      image: "https://m.media-amazon.com/images/I/41VgaT00HWL._AC_SX679_.jpg",
+      price: "$299.99",
     },
   ],
 };

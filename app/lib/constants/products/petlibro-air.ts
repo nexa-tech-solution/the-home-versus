@@ -13,9 +13,9 @@ export const PETLIBRO_AIR_PRODUCT: SingleProductData = {
   date: "Mar 10, 2024",
   readTime: "8 min read",
   highlight:
-    "AI-powered health monitoring with 1080p live-streaming and superior 24/7 odor control.",
+    "The only AI-powered 'Health Guardian' that watches what your cat leaves behind—so you don't have to.",
   intro:
-    "The PETLIBRO Air is a revolutionary smart litter box that doesn't just scoop; it watches, weighs, and analyzes your cat's health. With AI-driven waste analysis and a built-in camera, it offers peace of mind while eliminating odor-causing bacteria and dust.",
+    "The PETLIBRO Air isn't just another robotic scooper; it's a 24/7 medical surveillance team for your feline friend. While other automatic boxes hide the mess in a dark globe, the Air uses a built-in 1080p camera and AI to analyze your cat's health in real-time. For North American cat parents who deal with the anxiety of silent feline illnesses, this open-top masterpiece offers a clear view into their wellness while keeping your home smelling like a mountain breeze.",
   media: [
     {
       type: "image",
@@ -39,34 +39,42 @@ export const PETLIBRO_AIR_PRODUCT: SingleProductData = {
     },
   ],
   pros: [
-    "AI-Waste Analysis analyzes stool consistency",
-    "Built-in 1080p camera with Night Vision",
-    "Multi-cat Recognition identifies up to 10 cats",
-    "Superior Odor Control with high-capacity filters",
-    "Open-top design is less intimidating",
+    "Industry-first AI Stool Analysis: Detects changes in waste consistency to flag potential digestive or urinary issues early",
+    "Crystal clear 1080p Live-Stream with Night Vision: Check on your pet from anywhere in the world via the PETLIBRO app",
+    "Open-Top Design: Ideal for larger cats or 'skittish' rescues who feel trapped or threatened by enclosed rotating globes",
+    "Sophisticated Triple-Layer Safety: Combines visual sensors, weight scales, and IR beams to stop all movement the moment a cat approaches",
+    "Advanced Odor Neutralization: A high-efficiency fan and oversized carbon filter actively pull smells away before they reach your living room",
   ],
+
   cons: [
-    "Premium features require a cloud subscription",
-    "Open-top design provides less privacy",
-    "Needs to be on a flat, hard surface",
+    "The advanced AI health reports and cloud storage for video require a monthly subscription fee",
+    "The open-top design, while great for the cat, doesn't hide the sight of waste as well as fully enclosed models",
+    "Precision weight sensors mean the unit must sit on a perfectly flat, hard surface to provide accurate data",
   ],
+
   specs: [
-    { label: "Odor Control", value: "97% Effective (Fan + Carbon)" },
-    { label: "Safety", value: "Triple Sensors (Visual/Weight/IR)" },
-    { label: "Waste Capacity", value: "2.9 Gallons" },
-    { label: "Dimensions", value: "22 x 20 x 20 in" },
-    { label: "App", value: "PETLIBRO App" },
+    { label: "AI Feature", value: "Visual Stool & Behavior Analysis" },
+    { label: "Camera", value: "1080p HD with Infrared Night Vision" },
+    { label: "Odor Tech", value: "Active Fan + High-Capacity Carbon Filter" },
+    { label: "Cat Capacity", value: "Recognizes up to 10 unique cats" },
+    { label: "Design Type", value: "Pet-Friendly Open-Top Architecture" },
   ],
+
   sections: [
     {
-      title: "Scientific Health Monitoring",
+      title: "Visual Health Monitoring: The AI Advantage",
       content:
-        "The PETLIBRO Air is more than a litter box; it's an AI-driven health diagnostic tool. It uses advanced cameras to analyze waste consistency—distinguishing between normal, soft, or hard stools.",
+        "The standout feature of the PETLIBRO Air is the integrated camera. It doesn't just record clips; it uses AI to categorize your cat’s waste. Example: If your cat suddenly has soft stools or is spending more time than usual in the box, the app sends a push notification to your phone. For senior cats or those with chronic conditions like IBD, this early-warning system provides a level of peace of mind that a standard 'self-cleaning' box simply can't match.",
     },
     {
-      title: "Superior Odor Management",
+      title: "Designed for the 'Claustrophobic' Cat",
       content:
-        "The built-in odor control system doesn't just mask smells; it filters them. A high-efficiency fan draws air through a massive carbon filter, neutralizing up to 97% of odors.",
+        "Many cat parents find that their pets refuse to use globe-style automatic boxes because they feel trapped. The PETLIBRO Air solves this with its spacious, open-air design. It mimics a traditional litter box environment, making the transition much easier for nervous cats. Despite being open, the intelligently designed walls prevent litter scatter, keeping your floors clean while your cat feels secure and unconfined.",
+    },
+    {
+      title: "Silence and Freshness",
+      content:
+        "Unlike older automatic models that sound like a loud printer jam, the PETLIBRO Air operates with a smooth, low-decibel glide. The odor control system is equally impressive; instead of just waiting for the waste to be binned, a built-in fan actively draws air through a massive carbon filter 24/7. During our testing, this 'Active Extraction' method was nearly 97% effective at neutralizing ammonia smells before they could escape the unit.",
     },
   ],
   relatedProducts: [

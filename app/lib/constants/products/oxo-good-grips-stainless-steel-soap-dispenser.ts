@@ -13,9 +13,9 @@ export const OXO_SOAP_DISPENSER_STAINLESS: SingleProductData = {
   date: "Mar 14, 2026",
   readTime: "5 min read",
   highlight:
-    "The heavy-duty, fingerprint-proof dispenser that makes handwashing a breeze.",
+    "The heavy-duty, fingerprint-proof 'Sanity-Saver' that ends the struggle of slippery soap bottles.",
   intro:
-    "Let’s be real: when your hands are covered in raw chicken or bread dough, the last thing you want to do is grab a slippery soap bottle. The OXO Good Grips Stainless Steel Soap Dispenser is engineered for those messy moments. With a massive top button designed for palm-pushing and a sleek finish that resists smudges, it’s a small upgrade that makes a huge difference in your kitchen workflow.",
+    "Let’s be real: when your hands are covered in raw chicken juice or sticky bread dough, the last thing you want to do is fumble with a slippery plastic soap bottle. The OXO Good Grips Stainless Steel Dispenser is engineered for those 'messy-handed' moments. With a massive top button designed for a quick palm-push and a finish that actually fights off smudges, it’s the small, high-quality upgrade your kitchen workflow has been begging for.",
   media: [
     {
       type: "image",
@@ -40,39 +40,42 @@ export const OXO_SOAP_DISPENSER_STAINLESS: SingleProductData = {
     },
   ],
   pros: [
-    "Large surface area pump is perfect for dispensing soap with your palm or wrist",
-    "Fingerprint-proof coating keeps the stainless steel looking clean and shiny",
-    "Non-slip base ensures the dispenser stays put even on wet countertops",
-    "Clear window at the bottom shows exactly when it's time for a refill",
-    "Wide opening makes pouring soap in mess-free and simple",
+    "Oversized 'Palm-Pump' top: Designed to be operated with your wrist or the back of your hand for germ-free dispensing",
+    "High-end Fingerprint-Proof coating: Keeps that brushed stainless steel looking pristine even in a busy, high-traffic kitchen",
+    "Solid, Weighted Base: Coupled with a non-slip ring, this dispenser won't slide across your granite or quartz countertops",
+    "Clever 'Refill Window': A subtle clear indicator at the bottom tells you exactly when you're running low—no more dry pumps",
+    "Wide-Neck opening: Makes the refilling process mess-free, fitting even large bulk-sized soap jugs without a funnel",
   ],
+
   cons: [
-    "Higher price point than basic plastic dispensers",
-    "Can occasionally drip a tiny bit if using extremely thin, watery soap",
-    "Slightly heavier footprint on the counter compared to slim bottles",
+    "A higher initial investment compared to disposable plastic bottles (but it's built to last years)",
+    "The spout is optimized for standard dish soap; extremely watery/diluted soaps may cause a minor drip",
+    "Has a slightly larger footprint than slim models, requiring about 3 inches of clear space near your sink",
   ],
+
   specs: [
-    { label: "Material", value: "Stainless Steel / BPA-Free Plastic" },
-    { label: "Capacity", value: "12 oz (355 ml)" },
-    { label: "Finish", value: "Fingerprint-Proof Brushed Stainless" },
-    { label: "Mechanism", value: "One-Handed Palm Pump" },
-    { label: "Base", value: "Non-slip, Steady-grip" },
+    { label: "Material", value: "Brushed Stainless Steel & BPA-Free Plastic" },
+    { label: "Capacity", value: "12 oz (Standard Kitchen Size)" },
+    { label: "Base Type", value: "Weighted Non-Slip Rubber" },
+    { label: "Dispensing Method", value: "One-Handed / Palm-Push" },
+    { label: "Special Feature", value: "Smudge-Resistant Finish" },
   ],
+
   sections: [
     {
-      title: "The 'Palm-Push' Philosophy",
+      title: "The 'Clean-Hand' Philosophy",
       content:
-        "Traditional soap pumps require you to use your fingertips, which is exactly where the dirt and germs are. OXO’s oversized top allows you to use the back of your hand or your wrist to pump soap. This keeps the dispenser cleaner for longer and prevents cross-contamination during heavy meal prep sessions.",
+        "Traditional soap pumps require you to use your fingertips—exactly where the bacteria from food prep reside. OXO’s oversized top allows you to use your wrist or the side of your hand to get a perfect amount of soap. This simple ergonomic shift keeps the dispenser clean for longer and significantly reduces cross-contamination during heavy cooking sessions. It's an 'Industrial-grade' feel for a residential price.",
     },
     {
-      title: "Built to Stay Put",
+      title: "Built to Stay Put Under Pressure",
       content:
-        "There's nothing more frustrating than a soap dispenser that slides across the granite every time you touch it. This unit is weighted and features a rubberized non-slip base. Even if your countertop is covered in water, this dispenser feels solid and premium, staying exactly where you placed it.",
+        "There's nothing more frustrating than a soap dispenser that tip-toes across the counter every time you push it. This unit is intentionally weighted and features a rubberized base that grips wet surfaces. Even on slippery sealed granite or wet stainless steel, it feels solid and premium. It stays where you put it, period.",
     },
     {
-      title: "No More Guesswork",
+      title: "Say Goodbye to the 'Sputter'",
       content:
-        "Most stainless steel dispensers are opaque, leaving you guessing when the soap is empty until it finally sputters out. OXO added a clever clear window at the very base. It's subtle enough to maintain the high-end look while being practical enough to tell you exactly when you need to grab the refill jug.",
+        "Most high-end stainless dispensers are opaque, leaving you guessing about your soap levels until the pump finally sputters and dies mid-dishwashing. OXO integrated a clear window at the very base that is subtle enough to maintain the aesthetic but visible enough to be practical. It’s the kind of 'thoughtful design' that North American homeowners have come to expect from the Good Grips line.",
     },
   ],
   relatedProducts: [

@@ -13,9 +13,9 @@ export const NINJA_IG651_PRODUCT: SingleProductData = {
   date: "Mar 14, 2024",
   readTime: "6 min read",
   highlight:
-    "An incredibly powerful indoor grill and flat-top griddle that delivers true outdoor searing on your countertop.",
+    "The indoor 'Outdoor' grill: Achieve authentic 500°F charcoal-style searing and diner-grade griddling without leaving your kitchen.",
   intro:
-    "The Ninja IG651 Foodi Smart XL Pro completely upgrades indoor cooking. By introducing an independently powered 500°F grill grate and a flat-top BBQ griddle, it allows you to sear, sizzle, and air fry with authentic char-grilled results—all without the smoke.",
+    "If you’re a BBQ enthusiast living through a North American winter, the Ninja IG651 Pro is your new best friend. This isn't just a glorified air fryer with a grill plate; it’s a heavy-duty searing machine. By introducing an independently powered heating element directly into the grate, Ninja has finally achieved the holy grail of indoor cooking: genuine char-grilled flavor and 'hood-up' griddling that rivals your favorite backyard BBQ.",
   media: [
     {
       type: "image",
@@ -39,34 +39,42 @@ export const NINJA_IG651_PRODUCT: SingleProductData = {
     },
   ],
   pros: [
-    "500°F independently powered grill grate for authentic, edge-to-edge searing",
-    "Included 12-inch flat top BBQ griddle is perfect for pancakes and fajitas",
-    "Hood-up cooking for direct high heat, or hood-down for surround air frying",
-    "Foodi Smart Thermometer removes all guesswork for perfect meat doneness",
-    "Extra-large capacity can comfortably fit up to 6 steaks at once",
+    "Independent 500°F powered grill grate delivers edge-to-edge searing that standard air-based grills can't touch",
+    "Hood-up cooking capability transforms the unit into a professional-grade flat-top griddle for smash burgers and fajitas",
+    "Interchangeable 12-inch BBQ griddle plate is a game-changer for large weekend breakfasts and pancakes",
+    "Integrated Foodi Smart Thermometer monitors internal temps in real-time for foolproof 'Rare to Well-Done' results",
+    "Extra-large XL capacity comfortably handles 6 steaks or 24 hot dogs, making it perfect for hosting game-day parties",
   ],
+
   cons: [
-    "Very bulky and heavy (over 27 lbs), taking up significant counter space",
-    "Storing the multiple large plates (grill, griddle, air fry basket) can be difficult",
-    "Premium price point compared to standard air fryers or basic indoor grills",
+    "Significant 'Countertop Real Estate' required: This is a heavy-duty unit (27.5 lbs) that isn't easy to move daily",
+    "Storage logistics: Managing the multiple large plates (grill, griddle, basket) requires dedicated cabinet space",
+    "The premium price point is an investment, though it effectively replaces a standalone air fryer and indoor griddle",
   ],
+
   specs: [
-    { label: "Functions", value: "7-in-1" },
-    { label: "Wattage", value: "1760W" },
-    { label: "Max Temperature", value: "500°F" },
-    { label: "Weight", value: "27.5 lbs" },
-    { label: "Dimensions", value: '15.7" x 17.4" x 11.6"' },
+    { label: "Max Temp", value: "500°F (Direct Heat Searing)" },
+    { label: "Cooking Surface", value: '12" XL Grill & Griddle' },
+    { label: "Functions", value: "7-in-1 (Grill, Griddle, Air Fry, etc.)" },
+    { label: "Weight", value: "27.5 lbs (Heavy-Duty Build)" },
+    { label: "Safety", value: "Virtually Smoke-Free Technology" },
   ],
+
   sections: [
     {
-      title: "Hood-Up and Hood-Down Versatility",
+      title: "The 500°F Difference",
       content:
-        "A major upgrade in the Pro model is the ability to cook with the hood up for intense, direct bottom heat—just like a traditional outdoor grill or diner griddle. If you drop the hood, the system engages cyclonic air technology to rapidly circulate hot air for perfect air-frying, baking, and roasting.",
+        "Most indoor grills rely on hot air to cook, often resulting in gray, steamed-looking meat. The IG651 Pro changes the game with its independently powered grill grate. This direct-contact heat reaches a scorching 500°F, creating the perfect Maillard reaction for those deep, charred grill marks you usually only get from a Weber. It’s the difference between 'good for indoor' and 'actually delicious.'",
     },
     {
-      title: "Smart Thermometer Precision",
+      title: "Diner-Style Griddling at Home",
       content:
-        "Never overcook a steak again. The integrated Foodi Smart Thermometer features 4 smart protein settings and 9 customizable doneness levels. Simply insert the probe, tell the grill how you want your food cooked (from rare to well-done), and the system will automatically stop cooking at the exact right moment.",
+        "The ability to cook with the 'Hood-Up' is what truly separates this Pro model from the rest. When you swap in the 12-inch flat-top griddle, you effectively have a professional diner-style setup. You can sear smash burgers, sauté onions, or whip up a batch of pancakes while having full access to flip and move food around. It brings the 'social' aspect of outdoor grilling right onto your countertop.",
+    },
+    {
+      title: "Scientific Precision with the Smart Probe",
+      content:
+        "Even the most experienced pitmasters have off days, but the Foodi Smart Thermometer ensures you never overcook a $40 steak again. The system features 9 customizable doneness levels. Simply insert the probe, select your protein, and the grill shuts off automatically at the exact internal temperature. During our testing, it delivered a perfect medium-rare across six different-sized fillets every single time.",
     },
   ],
   relatedProducts: [

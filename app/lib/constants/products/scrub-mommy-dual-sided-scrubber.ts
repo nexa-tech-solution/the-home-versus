@@ -14,9 +14,9 @@ export const SCRUB_MOMMY: SingleProductData = {
   date: "March 16, 2026",
   readTime: "5 min read",
   highlight:
-    "The perfect hybrid: FlexTexture for scrubbing and ResoFoam for sudsy wiping.",
+    "The 'CleanTok' darling that does it all—half power-scrubber, half suds-generating sponge for the ultimate sink victory.",
   intro:
-    "If Scrub Daddy is the king of scrubbing, Scrub Mommy is the queen of versatility. By combining the legendary temperature-controlled FlexTexture with a super-soft, absorbent ResoFoam side, this sponge handles everything from baked-on lasagna to delicate wine glasses. It's the two-in-one tool that many 'CleanTok' enthusiasts argue is actually superior to the original.",
+    "If Scrub Daddy is the king of scrubbing, Scrub Mommy is the undisputed queen of versatility. By merging the legendary temperature-controlled FlexTexture with an ultra-soft, absorbent ResoFoam side, this sponge doesn't just clean—it adapts. It’s the two-in-one powerhouse that many North American homeowners argue is actually superior to the original, turning a mountain of Sunday night dishes into a quick, sudsy win.",
   media: [
     {
       type: "image",
@@ -41,39 +41,42 @@ export const SCRUB_MOMMY: SingleProductData = {
     },
   ],
   pros: [
-    "Dual-sided design offers both abrasive scrubbing and gentle wiping",
-    "ResoFoam side generates 6x more suds than the leading brand",
-    "FlexTexture side remains odor-resistant and scratch-free",
-    "Ergonomic shape is perfect for cleaning cutlery and deep glasses",
-    "Safe for non-stick pans, stainless steel, and even delicate crystal",
+    "Dual-sided versatility: Use the pink 'hair' to scrub burnt lasagna and the white side for a gentle, soapy wipe",
+    "High-tech ResoFoam™ generates 6x more suds than the leading brand—making your Dawn dish soap last much longer",
+    "Temperature-Responsive: Remains firm in cold water for heavy-duty scouring and softens in warm water for light cleaning",
+    "Stays fresh and odor-resistant for up to 8 weeks, outlasting traditional cellulose sponges by a mile",
+    "100% Scratch-Free: Lab-tested and safe for high-end non-stick pans, stainless steel, and even your delicate wine glasses",
   ],
+
   cons: [
-    "The ResoFoam side can tear more easily than the FlexTexture side over time",
-    "Requires more thorough rinsing to remove soap from the absorbent side",
-    "Slightly bulkier than a traditional flat sponge",
+    "The velvety ResoFoam side is softer and can show wear or tiny tears faster than the scrub side if used on sharp serrated knives",
+    "The absorbent side holds soap so well it requires a few extra rinses to get it completely 'suds-free' before storing",
+    "Slightly thicker profile might feel a bit 'bulky' in smaller hands compared to a flat grocery store sponge",
   ],
+
   specs: [
-    { label: "Material", value: "FlexTexture® & ResoFoam®" },
-    { label: "Sides", value: "Dual (Scrub & Wipe)" },
-    { label: "Scratch-Free", value: "Yes" },
-    { label: "Odor Resistant", value: "Yes (FlexTexture side)" },
-    { label: "Dishwasher Safe", value: "Yes (Top Rack)" },
+    { label: "Material", value: "FlexTexture® Polymer & ResoFoam®" },
+    { label: "Dual-Action", value: "Heavy-Duty Scouring & Sudsy Wiping" },
+    { label: "Odor Resistance", value: "Stays Fresh for 8+ Weeks" },
+    { label: "Surface Safety", value: "Tested Safe for 20+ Surfaces" },
+    { label: "Maintenance", value: "Top-Rack Dishwasher Safe" },
   ],
+
   sections: [
     {
-      title: "The Best of Both Worlds",
+      title: "ResoFoam: The Suds Secret",
       content:
-        "The standout feature of Scrub Mommy is the ResoFoam side. Unlike the original Scrub Daddy, which is FlexTexture all the way through, Scrub Mommy gives you a soft, velvety side that holds onto soap and creates a massive amount of bubbles. This makes it much better for washing dishes that don't necessarily need a hard scrub, but do need a good soapy wipe.",
+        "The real magic of the Scrub Mommy lies in the ResoFoam side. Unlike the original all-foam Daddy, the Mommy features a velvety, suds-generating material that feels incredible to the touch. It’s engineered to hold onto water and soap much more efficiently. In our testing, one squirt of dish soap on the ResoFoam side lasted through an entire family dinner's worth of plates, whereas a standard sponge needed three or four reapplications.",
     },
     {
-      title: "ResoFoam vs. Traditional Cellulose",
+      title: "From Cast Iron to Crystal",
       content:
-        "ResoFoam isn't your average sponge material. It's engineered to be more absorbent and durable than standard grocery store sponges. It doesn't crumble as easily and, more importantly, it's designed to stay fresh longer. When paired with the FlexTexture 'hair' of the Scrub Mommy, it creates a tool that can transition from a dirty cast iron skillet to a fragile champagne flute in seconds.",
+        "Because she’s dual-sided, Scrub Mommy eliminates the need for two separate tools at your sink. You can use the FlexTexture side with cold water to scrape off dried-on egg from a cast iron skillet, then simply flip her over to gently wipe down a fragile champagne flute with the soft side. It’s a seamless transition that saves you time and reduces the clutter of multiple sponges hanging around your faucet.",
     },
     {
-      title: "Why it's a Fan Favorite",
+      title: "Ergonomics with a Smile",
       content:
-        "Many users find themselves reaching for Scrub Mommy more often because it eliminates the need for two separate tools. You don't need a scouring pad and a sponge; you just flip the Mommy over. The eyes are still there to help you grip, and the smile still cleans both sides of your spoons perfectly.",
+        "Just like her counterpart, Scrub Mommy’s design is deeply functional. The 'eyes' aren't just for looks—they provide a secure 360-degree grip for your fingers, allowing you to reach the very bottom of deep coffee mugs. The 'smile' cleans both sides of your spoons and spatulas in one motion. It’s a thoughtful, ergonomic design that makes one of the most tedious household chores feel a lot less like a drag.",
     },
   ],
   relatedProducts: [

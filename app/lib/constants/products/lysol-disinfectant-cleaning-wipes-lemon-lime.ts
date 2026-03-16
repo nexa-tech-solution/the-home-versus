@@ -14,9 +14,9 @@ export const LYSOL_DISINFECTANT_WIPES: SingleProductData = {
   date: "March 15, 2026",
   readTime: "6 min read",
   highlight:
-    "Kills 99.9% of viruses and bacteria—your first line of defense against the cold and flu season.",
+    "Your 10-second defense against 99.9% of germs—the undisputed MVP of a healthy North American home.",
   intro:
-    "In a world where quick sanitizing is no longer optional, Lysol Wipes have become the MVP of the modern home. From wiping down sticky grocery deliveries to disinfecting high-touch doorknobs, these wipes offer a peace of mind that liquid sprays can't match. They are thick, pre-moistened, and ready to tackle the germs that a simple paper towel would just spread around.",
+    "In a fast-paced world where 'sanitized' is the new standard, Lysol Wipes are the ultimate peace-of-mind tool. Whether you're wiping down a sticky Amazon package, disinfecting high-touch doorknobs during flu season, or cleaning up after a raw chicken prep, these wipes deliver. They offer a level of convenience and trust that liquid sprays simply can't match, turning a daunting 'deep clean' into a simple, effortless habit.",
   media: [
     {
       type: "image",
@@ -42,39 +42,42 @@ export const LYSOL_DISINFECTANT_WIPES: SingleProductData = {
     },
   ],
   pros: [
-    "Kills 99.9% of viruses and bacteria, including Salmonella and E. Coli",
-    "Triple-layered wipe design is significantly stronger than generic brands",
-    "Cleans and disinfects in one step—no extra sprays or paper towels needed",
-    "Safe for multiple surfaces including kitchen counters, bathroom fixtures, and electronics",
-    "The fresh Lemon & Lime scent provides a clean smell without the harsh bleach odor",
+    "Hospital-grade efficacy: Kills 99.9% of viruses and bacteria, including Cold & Flu viruses and E. Coli",
+    "Triple-layered durability: These wipes are significantly tougher than generic brands and won't tear mid-scrub",
+    "Bleach-free formula: Safe for a vast array of surfaces including sealed granite, finished wood, and stainless steel",
+    "One-step solution: Simultaneously cleans grease and grime while disinfecting the surface underneath",
+    "The Lemon & Lime Blossom scent provides a crisp, 'just-cleaned' aroma without the chemical punch of bleach",
   ],
+
   cons: [
-    "Not flushable; must be disposed of in the trash to avoid plumbing issues",
-    "Can leave a slight streaky residue on glass or highly reflective surfaces",
-    "The packaging lid can sometimes be tricky to snap shut, leading to dried-out top wipes",
+    "Not flushable: Like all high-strength wipes, these must go in the trash to protect your home's plumbing",
+    "Can leave minor streaks on highly reflective surfaces like glass or black gloss countertops",
+    "The moisture-lock lid requires a firm snap; if left slightly ajar, the top wipes can dry out over time",
   ],
+
   specs: [
-    { label: "Quantity", value: "240 Wipes (3 Packs of 80)" },
+    { label: "Quantity", value: "240 Wipes Total (3 Packs of 80)" },
     { label: "Scent", value: "Lemon & Lime Blossom" },
-    { label: "Material", value: "Textured Triple-Layered Fiber" },
-    { label: "Effectiveness", value: "Kills 99.9% of Germs" },
-    { label: "Safety", value: "Bleach-Free" },
+    { label: "Safety Grade", value: "Bleach-Free / Surface Safe" },
+    { label: "Germ Kill Rate", value: "99.9% of Viruses & Bacteria" },
+    { label: "Wipe Tech", value: "Textured Triple-Layered Fiber" },
   ],
+
   sections: [
     {
       title: "The Convenience of the Grab-and-Go Clean",
       content:
-        "The real power of Lysol Wipes isn't just in the chemicals—it's in the accessibility. Having a canister under the sink means you're more likely to wipe down the counter after preparing raw meat or clean the light switch after someone sneezes. It lowers the barrier to a hygienic home, turning a 'deep clean' task into a 10-second habit.",
+        "The real power of this Lysol 3-pack isn't just in the formula—it's in the distribution. Having a canister in the kitchen, one in the bathroom, and one in the car means you're always 10 seconds away from a germ-free surface. It lowers the 'activation energy' required to keep a clean home, allowing you to sanitize high-traffic zones like light switches and remote controls the moment someone in the house starts sneezing.",
     },
     {
-      title: "Surface Safety and Versatility",
+      title: "Surface Safety: Beyond the Countertop",
       content:
-        "Unlike many spray disinfectants that can be too harsh for certain materials, Lysol Wipes are bleach-free. This makes them safe for finished wood, sealed granite, and even the exterior of your smartphones (just be careful with the screen coating). They effectively lift grease and grime while simultaneously killing the pathogens underneath.",
+        "A common misconception is that disinfectants are too harsh for daily use. Because Lysol Wipes are bleach-free, they are surprisingly versatile. We've used them on everything from the exterior of smartphones (avoiding the ports) to gym equipment and office desks. They effectively lift everyday 'gunk' and fingerprints while quietly eliminating the pathogens hiding in plain sight.",
     },
     {
-      title: "Maximizing Your Wipe: The 4-Minute Rule",
+      title: "Sarah's Pro Tip: The 4-Minute Rule",
       content:
-        "To truly disinfect, the surface must remain wet for 4 minutes. A common mistake is wiping and immediately drying the area. Sarah's Pro Tip: For high-traffic germ zones like the bathroom faucet, use enough wipes to ensure the surface stays visibly wet, then let it air dry. This ensures the disinfectant has enough contact time to do its job properly.",
+        "To get the full industrial-strength disinfection promised on the label, the surface must remain wet for 4 minutes. A quick wipe-and-dry won't cut it for serious germ zones. For high-risk areas like the kitchen sink or bathroom faucet, use enough wipes to ensure the surface stays visibly wet, then let it air dry. This contact time is the secret to ensuring that 99.9% of bacteria are actually gone, not just moved around.",
     },
   ],
   relatedProducts: [

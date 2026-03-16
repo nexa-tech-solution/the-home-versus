@@ -12,9 +12,10 @@ export const SHARK_STRATOS_PRODUCT: SingleProductData = {
   author: "Sarah Mitchell",
   date: "March 11, 2026",
   readTime: "7 min read",
-  highlight: "Smart suction and best-in-class hair pickup.",
+  highlight:
+    "The ultimate 'Dyson-Killer' for pet owners: Smart dirt detection meets a home that actually smells fresh.",
   intro:
-    "The Shark Stratos is Shark's most advanced cordless vacuum to date, featuring Clean Sense IQ to detect dirt and Odor Neutralizer technology to keep your home smelling fresh.",
+    "If you've been eyeing a high-end cordless vacuum but can't justify the $700+ price tag, the Shark Stratos is the high-performance alternative your home deserves. It’s Shark's most intelligent machine to date, specifically engineered to solve the three biggest 'pain points' of cordless cleaning: hair wrap, battery waste, and that lingering 'stuffy vacuum' smell. For North American households with high-pile carpets and shedding pets, the Stratos isn't just a vacuum—it's a whole-home hygiene system.",
   media: [
     {
       type: "image",
@@ -43,41 +44,49 @@ export const SHARK_STRATOS_PRODUCT: SingleProductData = {
     },
   ],
   pros: [
-    "Excellent hair pickup with PowerFins Pro",
-    "Clean Sense IQ saves battery by adjusting power",
-    "Odor neutralizer cartridge works well",
-    "MultiFLEX wand makes under-furniture cleaning easy",
-    "More affordable than Dyson competitors",
+    "Clean Sense IQ Technology: An infrared sensor detects hidden dirt and automatically ramps up power, maximizing battery life",
+    "Best-in-Class Hair Pickup: The DuoClean PowerFins HairPro brushroll digs deep into carpets and is virtually impossible to tangle",
+    "Exclusive Odor Neutralizer Technology: A replaceable cartridge guards against 'wet dog' odors, leaving your home smelling like a fresh breeze",
+    "MultiFLEX Wand: The jointed design allows you to reach deep under beds and sofas without ever having to bend over",
+    "Anti-Allergen Complete Seal: HEPA filtration traps 99.9% of dust and allergens—a must-have for allergy sufferers",
   ],
+
   cons: [
-    "Heavier than most stick vacuums at 8.9 lbs",
-    "Battery life in high-power mode is short",
-    "Dust cup is smaller than expected",
+    "Noticeably heavier (8.9 lbs) than ultralight models; might feel fatiguing during whole-house deep cleans",
+    "The dust cup capacity is on the smaller side, requiring more frequent trips to the trash can",
+    "High-power 'Boost' mode is extremely effective but drains the battery significantly faster than Eco mode",
   ],
+
   specs: [
-    { label: "Weight", value: "8.9 lbs" },
-    { label: "Cleaning Path", value: "10 inches" },
-    { label: "Run Time", value: "Up to 60 min (Eco)" },
-    { label: "Filter Type", value: "HEPA" },
-    { label: "Special Tech", value: "Clean Sense IQ" },
+    { label: "Suction Tech", value: "Clean Sense IQ (Auto-Adjust)" },
+    { label: "Weight", value: "8.9 lbs (Sturdy Build)" },
+    { label: "Run Time", value: "Up to 60 Minutes (Eco)" },
+    { label: "Wand Type", value: "MultiFLEX (Bendable)" },
+    { label: "Odor Control", value: "Integrated Odor Neutralizer" },
   ],
+
   sections: [
     {
-      title: "Clean Sense IQ Technology",
+      title: "Clean Sense IQ: Suction with a Brain",
       content:
-        "The Stratos uses an infrared sensor to detect dirt you can't see and automatically increases power. This is great for high-traffic areas and helps maximize battery life by only using full power when necessary.",
+        "The standout feature of the Stratos is Clean Sense IQ. By using an infrared sensor at the nozzle, the vacuum 'sees' dirt levels you can't. You can actually see the indicator light on the floorhead change color as it detects debris, instantly boosting suction power when you hit a high-traffic area. It’s a level of intelligence that ensures you aren't wasting battery on clean floors while getting professional-grade results where it actually matters.",
     },
     {
-      title: "The Ultimate Tool for Pet Parents",
+      title: "MultiFLEX: Saving Your Back One Room at a Time",
       content:
-        "The DuoClean PowerFins HairPro brushroll is a game changer for long hair. It literally digs into carpets and pulls up hair that other vacuums leave behind, and it rarely gets tangled.",
+        "Traditional cordless vacuums require you to move the sofa or get on your hands and knees to clean underneath. Shark’s patented MultiFLEX wand bends at a 90-degree angle with the push of a button. This allows the floorhead to slide completely under low-profile furniture while you remain standing comfortably. It’s a 'quality-of-life' feature that North American homeowners with sectional sofas and large bed frames will appreciate daily.",
+    },
+    {
+      title: "The End of the 'Dusty Vacuum' Smell",
+      content:
+        "Most vacuums eventually start to emit a musty odor as they age, especially in homes with pets. The Shark Stratos includes a unique Odor Neutralizer cartridge that slots directly into the floorhead. As you clean, it circulates a fresh scent while trapping pathogens inside the HEPA-sealed system. It’s a small detail that makes a massive difference, ensuring your home doesn't just *look* clean, but *smells* clean too.",
     },
   ],
   relatedProducts: [
     {
       slug: "dyson-v15-detect",
       name: "Dyson V15 Detect",
-      image: "https://m.media-amazon.com/images/I/61nGFa6cXlL._AC_SL1500_.jpg",
+      image: "https://m.media-amazon.com/images/I/61p+FdEl5UL._AC_SX679_.jpg",
       price: "$749.99",
     },
   ],
