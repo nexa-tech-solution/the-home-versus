@@ -11,6 +11,7 @@ import { comparisons, categories } from "@/lib/data";
 // Client-side animations
 import { HomeClient } from "@/HomeClient";
 import TrustSection from "@/components/TrustSection";
+import Newsletter from "@/components/Newsletter";
 
 import { SITE_CONFIG } from "@/lib/constants";
 
@@ -70,6 +71,8 @@ export default function Home() {
       <HomeClient categories={categories} comparisons={comparisons} heroImage={heroImage} />
 
       <TrustSection />
+
+      <Newsletter />
 
       <SiteFooter />
     </div>
