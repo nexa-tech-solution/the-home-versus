@@ -14,6 +14,7 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
   "litter-robot-4-vs-petlibro-air": Pets.LITTER_ROBOT_VS_PETLIBRO,
   "roborock-flexi-pro-vs-dyson-v15-detect": Cleaning.ROBOROCK_VS_DYSON,
   "the-pink-stuff-vs-multipurpose-sprays": Cleaning.PINK_STUFF_VS_SPRAYS,
+  "scrub-daddy-vs-scrub-mommy": Cleaning.SCRUB_DADDY_VS_MOMMY,
 };
 
 export * from "./cleaning";

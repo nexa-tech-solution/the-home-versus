@@ -14,6 +14,10 @@ import { OXO_SOAP_DISPENSER_STAINLESS } from "./oxo-good-grips-stainless-steel-s
 import { THE_PINK_STUFF_PASTE } from "./stardrops-the-pink-stuff-cleaning-paste";
 import { PAMPERS_SENSITIVE_WIPES } from "./pampers-sensitive-baby-wipes-bulk-pack";
 import { HUGGIES_NATURAL_CARE_WIPES } from "./huggies-natural-care-sensitive-baby-wipes";
+import { LYSOL_DISINFECTANT_WIPES } from "./lysol-disinfectant-cleaning-wipes-lemon-lime";
+import { SCRUB_DADDY_DYE_FREE } from "./scrub-daddy-dye-free-scratch-free-scrubber";
+import { SCRUB_MOMMY } from "./scrub-mommy-dual-sided-scrubber";
+import { GENERIC_SPONGE } from "./generic-cellulose-scrub-sponge";
 import { SingleProductData } from "../types";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
@@ -33,6 +37,10 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "stardrops-the-pink-stuff-cleaning-paste": THE_PINK_STUFF_PASTE,
   "pampers-sensitive-baby-wipes-bulk-pack": PAMPERS_SENSITIVE_WIPES,
   "huggies-natural-care-sensitive-baby-wipes": HUGGIES_NATURAL_CARE_WIPES,
+  "lysol-disinfectant-cleaning-wipes-lemon-lime": LYSOL_DISINFECTANT_WIPES,
+  "scrub-daddy-dye-free-scratch-free-scrubber": SCRUB_DADDY_DYE_FREE,
+  "scrub-mommy-dual-sided-scrubber": SCRUB_MOMMY,
+  "generic-cellulose-scrub-sponge": GENERIC_SPONGE,
 };
 
 export * from "./dyson-v15";
@@ -51,3 +59,7 @@ export * from "./oxo-good-grips-stainless-steel-soap-dispenser";
 export * from "./stardrops-the-pink-stuff-cleaning-paste";
 export * from "./pampers-sensitive-baby-wipes-bulk-pack";
 export * from "./huggies-natural-care-sensitive-baby-wipes";
+export * from "./lysol-disinfectant-cleaning-wipes-lemon-lime";
+export * from "./scrub-daddy-dye-free-scratch-free-scrubber";
+export * from "./scrub-mommy-dual-sided-scrubber";
+export * from "./generic-cellulose-scrub-sponge";
