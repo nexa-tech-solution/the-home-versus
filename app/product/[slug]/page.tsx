@@ -89,25 +89,42 @@ export default async function ProductPage({
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: product.name,
-    image: product.image,
-    description: product.intro,
-    brand: {
+    "name": product.name,
+    "image": product.image,
+    "description": product.intro,
+    "brand": {
       "@type": "Brand",
-      name: product.name.split(" ")[0],
+      "name": product.name.split(" ")[0],
     },
-    aggregateRating: {
+    "aggregateRating": {
       "@type": "AggregateRating",
-      ratingValue: product.rating,
-      reviewCount: product.reviewCount,
+      "ratingValue": product.rating,
+      "reviewCount": product.reviewCount,
+      "bestRating": "5",
+      "worstRating": "1"
     },
-    offers: {
+    "offers": {
       "@type": "Offer",
-      url: product.amazonUrl,
-      priceCurrency: "USD",
-      price: product.price.replace("$", "").replace(",", ""),
-      availability: "https://schema.org/InStock",
+      "url": product.amazonUrl,
+      "priceCurrency": "USD",
+      "price": product.price.replace("$", "").replace(",", ""),
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split('T')[0]
     },
+    "review": {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": product.author,
+        "url": `${SITE_CONFIG.url}/about`
+      },
+      "datePublished": new Date(product.date).toISOString(),
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": product.rating,
+        "bestRating": "5"
+      }
+    }
   };
 
   const breadcrumbSchema = {

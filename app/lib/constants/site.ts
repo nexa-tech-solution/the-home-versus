@@ -17,4 +17,10 @@ export const SITE_CONFIG = {
   amazonAffiliateDisclosure: "As an Amazon Associate, we earn from qualifying purchases.",
   copyright: `© ${new Date().getFullYear()} TheHomeVersus.com`,
   contactEmail: "cs.nexatech@gmail.com",
+  social: {
+    facebook: "https://facebook.com/thehomeversus",
+    instagram: "https://instagram.com/thehomeversus",
+    twitter: "https://twitter.com/thehomeversus",
+    youtube: "https://youtube.com/@thehomeversus",
+  }
 };

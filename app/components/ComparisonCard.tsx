@@ -15,6 +15,7 @@ interface ComparisonCardProps {
   snippet: string;
   winner?: string;
   index?: number;
+  priority?: boolean;
 }
 
 import Image from "next/image";
@@ -30,6 +31,7 @@ const ComparisonCard = ({
   snippet,
   winner,
   index = 0,
+  priority = false,
 }: ComparisonCardProps) => {
   return (
     <motion.div
@@ -65,6 +67,7 @@ const ComparisonCard = ({
                     fill
                     className="object-contain relative z-0" 
                     sizes="120px"
+                    priority={priority}
                 />
               </div>
               <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 text-center line-clamp-1 w-full px-2">{productA}</p>
@@ -79,6 +82,7 @@ const ComparisonCard = ({
                     fill
                     className="object-contain relative z-0" 
                     sizes="120px"
+                    priority={priority}
                 />
               </div>
               <p className="text-[10px] font-black uppercase tracking-widest text-foreground/40 text-center line-clamp-1 w-full px-2">{productB}</p>

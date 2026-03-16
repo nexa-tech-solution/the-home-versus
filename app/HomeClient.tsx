@@ -151,7 +151,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           {comparisons.map((comp, i) => (
-            <ComparisonCard key={comp.slug} {...comp} index={i} />
+            <ComparisonCard key={comp.slug} {...comp} index={i} priority={i < 2} />
           ))}
         </div>
       </section>

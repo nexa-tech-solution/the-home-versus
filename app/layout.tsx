@@ -59,6 +59,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": SITE_CONFIG.name,
+              "url": SITE_CONFIG.url,
+              "logo": `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": SITE_CONFIG.contactEmail,
+                "contactType": "customer service",
+              },
+              "sameAs": Object.values(SITE_CONFIG.social),
+            }),
+          }}
+        />
         <GoogleAdSense publisherId={publisherId} />
         {children}
         <Analytics />

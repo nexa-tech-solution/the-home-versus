@@ -14,7 +14,7 @@ import ReadingProgress from "@/components/ReadingProgress";
 // Client-side animations
 import { ArticleClient } from "@/compare/[slug]/ArticleClient";
 
-import { SITE_CONFIG, ARTICLE_DATA, COMPARISONS } from "@/lib/constants";
+import { SITE_CONFIG, ARTICLE_DATA, COMPARISONS, PRODUCT_DATA } from "@/lib/constants";
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
@@ -78,43 +78,66 @@ export default async function ComparisonArticlePage({
     );
   }
 
+  // Attempt to find full product data for better schema
+  const productAData = article.productA.slug ? PRODUCT_DATA[article.productA.slug] : null;
+  const productBData = article.productB.slug ? PRODUCT_DATA[article.productB.slug] : null;
+  
+  const winnerRef = article.verdict.overallWinner.toLowerCase();
+  const winnerData = (productAData && winnerRef.includes(productAData.name.toLowerCase().split(' ')[0])) ? productAData : 
+                    (productBData && winnerRef.includes(productBData.name.toLowerCase().split(' ')[0])) ? productBData : null;
+
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    headline: article.title,
-    description: article.intro,
-    itemReviewed: {
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${SITE_CONFIG.url}/compare/${slug}`
+    },
+    "headline": article.title,
+    "description": article.intro,
+    "image": [article.productA.image, article.productB.image],
+    "itemReviewed": {
       "@type": "Product",
-      name: article.verdict.overallWinner,
-      image: article.productA.image,
-      brand: {
+      "name": winnerData?.name || article.verdict.overallWinner,
+      "image": winnerData?.image || article.productA.image,
+      "brand": {
         "@type": "Brand",
-        name: article.verdict.overallWinner.split(" ")[0],
+        "name": winnerData?.name.split(" ")[0] || article.verdict.overallWinner.split(" ")[0],
       },
-      offers: {
+      "aggregateRating": winnerData ? {
+        "@type": "AggregateRating",
+        "ratingValue": winnerData.rating,
+        "reviewCount": winnerData.reviewCount,
+        "bestRating": "5",
+        "worstRating": "1"
+      } : undefined,
+      "offers": {
         "@type": "Offer",
-        priceCurrency: "USD",
-        price: article.productA.price.replace("$", "").replace(",", ""),
-        availability: "https://schema.org/InStock",
-        url: article.productA.amazonUrl,
+        "priceCurrency": "USD",
+        "price": (winnerData?.price || article.productA.price).replace("$", "").replace(",", ""),
+        "availability": "https://schema.org/InStock",
+        "url": winnerData?.amazonUrl || article.productA.amazonUrl,
+        "priceValidUntil": new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split('T')[0]
       },
     },
-    author: {
+    "author": {
       "@type": "Person",
-      name: article.author,
+      "name": article.author,
+      "url": `${SITE_CONFIG.url}/about`
     },
-    datePublished: article.date,
-    reviewRating: {
+    "datePublished": new Date(article.date).toISOString(),
+    "dateModified": new Date(article.date).toISOString(),
+    "reviewRating": {
       "@type": "Rating",
-      ratingValue: "4.5",
-      bestRating: "5",
+      "ratingValue": winnerData?.rating || "4.5",
+      "bestRating": "5",
     },
-    publisher: {
+    "publisher": {
       "@type": "Organization",
-      name: SITE_CONFIG.name,
-      logo: {
+      "name": SITE_CONFIG.name,
+      "logo": {
         "@type": "ImageObject",
-        url: SITE_CONFIG.ogImage,
+        "url": `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
       },
     },
   };
@@ -122,24 +145,24 @@ export default async function ComparisonArticlePage({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
+    "itemListElement": [
       {
         "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: SITE_CONFIG.url,
+        "position": 1,
+        "name": "Home",
+        "item": SITE_CONFIG.url,
       },
       {
         "@type": "ListItem",
-        position: 2,
-        name: article.category,
-        item: `${SITE_CONFIG.url}/category/${article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
+        "position": 2,
+        "name": article.category,
+        "item": `${SITE_CONFIG.url}/category/${article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
       },
       {
         "@type": "ListItem",
-        position: 3,
-        name: article.title,
-        item: `${SITE_CONFIG.url}/compare/${slug}`,
+        "position": 3,
+        "name": article.title,
+        "item": `${SITE_CONFIG.url}/compare/${slug}`,
       },
     ],
   };
