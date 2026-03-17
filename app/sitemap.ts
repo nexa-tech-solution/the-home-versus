@@ -5,11 +5,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.url;
 
   // Static routes
-  const routes = ['', '/search'].map((route) => ({
+  const routes = ['', '/search', '/comparisons', '/products', '/about', '/privacy', '/affiliate-disclosure'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'daily' as const,
-    priority: 1,
+    priority: route === '' ? 1 : 0.8,
   }));
 
   // Category routes

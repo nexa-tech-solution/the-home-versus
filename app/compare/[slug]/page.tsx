@@ -15,7 +15,7 @@ import ReviewDisclaimer from "@/components/ReviewDisclaimer";
 // Client-side animations
 import { ArticleClient } from "@/compare/[slug]/ArticleClient";
 
-import { SITE_CONFIG, ARTICLE_DATA, COMPARISONS, PRODUCT_DATA } from "@/lib/constants";
+import { SITE_CONFIG, ARTICLE_DATA, COMPARISONS, PRODUCT_DATA, CATEGORIES } from "@/lib/constants";
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
@@ -157,7 +157,7 @@ export default async function ComparisonArticlePage({
         "@type": "ListItem",
         "position": 2,
         "name": article.category,
-        "item": `${SITE_CONFIG.url}/category/${article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
+        "item": `${SITE_CONFIG.url}/category/${CATEGORIES.find(c => c.name.toLowerCase() === article.category.toLowerCase())?.slug || article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
       },
       {
         "@type": "ListItem",

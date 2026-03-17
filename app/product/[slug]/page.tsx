@@ -18,7 +18,7 @@ import ReadingProgress from "@/components/ReadingProgress";
 import ProductMediaGallery from "@/components/ProductMediaGallery";
 import Image from "next/image";
 import { calculateReadTime } from "@/lib/utils";
-import { SITE_CONFIG, PRODUCT_DATA } from "@/lib/constants";
+import { SITE_CONFIG, PRODUCT_DATA, CATEGORIES } from "@/lib/constants";
 import { getComparisonsByProductName } from "@/lib/data";
 import ReviewDisclaimer from "@/components/ReviewDisclaimer";
 
@@ -142,7 +142,7 @@ export default async function ProductPage({
         "@type": "ListItem",
         position: 2,
         name: product.category,
-        item: `${SITE_CONFIG.url}/category/${product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
+        item: `${SITE_CONFIG.url}/category/${CATEGORIES.find(c => c.name.toLowerCase() === product.category.toLowerCase())?.slug || product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
       },
       {
         "@type": "ListItem",

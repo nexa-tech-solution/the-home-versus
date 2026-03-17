@@ -8,6 +8,9 @@ import { AlertCircle, ExternalLink } from "lucide-react";
 export const metadata: Metadata = {
   title: `Affiliate Disclosure | ${SITE_CONFIG.name}`,
   description: `Find out how ${SITE_CONFIG.name} supports our testing efforts through affiliate partnerships.`,
+  alternates: {
+    canonical: `${SITE_CONFIG.url}/affiliate-disclosure`,
+  },
 };
 
 export default function AffiliatePage() {

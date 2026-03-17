@@ -7,6 +7,9 @@ import { CheckCircle2, Heart, Shield, Users } from "lucide-react";
 export const metadata: Metadata = {
   title: `About Us | ${SITE_CONFIG.name}`,
   description: `Learn more about ${SITE_CONFIG.name} and our mission to provide honest, real-world product comparisons for modern families.`,
+  alternates: {
+    canonical: `${SITE_CONFIG.url}/about`,
+  },
 };
 
 export default function AboutPage() {
