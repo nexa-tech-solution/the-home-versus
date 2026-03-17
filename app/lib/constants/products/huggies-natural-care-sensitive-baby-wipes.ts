@@ -85,6 +85,7 @@ export const HUGGIES_NATURAL_CARE_WIPES: SingleProductData = {
       name: "Huggies Little Snugglers Size 1 (198 Count)",
       image: "https://m.media-amazon.com/images/I/81sjklWzCCL._AC_SX679_.jpg",
       price: "$42.22",
+      amazonUrl: "https://amzn.to/4uzfe1w",
     },
   ],
 };

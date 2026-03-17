@@ -87,6 +87,7 @@ export const TIDY_CATS_LIGHTWEIGHT_GLADE: SingleProductData = {
       name: "Fancy Feast Gravy Lovers (24-Count Variety Pack)",
       image: "https://m.media-amazon.com/images/I/71ldASvM7YL._AC_SX679_.jpg",
       price: "$21.12",
+      amazonUrl: "https://amzn.to/4rEEvEX",
     },
   ],
 };

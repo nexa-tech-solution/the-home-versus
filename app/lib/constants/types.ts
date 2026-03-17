@@ -106,6 +106,7 @@ export interface SingleProductData {
     name: string;
     image: string;
     price: string;
+    amazonUrl?: string;
   }[];
   faqs?: {
     question: string;

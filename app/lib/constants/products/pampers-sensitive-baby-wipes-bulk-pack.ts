@@ -88,6 +88,7 @@ export const PAMPERS_SENSITIVE_WIPES: SingleProductData = {
       name: "Pampers Swaddlers Diapers Size 1 (198 Count)",
       image: "https://m.media-amazon.com/images/I/71ReIQsSrNL._AC_SX679_.jpg",
       price: "$64.99",
+      amazonUrl: "https://amzn.to/3PH5qCo",
     },
   ],
 };
