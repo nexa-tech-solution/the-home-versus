@@ -6,7 +6,7 @@ export const PURINA_TIDY_CARE_VS_LIGHTWEIGHT: ArticleData = {
   slug: "purina-tidy-care-alert-vs-lightweight-glade",
   title:
     "Purina Tidy Care Alert vs. Tidy Cats LightWeight: Health Monitoring or Ultimate Convenience?",
-  category: "Pet Care Guides",
+  category: "Pets",
   snippet:
     "Should you prioritize monitoring your cat's health with pH-sensitive crystals or save your back with 50% lighter clay litter? Sarah Mitchell breaks down Purina's two most innovative formulas.",
   author: "Sarah Mitchell",
