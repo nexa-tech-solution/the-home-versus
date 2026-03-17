@@ -20,6 +20,8 @@ import { SCRUB_MOMMY } from "./scrub-mommy-dual-sided-scrubber";
 import { GENERIC_SPONGE } from "./generic-cellulose-scrub-sponge";
 import { SingleProductData } from "../types";
 import { INSPIRE_HEAVY_DUTY_NITRILE_GLOVES } from "./inspire-heavy-duty-nitrile-gloves-6mil-8mil";
+import { TIDY_CARE_ALERT_LITTER } from "./purina-tidy-cats-tidy-care-alert-health-monitoring";
+import { TIDY_CATS_LIGHTWEIGHT_GLADE } from "./purina-tidy-cats-lightweight-glade-multi-cat";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "dyson-v15-detect": DYSON_V15_PRODUCT,
@@ -43,6 +45,8 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "scrub-mommy-dual-sided-scrubber": SCRUB_MOMMY,
   "generic-cellulose-scrub-sponge": GENERIC_SPONGE,
   "inspire-heavy-duty-nitrile-gloves-6mil-8mil": INSPIRE_HEAVY_DUTY_NITRILE_GLOVES,
+  "purina-tidy-cats-tidy-care-alert-health-monitoring": TIDY_CARE_ALERT_LITTER,
+  "purina-tidy-cats-lightweight-glade-multi-cat": TIDY_CATS_LIGHTWEIGHT_GLADE,
 };
 
 export * from "./dyson-v15";
@@ -66,3 +70,5 @@ export * from "./scrub-daddy-dye-free-scratch-free-scrubber";
 export * from "./scrub-mommy-dual-sided-scrubber";
 export * from "./generic-cellulose-scrub-sponge";
 export * from "./inspire-heavy-duty-nitrile-gloves-6mil-8mil";
+export * from "./purina-tidy-cats-tidy-care-alert-health-monitoring";
+export * from "./purina-tidy-cats-lightweight-glade-multi-cat";
