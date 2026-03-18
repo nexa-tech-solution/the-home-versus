@@ -16,6 +16,7 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
   "the-pink-stuff-vs-multipurpose-sprays": Cleaning.PINK_STUFF_VS_SPRAYS,
   "scrub-daddy-vs-scrub-mommy": Cleaning.SCRUB_DADDY_VS_MOMMY,
   "purina-tidy-care-alert-vs-lightweight-glade": Pets.PURINA_TIDY_CARE_VS_LIGHTWEIGHT,
+  "airrobo-pg100-vs-oneisall-7in1": Pets.AIRROBO_VS_ONEISALL,
 };
 
 export * from "./cleaning";
