@@ -15,7 +15,13 @@ import ReviewDisclaimer from "@/components/ReviewDisclaimer";
 // Client-side animations
 import { ArticleClient } from "@/compare/[slug]/ArticleClient";
 
-import { SITE_CONFIG, ARTICLE_DATA, COMPARISONS, PRODUCT_DATA, CATEGORIES } from "@/lib/constants";
+import {
+  SITE_CONFIG,
+  ARTICLE_DATA,
+  COMPARISONS,
+  PRODUCT_DATA,
+  CATEGORIES,
+} from "@/lib/constants";
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
@@ -80,65 +86,83 @@ export default async function ComparisonArticlePage({
   }
 
   // Attempt to find full product data for better schema
-  const productAData = article.productA.slug ? PRODUCT_DATA[article.productA.slug] : null;
-  const productBData = article.productB.slug ? PRODUCT_DATA[article.productB.slug] : null;
-  
+  const productAData = article.productA.slug
+    ? PRODUCT_DATA[article.productA.slug]
+    : null;
+  const productBData = article.productB.slug
+    ? PRODUCT_DATA[article.productB.slug]
+    : null;
+
   const winnerRef = article.verdict.overallWinner.toLowerCase();
-  const winnerData = (productAData && winnerRef.includes(productAData.name.toLowerCase().split(' ')[0])) ? productAData : 
-                    (productBData && winnerRef.includes(productBData.name.toLowerCase().split(' ')[0])) ? productBData : null;
+  const winnerData =
+    productAData &&
+    winnerRef.includes(productAData.name.toLowerCase().split(" ")[0])
+      ? productAData
+      : productBData &&
+          winnerRef.includes(productBData.name.toLowerCase().split(" ")[0])
+        ? productBData
+        : null;
 
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    "mainEntityOfPage": {
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_CONFIG.url}/compare/${slug}`
+      "@id": `${SITE_CONFIG.url}/compare/${slug}`,
     },
-    "headline": article.title,
-    "description": article.intro,
-    "image": [article.productA.image, article.productB.image],
-    "itemReviewed": {
+    headline: article.title,
+    description: article.intro,
+    image: [article.productA.image, article.productB.image],
+    itemReviewed: {
       "@type": "Product",
-      "name": winnerData?.name || article.verdict.overallWinner,
-      "image": winnerData?.image || article.productA.image,
-      "brand": {
+      name: winnerData?.name || article.verdict.overallWinner,
+      image: winnerData?.image || article.productA.image,
+      brand: {
         "@type": "Brand",
-        "name": winnerData?.name.split(" ")[0] || article.verdict.overallWinner.split(" ")[0],
+        name:
+          winnerData?.name.split(" ")[0] ||
+          article.verdict.overallWinner.split(" ")[0],
       },
-      "aggregateRating": winnerData ? {
-        "@type": "AggregateRating",
-        "ratingValue": winnerData.rating,
-        "reviewCount": winnerData.reviewCount,
-        "bestRating": "5",
-        "worstRating": "1"
-      } : undefined,
-      "offers": {
+      aggregateRating: winnerData
+        ? {
+            "@type": "AggregateRating",
+            ratingValue: winnerData.rating,
+            reviewCount: winnerData.reviewCount,
+            bestRating: "5",
+            worstRating: "1",
+          }
+        : undefined,
+      offers: {
         "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": (winnerData?.price || article.productA.price).replace("$", "").replace(",", ""),
-        "availability": "https://schema.org/InStock",
-        "url": winnerData?.amazonUrl || article.productA.amazonUrl,
-        "priceValidUntil": new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split('T')[0]
+        priceCurrency: "USD",
+        price: (winnerData?.price || article.productA.price)
+          .replace("$", "")
+          .replace(",", ""),
+        availability: "https://schema.org/InStock",
+        url: winnerData?.amazonUrl || article.productA.amazonUrl,
+        priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1)
+          .toISOString()
+          .split("T")[0],
       },
     },
-    "author": {
+    author: {
       "@type": "Person",
-      "name": article.author,
-      "url": `${SITE_CONFIG.url}/about`
+      name: article.author,
+      url: `${SITE_CONFIG.url}/about`,
     },
-    "datePublished": new Date(article.date).toISOString(),
-    "dateModified": new Date(article.date).toISOString(),
-    "reviewRating": {
+    datePublished: new Date(article.date).toISOString(),
+    dateModified: new Date(article.date).toISOString(),
+    reviewRating: {
       "@type": "Rating",
-      "ratingValue": winnerData?.rating || "4.5",
-      "bestRating": "5",
+      ratingValue: winnerData?.rating || "4.5",
+      bestRating: "5",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": SITE_CONFIG.name,
-      "logo": {
+      name: SITE_CONFIG.name,
+      logo: {
         "@type": "ImageObject",
-        "url": `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
+        url: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
       },
     },
   };
@@ -146,24 +170,24 @@ export default async function ComparisonArticlePage({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": SITE_CONFIG.url,
+        position: 1,
+        name: "Home",
+        item: SITE_CONFIG.url,
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": article.category,
-        "item": `${SITE_CONFIG.url}/category/${CATEGORIES.find(c => c.name.toLowerCase() === article.category.toLowerCase())?.slug || article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
+        position: 2,
+        name: article.category,
+        item: `${SITE_CONFIG.url}/category/${CATEGORIES.find((c) => c.name.toLowerCase().replace(" guides", "").trim() === article.category.toLowerCase().replace(" guides", "").trim())?.slug || article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": article.title,
-        "item": `${SITE_CONFIG.url}/compare/${slug}`,
+        position: 3,
+        name: article.title,
+        item: `${SITE_CONFIG.url}/compare/${slug}`,
       },
     ],
   };
@@ -334,6 +358,29 @@ export default async function ComparisonArticlePage({
               ))}
           </div>
         </section>
+        {/* FAQs Section */}
+        {article.faqs && article.faqs.length > 0 && (
+          <section className="mt-24 pt-16 border-t border-border">
+            <h2 className="font-display text-3xl font-bold text-foreground mb-10 flex items-center gap-3">
+              ❓ Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              {article.faqs.map((faq: any, index: number) => (
+                <div 
+                  key={index} 
+                  className="bg-card rounded-2xl border border-border p-6 md:p-8 hover:border-accent/20 transition-all"
+                >
+                  <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                    {faq.question}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </article>
 
       <SiteFooter />

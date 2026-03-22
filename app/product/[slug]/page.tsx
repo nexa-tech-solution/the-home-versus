@@ -90,42 +90,44 @@ export default async function ProductPage({
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": product.name,
-    "image": product.image,
-    "description": product.intro,
-    "brand": {
+    name: product.name,
+    image: product.image,
+    description: product.intro,
+    brand: {
       "@type": "Brand",
-      "name": product.name.split(" ")[0],
+      name: product.name.split(" ")[0],
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": product.rating,
-      "reviewCount": product.reviewCount,
-      "bestRating": "5",
-      "worstRating": "1"
+      ratingValue: product.rating,
+      reviewCount: product.reviewCount,
+      bestRating: "5",
+      worstRating: "1",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "url": product.amazonUrl,
-      "priceCurrency": "USD",
-      "price": product.price.replace("$", "").replace(",", ""),
-      "availability": "https://schema.org/InStock",
-      "priceValidUntil": new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split('T')[0]
+      url: product.amazonUrl,
+      priceCurrency: "USD",
+      price: product.price.replace("$", "").replace(",", ""),
+      availability: "https://schema.org/InStock",
+      priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1)
+        .toISOString()
+        .split("T")[0],
     },
-    "review": {
+    review: {
       "@type": "Review",
-      "author": {
+      author: {
         "@type": "Person",
-        "name": product.author,
-        "url": `${SITE_CONFIG.url}/about`
+        name: product.author,
+        url: `${SITE_CONFIG.url}/about`,
       },
-      "datePublished": new Date(product.date).toISOString(),
-      "reviewRating": {
+      datePublished: new Date(product.date).toISOString(),
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": product.rating,
-        "bestRating": "5"
-      }
-    }
+        ratingValue: product.rating,
+        bestRating: "5",
+      },
+    },
   };
 
   const breadcrumbSchema = {
@@ -142,7 +144,7 @@ export default async function ProductPage({
         "@type": "ListItem",
         position: 2,
         name: product.category,
-        item: `${SITE_CONFIG.url}/category/${CATEGORIES.find(c => c.name.toLowerCase() === product.category.toLowerCase())?.slug || product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
+        item: `${SITE_CONFIG.url}/category/${CATEGORIES.find((c) => c.name.toLowerCase().replace(" guides", "").trim() === product.category.toLowerCase().replace(" guides", "").trim())?.slug || product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
       },
       {
         "@type": "ListItem",
@@ -479,6 +481,29 @@ export default async function ProductPage({
             ))}
           </div>
         </section>
+        {/* FAQs Section */}
+        {product.faqs && product.faqs.length > 0 && (
+          <section className="mt-24 pt-16 border-t border-border">
+            <h2 className="font-display text-3xl font-bold text-foreground mb-10 flex items-center gap-3">
+              ❓ Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              {product.faqs.map((faq: any, index: number) => (
+                <div 
+                  key={index} 
+                  className="bg-card rounded-2xl border border-border p-6 md:p-8 hover:border-accent/20 transition-all"
+                >
+                  <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                    {faq.question}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
 
       <SiteFooter />

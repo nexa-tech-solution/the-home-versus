@@ -13,9 +13,11 @@ import { calculateReadTime } from "../utils";
 
 export const CATEGORIES: Category[] = RAW_CATEGORIES.map((cat: Category) => ({
   ...cat,
-  count: Object.values(ARTICLE_DATA).filter(article => 
-    article.category.toLowerCase() === cat.name.toLowerCase()
-  ).length
+  count: Object.values(ARTICLE_DATA).filter(article => {
+    const artCat = article.category.toLowerCase().replace(" guides", "").trim();
+    const catName = cat.name.toLowerCase().replace(" guides", "").trim();
+    return artCat === catName;
+  }).length
 }));
 
 export const COMPARISONS: ComparisonSnippet[] = Object.values(ARTICLE_DATA).map((article: ArticleData) => {

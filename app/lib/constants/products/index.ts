@@ -24,6 +24,8 @@ import { TIDY_CARE_ALERT_LITTER } from "./purina-tidy-cats-tidy-care-alert-healt
 import { TIDY_CATS_LIGHTWEIGHT_GLADE } from "./purina-tidy-cats-lightweight-glade-multi-cat";
 import { AIRROBO_PG100_VACUUM } from "./airrobo-pg100-dog-grooming-vacuum-kit";
 import { ONEISALL_7IN1_VACUUM } from "./oneisall-dog-grooming-vacuum-clipper-nail-grinder";
+import { ELECTRIC_SPIN_SCRUBBER } from "./electric-spin-scrubber-cordless-power-shower";
+import { RUBBERMAID_REVEAL_18PC_KIT } from "./rubbermaid-reveal-power-scrubber-18-piece-kit";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "dyson-v15-detect": DYSON_V15_PRODUCT,
@@ -51,6 +53,8 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "purina-tidy-cats-lightweight-glade-multi-cat": TIDY_CATS_LIGHTWEIGHT_GLADE,
   "airrobo-pg100-dog-grooming-vacuum-kit": AIRROBO_PG100_VACUUM,
   "oneisall-dog-grooming-vacuum-clipper-nail-grinder": ONEISALL_7IN1_VACUUM,
+  "electric-spin-scrubber-cordless-power-shower": ELECTRIC_SPIN_SCRUBBER,
+  "rubbermaid-reveal-power-scrubber-18-piece-kit": RUBBERMAID_REVEAL_18PC_KIT,
 };
 
 export * from "./dyson-v15";
@@ -78,3 +82,5 @@ export * from "./purina-tidy-cats-tidy-care-alert-health-monitoring";
 export * from "./purina-tidy-cats-lightweight-glade-multi-cat";
 export * from "./airrobo-pg100-dog-grooming-vacuum-kit";
 export * from "./oneisall-dog-grooming-vacuum-clipper-nail-grinder";
+export * from "./electric-spin-scrubber-cordless-power-shower";
+export * from "./rubbermaid-reveal-power-scrubber-18-piece-kit";

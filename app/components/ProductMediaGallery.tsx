@@ -108,7 +108,7 @@ export default function ProductMediaGallery({
                 {item.thumbnail ? (
                   <Image
                     src={item.thumbnail}
-                    alt=""
+                    alt={`${productName} thumbnail ${index + 1}`}
                     fill
                     className="object-cover"
                     sizes="150px"
@@ -125,7 +125,7 @@ export default function ProductMediaGallery({
             ) : (
               <Image
                 src={item.url}
-                alt=""
+                alt={`${productName} thumbnail ${index + 1}`}
                 fill
                 className="object-cover bg-white p-2"
                 sizes="150px"
