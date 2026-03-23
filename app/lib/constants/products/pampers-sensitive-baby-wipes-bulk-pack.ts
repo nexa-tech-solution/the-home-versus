@@ -3,7 +3,7 @@ import { SingleProductData } from "../types";
 export const PAMPERS_SENSITIVE_WIPES: SingleProductData = {
   slug: "pampers-sensitive-baby-wipes-bulk-pack",
   name: "Pampers Sensitive Baby Wipes (8 Pop-Top Packs)",
-  category: "Baby Essentials",
+  category: "Baby & Kids",
   image: "https://m.media-amazon.com/images/I/61loN9foTiL._AC_SL1000_.jpg",
   price: "$23.47",
   amazonUrl: "https://amzn.to/4rAsjF0",

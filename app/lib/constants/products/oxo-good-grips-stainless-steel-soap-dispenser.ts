@@ -3,7 +3,7 @@ import { SingleProductData } from "../types";
 export const OXO_SOAP_DISPENSER_STAINLESS: SingleProductData = {
   slug: "oxo-good-grips-stainless-steel-soap-dispenser",
   name: "OXO Good Grips Stainless Steel Soap Dispenser",
-  category: "Kitchen Accessories",
+  category: "Kitchen",
   image: "https://m.media-amazon.com/images/I/61GaZcd6ojL._AC_SX569_.jpg",
   price: "$25.92",
   amazonUrl: "https://amzn.to/4dly7yE",

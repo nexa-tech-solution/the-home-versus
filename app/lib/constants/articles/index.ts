@@ -18,6 +18,8 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
   "purina-tidy-care-alert-vs-lightweight-glade": Pets.PURINA_TIDY_CARE_VS_LIGHTWEIGHT,
   "airrobo-pg100-vs-oneisall-7in1": Pets.AIRROBO_VS_ONEISALL,
   "electric-spin-scrubber-vs-rubbermaid-reveal": Cleaning.ELECTRIC_SCRUBBER_COMPARISON,
+  "ninja-kitchen-system-vs-wantjoin-professional-blender": Kitchen.NINJA_VS_WANTJOIN_BLENDER,
+  "bfpethome-orthopedic-vs-standard-dog-bed": Pets.BFPETHOME_VS_STANDARD_BED,
 };
 
 export * from "./cleaning";

@@ -332,6 +332,8 @@ export default async function ComparisonArticlePage({
                         fill
                         className="object-contain p-1"
                         sizes="48px"
+                        unoptimized
+                        loading="lazy"
                       />
                     </div>
                     <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold">
@@ -344,6 +346,8 @@ export default async function ComparisonArticlePage({
                         fill
                         className="object-contain p-1"
                         sizes="48px"
+                        unoptimized
+                        loading="lazy"
                       />
                     </div>
                   </div>

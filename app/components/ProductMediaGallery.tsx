@@ -76,6 +76,7 @@ export default function ProductMediaGallery({
               fill
               className="object-contain p-8 bg-white"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-black/0 group-hover/main:bg-black/5 transition-colors flex items-center justify-center opacity-0 group-hover/main:opacity-100">
               <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg text-accent">
@@ -112,6 +113,8 @@ export default function ProductMediaGallery({
                     fill
                     className="object-cover"
                     sizes="150px"
+                    unoptimized
+                    loading="lazy"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -129,6 +132,8 @@ export default function ProductMediaGallery({
                 fill
                 className="object-cover bg-white p-2"
                 sizes="150px"
+                unoptimized
+                loading="lazy"
               />
             )}
           </button>

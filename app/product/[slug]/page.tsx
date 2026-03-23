@@ -413,6 +413,8 @@ export default async function ProductPage({
                       fill
                       className="object-contain p-2"
                       sizes="80px"
+                      unoptimized
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex-1">
@@ -448,6 +450,7 @@ export default async function ProductPage({
                     fill
                     className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, 40vw"
+                    loading="lazy"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-black text-accent uppercase tracking-widest shadow-sm">
                     Top Rated

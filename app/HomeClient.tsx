@@ -54,6 +54,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
                 alt="Detailed side-by-side comparison of home appliances in a real family kitchen"
                 className="rounded-3xl shadow-2xl w-full border border-border"
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -93,6 +94,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
                         fill
                         className="object-contain" 
                         sizes="40px"
+                        unoptimized
                       />
                     ) : (
                       <span className="text-xl">{cat.icon}</span>

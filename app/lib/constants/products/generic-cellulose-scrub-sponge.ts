@@ -3,7 +3,7 @@ import { SingleProductData } from "../types";
 export const GENERIC_SPONGE: SingleProductData = {
   slug: "generic-cellulose-scrub-sponge",
   name: "Generic Cellulose Scrub Sponges (6-Pack)",
-  category: "Cleaning Supplies",
+  category: "Cleaning",
   image: "https://m.media-amazon.com/images/I/619wP5245EL._AC_SY450_.jpg",
   price: "$5.99",
   amazonUrl: "https://amzn.to/4cPwJ7f", // Updated for consistency

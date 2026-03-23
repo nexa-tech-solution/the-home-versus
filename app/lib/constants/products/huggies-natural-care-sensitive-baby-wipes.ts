@@ -3,7 +3,7 @@ import { SingleProductData } from "../types";
 export const HUGGIES_NATURAL_CARE_WIPES: SingleProductData = {
   slug: "huggies-natural-care-sensitive-baby-wipes",
   name: "Huggies Natural Care Sensitive Baby Wipes (Pack of 12)",
-  category: "Baby Essentials",
+  category: "Baby & Kids",
   image: "https://m.media-amazon.com/images/I/81lANYhvbgL._AC_SL1500_.jpg",
   price: "$38.48",
   amazonUrl:

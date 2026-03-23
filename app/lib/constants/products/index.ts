@@ -26,6 +26,9 @@ import { AIRROBO_PG100_VACUUM } from "./airrobo-pg100-dog-grooming-vacuum-kit";
 import { ONEISALL_7IN1_VACUUM } from "./oneisall-dog-grooming-vacuum-clipper-nail-grinder";
 import { ELECTRIC_SPIN_SCRUBBER } from "./electric-spin-scrubber-cordless-power-shower";
 import { RUBBERMAID_REVEAL_18PC_KIT } from "./rubbermaid-reveal-power-scrubber-18-piece-kit";
+import { BFPETHOME_DOG_BED_ORTHOPEDIC } from "./bfpethome-orthopedic-large-dog-bed-waterproof";
+import { NINJA_KITCHEN_SYSTEM_BR601AMZ } from "./ninja-kitchen-system-smoothie-food-processor-br601amz";
+import { WANTJOIN_COMMERCIAL_BLENDER } from "./wantjoin-professional-commercial-blender-1800w";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "dyson-v15-detect": DYSON_V15_PRODUCT,
@@ -55,6 +58,9 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "oneisall-dog-grooming-vacuum-clipper-nail-grinder": ONEISALL_7IN1_VACUUM,
   "electric-spin-scrubber-cordless-power-shower": ELECTRIC_SPIN_SCRUBBER,
   "rubbermaid-reveal-power-scrubber-18-piece-kit": RUBBERMAID_REVEAL_18PC_KIT,
+  "bfpethome-orthopedic-large-dog-bed-waterproof": BFPETHOME_DOG_BED_ORTHOPEDIC,
+  "ninja-kitchen-system-smoothie-food-processor-br601amz": NINJA_KITCHEN_SYSTEM_BR601AMZ,
+  "wantjoin-professional-commercial-blender-1800w": WANTJOIN_COMMERCIAL_BLENDER,
 };
 
 export * from "./dyson-v15";
@@ -84,3 +90,6 @@ export * from "./airrobo-pg100-dog-grooming-vacuum-kit";
 export * from "./oneisall-dog-grooming-vacuum-clipper-nail-grinder";
 export * from "./electric-spin-scrubber-cordless-power-shower";
 export * from "./rubbermaid-reveal-power-scrubber-18-piece-kit";
+export * from "./bfpethome-orthopedic-large-dog-bed-waterproof";
+export * from "./ninja-kitchen-system-smoothie-food-processor-br601amz";
+export * from "./wantjoin-professional-commercial-blender-1800w";

@@ -53,8 +53,13 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/* Amazon CDN: primary source for all product images */}
         <link rel="preconnect" href="https://m.media-amazon.com" />
         <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+        {/* Secondary Amazon image domains */}
+        <link rel="dns-prefetch" href="https://images-na.ssl-images-amazon.com" />
+        {/* Google AdSense */}
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
