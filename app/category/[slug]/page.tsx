@@ -1,16 +1,20 @@
 import { type Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { ArrowLeft, Home } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ComparisonCard from "@/components/ComparisonCard";
 import { comparisons, categories } from "@/lib/data";
-import AdSlot from "@/components/AdSlot";
 
 import { SITE_CONFIG } from "@/lib/constants";
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  return categories.map((category) => ({ slug: category.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -32,6 +36,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${category.name} comparisons`,
       "best home products",
     ],
+    openGraph: {
+      title: `${category.name} Comparisons | ${SITE_CONFIG.name}`,
+      description: category.description,
+      url: `${SITE_CONFIG.url}/category/${slug}`,
+      type: "website",
+      siteName: SITE_CONFIG.name,
+      images: [SITE_CONFIG.ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${category.name} Comparisons | ${SITE_CONFIG.name}`,
+      description: category.description,
+      images: [SITE_CONFIG.ogImage],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: `${SITE_CONFIG.url}/category/${slug}`,
     },
@@ -47,23 +69,7 @@ export default async function CategoryPage({ params }: Props) {
   );
 
   if (!category) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <SiteHeader />
-        <div className="container py-20 text-center">
-          <h1 className="font-display text-4xl font-bold text-foreground mb-6">
-            Category Not Found
-          </h1>
-          <Link
-            href="/"
-            className="text-accent hover:underline inline-flex items-center gap-2 font-bold text-lg"
-          >
-            <ArrowLeft className="h-5 w-5" /> Back to Home
-          </Link>
-        </div>
-        <SiteFooter />
-      </div>
-    );
+    notFound();
   }
 
   const breadcrumbSchema = {
@@ -189,11 +195,6 @@ export default async function CategoryPage({ params }: Props) {
               </Link>
             </div>
           )}
-
-          {/* Ad Slot - Strategically placed at the end of the list for better UX */}
-          <div className="mt-24 mx-auto">
-            <AdSlot label="Home Essentials" />
-          </div>
         </section>
       </main>
 

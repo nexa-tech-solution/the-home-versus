@@ -1,9 +1,9 @@
-import { type Metadata, type ResolvingMetadata } from "next";
+import { type Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   Clock,
-  User,
   Star,
   CheckCircle2,
   XCircle,
@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import AdSlot from "@/components/AdSlot";
 import ReadingProgress from "@/components/ReadingProgress";
 import ProductMediaGallery from "@/components/ProductMediaGallery";
 import Image from "next/image";
@@ -22,9 +21,27 @@ import { SITE_CONFIG, PRODUCT_DATA, CATEGORIES } from "@/lib/constants";
 import { getComparisonsByProductName } from "@/lib/data";
 import ReviewDisclaimer from "@/components/ReviewDisclaimer";
 
+const GENERIC_BRAND_PREFIXES = new Set([
+  "all-purpose",
+  "generic",
+  "standard",
+  "traditional",
+]);
+
+function getBrandName(productName: string) {
+  const firstWord = productName.split(" ")[0]?.toLowerCase();
+  if (!firstWord || GENERIC_BRAND_PREFIXES.has(firstWord)) {
+    return undefined;
+  }
+  return productName.split(" ")[0];
+}
+
+export async function generateStaticParams() {
+  return Object.keys(PRODUCT_DATA).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
-  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { slug } = await params;
   const product = PRODUCT_DATA[slug];
@@ -49,7 +66,27 @@ export async function generateMetadata(
     openGraph: {
       title: `${product.name} Review`,
       description: product.intro,
-      images: [product.image],
+      url: `${SITE_CONFIG.url}/product/${slug}`,
+      type: "article",
+      siteName: SITE_CONFIG.name,
+      images: [
+        {
+          url: `${SITE_CONFIG.url}/product/${slug}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: `${product.name} Review`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} Review`,
+      description: product.intro,
+      images: [`${SITE_CONFIG.url}/product/${slug}/opengraph-image`],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: `${SITE_CONFIG.url}/product/${slug}`,
@@ -66,26 +103,11 @@ export default async function ProductPage({
   const product = PRODUCT_DATA[slug];
 
   if (!product) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <SiteHeader />
-        <div className="container py-20 text-center">
-          <h1 className="font-display text-4xl font-bold text-foreground mb-6">
-            Product Review Not Found
-          </h1>
-          <Link
-            href="/"
-            className="text-accent hover:underline inline-flex items-center gap-2 font-bold text-lg"
-          >
-            <ArrowLeft className="h-5 w-5" /> Back to Home
-          </Link>
-        </div>
-        <SiteFooter />
-      </div>
-    );
+    notFound();
   }
 
   const relatedComparisons = getComparisonsByProductName(product.name);
+  const brandName = getBrandName(product.name);
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -93,10 +115,12 @@ export default async function ProductPage({
     name: product.name,
     image: product.image,
     description: product.intro,
-    brand: {
-      "@type": "Brand",
-      name: product.name.split(" ")[0],
-    },
+    brand: brandName
+      ? {
+          "@type": "Brand",
+          name: brandName,
+        }
+      : undefined,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: product.rating,
@@ -233,7 +257,7 @@ export default async function ProductPage({
                   {product.rating}
                 </span>
                 <span className="text-muted-foreground text-[10px] font-medium opacity-60">
-                  ({product.reviewCount} verified reviews)
+                  ({product.reviewCount} customer ratings)
                 </span>
               </div>
             </div>
@@ -389,9 +413,6 @@ export default async function ProductPage({
           ))}
         </div>
 
-        {/* Ad Slot - Post Content */}
-        <AdSlot label="Related Deals" className="mb-20" />
-
         {/* Related Comparisons */}
         {relatedComparisons.length > 0 && (
           <section className="mb-20">
@@ -491,7 +512,7 @@ export default async function ProductPage({
               ❓ Frequently Asked Questions
             </h2>
             <div className="space-y-6">
-              {product.faqs.map((faq: any, index: number) => (
+              {product.faqs.map((faq, index: number) => (
                 <div 
                   key={index} 
                   className="bg-card rounded-2xl border border-border p-6 md:p-8 hover:border-accent/20 transition-all"

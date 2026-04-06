@@ -3,11 +3,22 @@ import { SITE_CONFIG, CATEGORIES, COMPARISONS, PRODUCT_DATA } from '@/lib/consta
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.url;
+  const fallbackLastModified = new Date("2026-04-06");
 
   // Static routes
-  const routes = ['', '/search', '/comparisons', '/products', '/about', '/privacy', '/affiliate-disclosure'].map((route) => ({
+  const routes = [
+    '',
+    '/comparisons',
+    '/products',
+    '/about',
+    '/contact',
+    '/privacy',
+    '/affiliate-disclosure',
+    '/editorial-policy',
+    '/methodology',
+  ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: fallbackLastModified,
     changeFrequency: 'daily' as const,
     priority: route === '' ? 1 : 0.8,
   }));
@@ -15,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Category routes
   const categoryRoutes = CATEGORIES.map((cat) => ({
     url: `${baseUrl}/category/${cat.slug}`,
-    lastModified: new Date(),
+    lastModified: fallbackLastModified,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
@@ -23,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Comparison article routes
   const comparisonRoutes = COMPARISONS.map((comp) => ({
     url: `${baseUrl}/compare/${comp.slug}`,
-    lastModified: new Date(),
+    lastModified: fallbackLastModified,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }));
@@ -31,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Product review routes
   const productRoutes = Object.keys(PRODUCT_DATA).map((slug) => ({
     url: `${baseUrl}/product/${slug}`,
-    lastModified: new Date(),
+    lastModified: fallbackLastModified,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));

@@ -10,9 +10,9 @@ export default function TrustSection() {
   return (
     <section className="bg-primary text-primary-foreground" aria-labelledby="trust-heading">
       <div className="container py-20 text-center">
-        <h2 id="trust-heading" className="font-display text-4xl font-bold mb-6">Tested by Moms in US & Canada</h2>
+        <h2 id="trust-heading" className="font-display text-4xl font-bold mb-6">What we publish and how we handle it</h2>
         <p className="max-w-2xl mx-auto text-primary-foreground/80 text-lg mb-12">
-          We're North American moms and homeowners — just like you. Every product is tested in our real family homes (pets and kids included) to give you the truth.
+          We focus on practical comparisons, transparent affiliate disclosure, and clear editorial notes so readers can understand how each recommendation was assembled.
         </p>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

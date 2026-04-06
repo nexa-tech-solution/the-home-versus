@@ -1,4 +1,5 @@
 import { ShieldCheck, Info } from "lucide-react";
+import Link from "next/link";
 
 const ReviewDisclaimer = () => {
   return (
@@ -12,15 +13,23 @@ const ReviewDisclaimer = () => {
             Editorial Integrity & Disclaimer
           </h4>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            All reviews on <span className="text-foreground font-bold italic">TheHomeVersus</span> are based on our hands-on testing and subjective experiences. While we strive for absolute accuracy, product performance can vary based on individual usage, environments, and manufacturing batches. 
+            Content on <span className="text-foreground font-bold italic">TheHomeVersus</span> may combine editorial research, product documentation, retailer information, customer feedback patterns, and firsthand notes when explicitly available. Performance can vary by usage, environment, and product revision.
           </p>
           <div className="mt-4 flex flex-col gap-2">
             <p className="text-[11px] text-muted-foreground/70 italic leading-relaxed">
-              * We do not receive direct payment for product reviews. Our opinions remain our own.
+              * We may earn from qualifying purchases through affiliate links, but that does not guarantee favorable coverage.
             </p>
             <p className="text-[11px] text-muted-foreground/70 italic leading-relaxed flex items-start gap-1.5">
               <Info className="h-3 w-3 mt-0.5 shrink-0" />
-              Users are encouraged to verify technical specs and safety warnings with the manufacturer before purchase. We are not liable for any issues, damages, or dissatisfaction resulting from product use based on our content.
+              Verify final specs, compatibility, pricing, and safety information with the manufacturer or retailer before purchase. See our{" "}
+              <Link href="/methodology" className="text-foreground underline underline-offset-2">
+                methodology
+              </Link>{" "}
+              and{" "}
+              <Link href="/affiliate-disclosure" className="text-foreground underline underline-offset-2">
+                affiliate disclosure
+              </Link>
+              .
             </p>
           </div>
         </div>

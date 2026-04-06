@@ -7,7 +7,7 @@ import { AlertCircle, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: `Affiliate Disclosure | ${SITE_CONFIG.name}`,
-  description: `Find out how ${SITE_CONFIG.name} supports our testing efforts through affiliate partnerships.`,
+  description: `Find out how ${SITE_CONFIG.name} uses affiliate links and separates monetization from editorial content.`,
   alternates: {
     canonical: `${SITE_CONFIG.url}/affiliate-disclosure`,
   },
@@ -45,7 +45,7 @@ export default function AffiliatePage() {
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-6 lowercase">What is an Affiliate Link?</h2>
             <p>
-              An affiliate link is a special URL that contains a tracking code. When you click an affiliate link on our site and make a purchase, the retailer pays us a small percentage of the sale price. This commission is what allows us to pay our testers, maintain this website, and purchase the products we review.
+              An affiliate link is a special URL that contains a tracking code. When you click an affiliate link on our site and make a purchase, the retailer pays us a small percentage of the sale price. This commission helps us maintain the site and continue publishing content.
             </p>
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-6 lowercase">Amazon Associates Program</h2>
@@ -55,34 +55,34 @@ export default function AffiliatePage() {
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-6 lowercase">Our Commitment to You</h2>
             <p className="mb-6">
-              Our editorial content is not influenced by our affiliate partnerships. We don't get paid to write positive reviews. Our comparisons are based on actual testing and real-world results.
+              Our editorial content is not automatically shaped by affiliate relationships. We do not sell positive verdicts, and we aim to explain weaknesses and uncertainty where they matter.
             </p>
             <ul className="space-y-4">
                 <li className="flex gap-3">
                     <span className="h-6 w-6 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0">1</span>
-                    <span className="text-sm">If a product fails our "Family Test," we will say so, regardless of affiliate potential.</span>
+                    <span className="text-sm">If a product looks weak for a clear use case, we aim to say so even when an affiliate link is present.</span>
                 </li>
                 <li className="flex gap-3">
                     <span className="h-6 w-6 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0">2</span>
-                    <span className="text-sm">We often link to multiple retailers (Amazon, Walmart, Best Buy) to help you find the best price.</span>
+                    <span className="text-sm">We may link to one or more retailers, but readers should still compare price, shipping, and return policy before purchasing.</span>
                 </li>
                 <li className="flex gap-3">
                     <span className="h-6 w-6 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0">3</span>
-                    <span className="text-sm">We are consumers too, and we only recommend products we would (and often do) use in our own homes.</span>
+                    <span className="text-sm">We try to make the reasoning on each page understandable even if the reader never clicks a shopping link.</span>
                 </li>
             </ul>
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-6 lowercase">Questions?</h2>
             <p>
-              If you have any questions regarding our affiliate relationships or how we make money, please don't hesitate to reach out to us at <span className="text-accent font-bold italic underline">{SITE_CONFIG.contactEmail}</span>.
+              If you have any questions regarding our affiliate relationships or how we make money, please don&apos;t hesitate to reach out to us at <span className="text-accent font-bold italic underline">{SITE_CONFIG.contactEmail}</span>.
             </p>
 
             <div className="mt-20 pt-10 border-t border-border/40">
                 <Link 
-                    href="/about" 
+                    href="/methodology" 
                     className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-accent hover:gap-4 transition-all"
                 >
-                    Learn more about our testing process <ExternalLink className="h-4 w-4" />
+                    Learn more about our methodology <ExternalLink className="h-4 w-4" />
                 </Link>
             </div>
           </div>

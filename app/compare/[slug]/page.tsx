@@ -1,6 +1,7 @@
 import { type Metadata, type ResolvingMetadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, User, ArrowRight, Layers } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -8,7 +9,6 @@ import ComparisonTable from "@/components/ComparisonTable";
 import ProsConsList from "@/components/ProsConsList";
 import VerdictSection from "@/components/VerdictSection";
 import ProductMediaGallery from "@/components/ProductMediaGallery";
-import AdSlot from "@/components/AdSlot";
 import ReadingProgress from "@/components/ReadingProgress";
 import ReviewDisclaimer from "@/components/ReviewDisclaimer";
 
@@ -23,9 +23,28 @@ import {
   CATEGORIES,
 } from "@/lib/constants";
 
+const GENERIC_BRAND_PREFIXES = new Set([
+  "all-purpose",
+  "generic",
+  "standard",
+  "traditional",
+]);
+
+function getBrandName(productName: string) {
+  const firstWord = productName.split(" ")[0]?.toLowerCase();
+  if (!firstWord || GENERIC_BRAND_PREFIXES.has(firstWord)) {
+    return undefined;
+  }
+  return productName.split(" ")[0];
+}
+
+export async function generateStaticParams() {
+  return Object.keys(ARTICLE_DATA).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
-  parent: ResolvingMetadata,
+  _parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const { slug } = await params;
   const article = ARTICLE_DATA[slug];
@@ -43,13 +62,36 @@ export async function generateMetadata(
       article.category,
       article.productA.name,
       article.productB.name,
+      `${article.productA.name} vs ${article.productB.name}`,
+      `${article.productA.name} review`,
+      `${article.productB.name} review`,
       "comparison",
       "review",
     ],
     openGraph: {
       title: article.title,
       description: article.intro,
-      images: [article.productA.image, article.productB.image],
+      url: `${SITE_CONFIG.url}/compare/${slug}`,
+      type: "article",
+      siteName: SITE_CONFIG.name,
+      images: [
+        {
+          url: `${SITE_CONFIG.url}/compare/${slug}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.intro,
+      images: [`${SITE_CONFIG.url}/compare/${slug}/opengraph-image`],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: `${SITE_CONFIG.url}/compare/${slug}`,
@@ -66,23 +108,7 @@ export default async function ComparisonArticlePage({
   const article = ARTICLE_DATA[slug];
 
   if (!article) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <SiteHeader />
-        <div className="container py-20 text-center">
-          <h1 className="font-display text-4xl font-bold text-foreground mb-6">
-            Comparison Not Found
-          </h1>
-          <Link
-            href="/"
-            className="text-accent hover:underline inline-flex items-center gap-2 font-bold text-lg"
-          >
-            <ArrowLeft className="h-5 w-5" /> Back to Home
-          </Link>
-        </div>
-        <SiteFooter />
-      </div>
-    );
+    notFound();
   }
 
   // Attempt to find full product data for better schema
@@ -102,48 +128,94 @@ export default async function ComparisonArticlePage({
           winnerRef.includes(productBData.name.toLowerCase().split(" ")[0])
         ? productBData
         : null;
+  const winnerBrand = winnerData ? getBrandName(winnerData.name) : undefined;
+  const compareUrl = `${SITE_CONFIG.url}/compare/${slug}`;
+  const categoryUrl = `${SITE_CONFIG.url}/category/${CATEGORIES.find((c) => c.name.toLowerCase().replace(" guides", "").trim() === article.category.toLowerCase().replace(" guides", "").trim())?.slug || article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`;
+  const ogImageUrl = `${SITE_CONFIG.url}/compare/${slug}/opengraph-image`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": compareUrl,
+    },
+    headline: article.title,
+    description: article.intro,
+    image: [ogImageUrl],
+    about: [
+      {
+        "@type": "Product",
+        name: article.productA.name,
+        image: article.productA.image,
+        url: article.productA.slug
+          ? `${SITE_CONFIG.url}/product/${article.productA.slug}`
+          : undefined,
+      },
+      {
+        "@type": "Product",
+        name: article.productB.name,
+        image: article.productB.image,
+        url: article.productB.slug
+          ? `${SITE_CONFIG.url}/product/${article.productB.slug}`
+          : undefined,
+      },
+    ],
+    author: {
+      "@type": "Person",
+      name: article.author,
+      url: `${SITE_CONFIG.url}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
+      },
+    },
+    datePublished: new Date(article.date).toISOString(),
+    dateModified: new Date(article.date).toISOString(),
+    articleSection: article.category,
+    keywords: [
+      article.category,
+      article.productA.name,
+      article.productB.name,
+      `${article.productA.name} vs ${article.productB.name}`,
+    ],
+  };
 
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_CONFIG.url}/compare/${slug}`,
+      "@id": compareUrl,
     },
     headline: article.title,
     description: article.intro,
-    image: [article.productA.image, article.productB.image],
+    image: [ogImageUrl],
     itemReviewed: {
-      "@type": "Product",
-      name: winnerData?.name || article.verdict.overallWinner,
-      image: winnerData?.image || article.productA.image,
-      brand: {
-        "@type": "Brand",
-        name:
-          winnerData?.name.split(" ")[0] ||
-          article.verdict.overallWinner.split(" ")[0],
-      },
-      aggregateRating: winnerData
-        ? {
-            "@type": "AggregateRating",
-            ratingValue: winnerData.rating,
-            reviewCount: winnerData.reviewCount,
-            bestRating: "5",
-            worstRating: "1",
-          }
-        : undefined,
-      offers: {
-        "@type": "Offer",
-        priceCurrency: "USD",
-        price: (winnerData?.price || article.productA.price)
-          .replace("$", "")
-          .replace(",", ""),
-        availability: "https://schema.org/InStock",
-        url: winnerData?.amazonUrl || article.productA.amazonUrl,
-        priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1)
-          .toISOString()
-          .split("T")[0],
-      },
+      "@type": "ProductGroup",
+      name: `${article.productA.name} vs ${article.productB.name}`,
+      hasVariant: [
+        {
+          "@type": "Product",
+          name: article.productA.name,
+          image: article.productA.image,
+          url: article.productA.slug
+            ? `${SITE_CONFIG.url}/product/${article.productA.slug}`
+            : undefined,
+        },
+        {
+          "@type": "Product",
+          name: article.productB.name,
+          image: article.productB.image,
+          url: article.productB.slug
+            ? `${SITE_CONFIG.url}/product/${article.productB.slug}`
+            : undefined,
+        },
+      ],
     },
     author: {
       "@type": "Person",
@@ -157,6 +229,7 @@ export default async function ComparisonArticlePage({
       ratingValue: winnerData?.rating || "4.5",
       bestRating: "5",
     },
+    reviewBody: article.verdict.summary,
     publisher: {
       "@type": "Organization",
       name: SITE_CONFIG.name,
@@ -165,6 +238,32 @@ export default async function ComparisonArticlePage({
         url: `${SITE_CONFIG.url}${SITE_CONFIG.ogImage}`,
       },
     },
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${article.productA.name} vs ${article.productB.name}`,
+    itemListOrder: "https://schema.org/ItemListUnordered",
+    numberOfItems: 2,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        url: article.productA.slug
+          ? `${SITE_CONFIG.url}/product/${article.productA.slug}`
+          : article.productA.amazonUrl,
+        name: article.productA.name,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        url: article.productB.slug
+          ? `${SITE_CONFIG.url}/product/${article.productB.slug}`
+          : article.productB.amazonUrl,
+        name: article.productB.name,
+      },
+    ],
   };
 
   const breadcrumbSchema = {
@@ -181,7 +280,7 @@ export default async function ComparisonArticlePage({
         "@type": "ListItem",
         position: 2,
         name: article.category,
-        item: `${SITE_CONFIG.url}/category/${CATEGORIES.find((c) => c.name.toLowerCase().replace(" guides", "").trim() === article.category.toLowerCase().replace(" guides", "").trim())?.slug || article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
+        item: categoryUrl,
       },
       {
         "@type": "ListItem",
@@ -196,7 +295,15 @@ export default async function ComparisonArticlePage({
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/30">
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
       <script
         type="application/ld+json"
@@ -271,11 +378,6 @@ export default async function ComparisonArticlePage({
             productB={article.productB}
             specs={article.specs}
           />
-        </div>
-
-        {/* Ad Slot - Post Table */}
-        <div className="my-20">
-          <AdSlot label="Recommended for You" />
         </div>
 
         {/* Pros & Cons */}

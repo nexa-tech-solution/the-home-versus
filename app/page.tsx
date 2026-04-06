@@ -1,10 +1,6 @@
 import { type Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import ComparisonCard from "@/components/ComparisonCard";
 import heroImage from "@/assets/hero-illustration.jpg";
 import { comparisons, categories } from "@/lib/data";
 
@@ -28,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `${SITE_CONFIG.name} | Honest Home Product Comparisons`,
-    description: "Real-world, side-by-side product comparisons tested in real homes. Honest reviews for families.",
+    description: "Independent side-by-side product comparisons, practical buying notes, and category guides for home shoppers.",
     type: "website",
     url: SITE_CONFIG.url,
     images: [{ 
@@ -41,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${SITE_CONFIG.name} | Honest Home Product Comparisons`,
-    description: "Real-world, side-by-side product comparisons tested in real homes.",
+    description: "Independent side-by-side product comparisons and practical buying notes for home shoppers.",
     images: [SITE_CONFIG.ogImage],
   }
 };
@@ -53,11 +49,6 @@ export default function Home() {
     "name": SITE_CONFIG.name,
     "url": SITE_CONFIG.url,
     "description": SITE_CONFIG.description,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": `${SITE_CONFIG.url}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
   };
 
   return (

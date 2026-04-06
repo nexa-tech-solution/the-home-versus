@@ -1,17 +1,17 @@
 export const SITE_CONFIG = {
   name: "TheHomeVersus",
-  tagline: "Expert Home Product Comparisons & Real-World Reviews",
-  description: "Honest, side-by-side product comparisons for North American families. Tested by real moms in real US & Canadian homes — from Dyson vs Shark to baby essentials.",
+  tagline: "Transparent Home Product Comparisons",
+  description: "Independent product comparisons, buying guides, and practical notes for home, kitchen, pet, and family gear.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://thehomeversus.com",
   ogImage: "/og-image.jpg",
   keywords: [
-    "product comparison US Canada", 
-    "home product reviews for moms", 
-    "Dyson vs Shark reviews", 
-    "best vacuum for pet hair Canada", 
-    "kitchen appliance comparisons USA", 
-    "baby gear reviews 2024",
-    "real home testing North America"
+    "home product comparisons",
+    "appliance buying guides",
+    "cleaning product reviews",
+    "kitchen product comparisons",
+    "baby gear comparisons",
+    "pet product reviews",
+    "editorial buying guides"
   ],
   publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-3012411444875177",
   amazonAffiliateDisclosure: "As an Amazon Associate, we earn from qualifying purchases.",

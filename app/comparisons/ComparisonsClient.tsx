@@ -4,7 +4,6 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { Home, Search } from "lucide-react";
 import ComparisonCard from "@/components/ComparisonCard";
-import AdSlot from "@/components/AdSlot";
 import { categories } from "@/lib/data";
 import { ComparisonSnippet } from "@/lib/constants/types";
 
@@ -41,7 +40,7 @@ export default function ComparisonsClient({ initialComparisons }: ComparisonsCli
             Expert <span className="text-accent underline decoration-accent/20">Comparisons</span>
           </h1>
           <p className="max-w-2xl mx-auto text-xl text-muted-foreground leading-relaxed">
-            Every product in our library is tested in real-world scenarios. We strip away the marketing fluff to help you make informed decisions for your family.
+            Browse side-by-side comparisons written to clarify tradeoffs, fit, and likely ownership friction before you buy.
           </p>
         </div>
       </section>
@@ -76,7 +75,7 @@ export default function ComparisonsClient({ initialComparisons }: ComparisonsCli
             </h2>
             <p className="text-muted-foreground flex items-center gap-2 uppercase tracking-widest text-xs font-bold">
               <span className="w-12 h-0.5 bg-accent/30 inline-block"></span>
-              {searchQuery ? `Found ${filteredComparisons.length} matches` : `Showing ${initialComparisons.length} side-by-side tests`}
+              {searchQuery ? `Found ${filteredComparisons.length} matches` : `Showing ${initialComparisons.length} side-by-side comparisons`}
             </p>
           </div>
           
@@ -102,14 +101,9 @@ export default function ComparisonsClient({ initialComparisons }: ComparisonsCli
 
         {filteredComparisons.length === 0 && (
           <div className="py-20 text-center bg-secondary/20 rounded-[3rem] border border-dashed border-border/60">
-            <p className="text-xl text-muted-foreground">No comparisons found for "{searchQuery}". Try another search!</p>
+            <p className="text-xl text-muted-foreground">No comparisons found for &quot;{searchQuery}&quot;. Try another search!</p>
           </div>
         )}
-
-        {/* Ad Slot */}
-        <div className="mt-24">
-          <AdSlot label="Featured Partnerships" />
-        </div>
       </section>
 
       {/* Newsletter/CTA Section */}
@@ -120,7 +114,7 @@ export default function ComparisonsClient({ initialComparisons }: ComparisonsCli
               
               <div className="relative z-10 max-w-2xl">
                   <h2 className="font-display text-3xl md:text-5xl font-black mb-6 leading-tight">
-                      Don't miss our next <span className="text-secondary italic">Battle Royale</span>.
+                      Don&apos;t miss our next <span className="text-secondary italic">Battle Royale</span>.
                   </h2>
                   <p className="text-lg text-primary-foreground/80 mb-10 leading-relaxed font-medium capitalize">
                       We send one deep-dive comparison every week. No spam, just the facts to save you time and money.

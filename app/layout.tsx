@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: `${SITE_CONFIG.name} | Real Product Comparisons for Real Homes`,
   description:
-    "Side-by-side product reviews and comparisons for homeowners, parents, and pet owners. Tested in real-world scenarios.",
+    "Side-by-side product reviews, comparisons, and buying guides for homeowners, parents, and pet owners.",
   verification: {
     google: "lqAwRr9TNtFQCQKhncueLDL7_7kBhduGUfgFl5B-SLo",
   },
@@ -53,6 +53,11 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-3012411444875177"
+        />
+
         {/* Amazon CDN: primary source for all product images */}
         <link rel="preconnect" href="https://m.media-amazon.com" />
         <link rel="dns-prefetch" href="https://m.media-amazon.com" />

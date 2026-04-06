@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Home, Search, Package } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { categories } from "@/lib/data";
-import AdSlot from "@/components/AdSlot";
 import { SingleProductData } from "@/lib/constants/types";
 
 interface ProductsClientProps {
@@ -40,7 +39,7 @@ export default function ProductsClient({ allProducts }: ProductsClientProps) {
             Family <span className="text-accent underline decoration-accent/20 italic">Essentials.</span>
           </h1>
           <p className="max-w-2xl mx-auto text-xl text-muted-foreground leading-relaxed">
-              A curated selection of home gadgets and gear that actually pass the "Family Test." No filler, just the best performers.
+              A browsable library of product pages with practical highlights, key specs, and comparison context across home categories.
           </p>
         </div>
       </section>
@@ -75,7 +74,7 @@ export default function ProductsClient({ allProducts }: ProductsClientProps) {
             </h2>
             <p className="text-muted-foreground flex items-center gap-2 uppercase tracking-widest text-xs font-bold">
               <span className="w-12 h-0.5 bg-accent/30 inline-block"></span>
-              {searchQuery ? `Found ${filteredProducts.length} results` : `Reviewing ${allProducts.length} battle-tested products`}
+              {searchQuery ? `Found ${filteredProducts.length} results` : `Showing ${allProducts.length} products`}
             </p>
           </div>
           
@@ -106,14 +105,9 @@ export default function ProductsClient({ allProducts }: ProductsClientProps) {
         {filteredProducts.length === 0 && (
           <div className="py-24 text-center">
             <Package className="h-16 w-16 text-muted-foreground/30 mx-auto mb-6" />
-            <p className="text-xl text-muted-foreground">We couldn't find any products matching your search.</p>
+            <p className="text-xl text-muted-foreground">We couldn&apos;t find any products matching your search.</p>
           </div>
         )}
-
-        {/* Ad Slot */}
-        <div className="mt-24">
-          <AdSlot label="Recommended for You" />
-        </div>
       </section>
 
       {/* Brand Mission */}
@@ -121,16 +115,16 @@ export default function ProductsClient({ allProducts }: ProductsClientProps) {
           <div className="bg-secondary/40 rounded-[3rem] p-8 md:p-16 border border-border/60">
               <div className="max-w-4xl mx-auto text-center">
                   <h2 className="font-display text-3xl md:text-5xl font-black mb-8 leading-tight">
-                      We don't just "Review". <br/>
-                      We <span className="text-accent italic">Live</span> With Them.
+                      Product pages with <br/>
+                      <span className="text-accent italic">clearer buying context</span>
                   </h2>
                   <p className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto">
-                      Choosing the right appliances for your home is overwhelming. Our team spends weeks putting every machine through the same real-world chaos your family faces daily. If it can't handle a toddler's spill or a pet's mess, it won't make our list.
+                      We aim to make product pages more useful than a retailer listing by summarizing fit, limitations, and the kind of buyer each item makes sense for.
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all">
-                      <span className="font-display text-2xl font-black">HONESTY</span>
+                      <span className="font-display text-2xl font-black">CLARITY</span>
                       <span className="font-display text-2xl font-black">UTILITY</span>
-                      <span className="font-display text-2xl font-black">FAMILY</span>
+                      <span className="font-display text-2xl font-black">DISCLOSURE</span>
                   </div>
               </div>
           </div>

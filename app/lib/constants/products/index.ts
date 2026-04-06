@@ -29,6 +29,8 @@ import { RUBBERMAID_REVEAL_18PC_KIT } from "./rubbermaid-reveal-power-scrubber-1
 import { BFPETHOME_DOG_BED_ORTHOPEDIC } from "./bfpethome-orthopedic-large-dog-bed-waterproof";
 import { NINJA_KITCHEN_SYSTEM_BR601AMZ } from "./ninja-kitchen-system-smoothie-food-processor-br601amz";
 import { WANTJOIN_COMMERCIAL_BLENDER } from "./wantjoin-professional-commercial-blender-1800w";
+import { KITCHENAID_WIRE_MASHER } from "./kitchenaid-gourmet-stainless-steel-wire-masher";
+import { KITCHEN_SHEARS_3PACK } from "./all-purpose-kitchen-shears-heavy-duty-3-pack";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "dyson-v15-detect": DYSON_V15_PRODUCT,
@@ -61,6 +63,8 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "bfpethome-orthopedic-large-dog-bed-waterproof": BFPETHOME_DOG_BED_ORTHOPEDIC,
   "ninja-kitchen-system-smoothie-food-processor-br601amz": NINJA_KITCHEN_SYSTEM_BR601AMZ,
   "wantjoin-professional-commercial-blender-1800w": WANTJOIN_COMMERCIAL_BLENDER,
+  "kitchenaid-gourmet-stainless-steel-wire-masher": KITCHENAID_WIRE_MASHER,
+  "all-purpose-kitchen-shears-heavy-duty-3-pack": KITCHEN_SHEARS_3PACK,
 };
 
 export * from "./dyson-v15";
@@ -93,3 +97,5 @@ export * from "./rubbermaid-reveal-power-scrubber-18-piece-kit";
 export * from "./bfpethome-orthopedic-large-dog-bed-waterproof";
 export * from "./ninja-kitchen-system-smoothie-food-processor-br601amz";
 export * from "./wantjoin-professional-commercial-blender-1800w";
+export * from "./kitchenaid-gourmet-stainless-steel-wire-masher";
+export * from "./all-purpose-kitchen-shears-heavy-duty-3-pack";

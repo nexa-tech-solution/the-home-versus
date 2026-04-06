@@ -6,7 +6,7 @@ import ProductsClient from "./ProductsClient";
 
 export const metadata: Metadata = {
   title: `Best Rated Products | ${SITE_CONFIG.name}`,
-  description: "Explore our curated list of high-performance products for your home, tested and reviewed for North American families.",
+  description: "Explore our product library with practical summaries, specs, and comparison context across home categories.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/products`,
   },

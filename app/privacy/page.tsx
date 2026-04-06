@@ -23,10 +23,10 @@ export default function PrivacyPage() {
           </h1>
           
           <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
-            <p className="text-lg font-bold text-foreground">Last Updated: March 14, 2024</p>
+            <p className="text-lg font-bold text-foreground">Last Updated: April 6, 2026</p>
             
             <p>
-              At The Home Versus, we take your privacy seriously. This Privacy Policy describes how your personal information is collected, used, and shared when you visit our website (the "Site").
+              At The Home Versus, we take your privacy seriously. This Privacy Policy describes how your personal information is collected, used, and shared when you visit our website (the &quot;Site&quot;).
             </p>
 
             <h2 className="font-display text-2xl font-bold text-foreground mt-12 mb-4 lowercase">1. Personal Information We Collect</h2>

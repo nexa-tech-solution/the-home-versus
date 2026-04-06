@@ -5,10 +5,11 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import ComparisonCard from "@/components/ComparisonCard";
+import { ComparisonSnippet } from "@/lib/constants/types";
 
 interface HomeClientProps {
   categories: { name: string; slug: string; icon: string; count: number }[];
-  comparisons: any[];
+  comparisons: ComparisonSnippet[];
   heroImage: StaticImageData | string;
 }
 
@@ -21,14 +22,13 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
           <div className="md:grid md:grid-cols-2 gap-12 items-center">
             <div className="hero-content">
               <span className="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full mb-6">
-                Tested by 50,000+ North American Families
+                Independent comparisons and practical buying notes
               </span>
               <h1 id="hero-heading" className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-6">
-                Real Reviews for <span className="text-accent italic">Real Moms.</span>
+                Clear product comparisons for <span className="text-accent italic">real homes.</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg mb-10">
-                Side-by-side product comparisons tested by real families across the US and Canada. 
-                We find what actually works for busy households, so you don't have to guess.
+                We publish side-by-side comparisons, product summaries, and shopping guidance for the categories people actually buy for every week.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -125,13 +125,13 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
             className="max-w-2xl"
           >
             <span className="inline-block text-accent font-bold text-xs uppercase tracking-[0.2em] mb-4">
-              Editorial Pick · March 2024
+              Latest comparisons
             </span>
             <h2 id="latest-comparisons-heading" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1]">
-              New This Week <br/><span className="text-muted-foreground/40 italic">In Our Homes</span>
+              Fresh side-by-sides <br/><span className="text-muted-foreground/40 italic">with clearer tradeoffs</span>
             </h2>
             <p className="text-xl text-muted-foreground mt-6 leading-relaxed">
-              From city apartments to suburban houses, we've spent the last month testing these head-to-head for you.
+              Each article is written to help you compare fit, weaknesses, and likely use cases before you spend money.
             </p>
           </motion.div>
           
@@ -144,7 +144,7 @@ export function HomeClient({ categories, comparisons, heroImage }: HomeClientPro
             <Link
               href="/comparisons"
               className="inline-flex items-center gap-3 text-lg font-bold text-foreground border-b-2 border-accent/20 hover:border-accent hover:gap-5 transition-all py-1 pb-2"
-              aria-label="View all North American home product comparisons"
+              aria-label="View all home product comparisons"
             >
               Browse all side-by-sides <ArrowRight className="h-5 w-5 text-accent" aria-hidden="true" />
             </Link>

@@ -20,6 +20,7 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
   "electric-spin-scrubber-vs-rubbermaid-reveal": Cleaning.ELECTRIC_SCRUBBER_COMPARISON,
   "ninja-kitchen-system-vs-wantjoin-professional-blender": Kitchen.NINJA_VS_WANTJOIN_BLENDER,
   "bfpethome-orthopedic-vs-standard-dog-bed": Pets.BFPETHOME_VS_STANDARD_BED,
+  "kitchen-shears-vs-wire-masher": Kitchen.KITCHEN_SHEARS_VS_WIRE_MASHER,
 };
 
 export * from "./cleaning";
