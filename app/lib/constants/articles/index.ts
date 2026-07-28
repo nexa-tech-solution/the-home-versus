@@ -2,6 +2,7 @@ import * as Cleaning from "./cleaning";
 import * as Kitchen from "./kitchen";
 import * as BabyKids from "./baby-kids";
 import * as Pets from "./pets";
+import * as Electronics from "./electronics";
 import { ArticleData } from "../types";
 
 export const ARTICLE_DATA: Record<string, ArticleData> = {
@@ -21,9 +22,11 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
   "ninja-kitchen-system-vs-wantjoin-professional-blender": Kitchen.NINJA_VS_WANTJOIN_BLENDER,
   "bfpethome-orthopedic-vs-standard-dog-bed": Pets.BFPETHOME_VS_STANDARD_BED,
   "kitchen-shears-vs-wire-masher": Kitchen.KITCHEN_SHEARS_VS_WIRE_MASHER,
+  "kindle-paperwhite-vs-new-amazon-kindle": Electronics.KINDLE_PAPERWHITE_VS_NEW_KINDLE,
 };
 
 export * from "./cleaning";
 export * from "./kitchen";
 export * from "./baby-kids";
 export * from "./pets";
+export * from "./electronics";

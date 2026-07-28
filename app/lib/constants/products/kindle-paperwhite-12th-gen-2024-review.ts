@@ -56,6 +56,7 @@ export const KINDLE_PAPERWHITE_12TH_GEN: SingleProductData = {
   ],
   specs: [
     { label: "Display Size", value: "7-inch glare-free, 300 ppi" },
+    { label: "Page Turns", value: "25% faster" },
     { label: "Storage", value: "16 GB (Holds thousands of books)" },
     { label: "Battery Life", value: "Up to 12 weeks per charge" },
     {

@@ -56,8 +56,11 @@ export const NEW_AMAZON_KINDLE: SingleProductData = {
   ],
   specs: [
     { label: "Display", value: "6-inch glare-free, 300 ppi" },
+    { label: "Page Turns", value: "Standard speed" },
     { label: "Storage", value: "16 GB" },
     { label: "Battery Life", value: "Up to 6 weeks per charge" },
+    { label: "Lighting", value: "Adjustable front light" },
+    { label: "Waterproofing", value: "Not waterproof" },
     { label: "Connectivity", value: "Wi-Fi & Bluetooth (for Audible)" },
     { label: "Charging Port", value: "USB-C" },
   ],
