@@ -19,7 +19,7 @@ export const KINDLE_PAPERWHITE_VS_NEW_KINDLE: ArticleData = {
     "Amazon Kindle Paperwhite vs. New Amazon Kindle: Which Kindle Is Better in 2026?",
   category: "Electronics",
   snippet:
-    "The Kindle Paperwhite and the new base Kindle are Amazon's two best e-readers for most people. We compare screen size, lighting, battery life, and value to help you choose the right one.",
+    "Amazon Kindle Paperwhite vs. New Amazon Kindle: which Kindle should you buy for travel, reading in bed, and everyday use?",
   author: "Tech Review Team",
   date: "July 28, 2026",
   readTime: "11 min read",

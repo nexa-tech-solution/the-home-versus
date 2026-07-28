@@ -38,6 +38,36 @@ function getBrandName(productName: string) {
   return productName.split(" ")[0];
 }
 
+function getComparisonKeywords(article: (typeof ARTICLE_DATA)[string]) {
+  const baseKeywords = [
+    article.category,
+    article.productA.name,
+    article.productB.name,
+    `${article.productA.name} vs ${article.productB.name}`,
+    `${article.productA.name} review`,
+    `${article.productB.name} review`,
+    "comparison",
+    "review",
+  ];
+
+  if (article.category.toLowerCase() === "electronics") {
+    baseKeywords.push(
+      "kindle paperwhite vs kindle",
+      "best kindle for travel",
+      "best kindle for reading in bed",
+      "best kindle 2026",
+      "e-reader comparison",
+      "amazon kindle comparison",
+    );
+  }
+
+  return baseKeywords;
+}
+
+function getMetaDescription(article: (typeof ARTICLE_DATA)[string]) {
+  return article.snippet || article.intro;
+}
+
 export async function generateStaticParams() {
   return Object.keys(ARTICLE_DATA).map((slug) => ({ slug }));
 }
@@ -57,20 +87,11 @@ export async function generateMetadata(
 
   return {
     title: `${article.title} | ${SITE_CONFIG.name}`,
-    description: article.intro,
-    keywords: [
-      article.category,
-      article.productA.name,
-      article.productB.name,
-      `${article.productA.name} vs ${article.productB.name}`,
-      `${article.productA.name} review`,
-      `${article.productB.name} review`,
-      "comparison",
-      "review",
-    ],
+    description: getMetaDescription(article),
+    keywords: getComparisonKeywords(article),
     openGraph: {
       title: article.title,
-      description: article.intro,
+      description: getMetaDescription(article),
       url: `${SITE_CONFIG.url}/compare/${slug}`,
       type: "article",
       siteName: SITE_CONFIG.name,
@@ -86,7 +107,7 @@ export async function generateMetadata(
     twitter: {
       card: "summary_large_image",
       title: article.title,
-      description: article.intro,
+      description: getMetaDescription(article),
       images: [`${SITE_CONFIG.url}/compare/${slug}/opengraph-image`],
     },
     robots: {
@@ -130,18 +151,22 @@ export default async function ComparisonArticlePage({
         : null;
   const winnerBrand = winnerData ? getBrandName(winnerData.name) : undefined;
   const compareUrl = `${SITE_CONFIG.url}/compare/${slug}`;
+  const metaDescription = getMetaDescription(article);
   const categoryUrl = `${SITE_CONFIG.url}/category/${CATEGORIES.find((c) => c.name.toLowerCase().replace(" guides", "").trim() === article.category.toLowerCase().replace(" guides", "").trim())?.slug || article.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`;
   const ogImageUrl = `${SITE_CONFIG.url}/compare/${slug}/opengraph-image`;
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": compareUrl,
     },
     headline: article.title,
-    description: article.intro,
+    description: metaDescription,
+    abstract: metaDescription,
     image: [ogImageUrl],
     about: [
       {
@@ -177,23 +202,21 @@ export default async function ComparisonArticlePage({
     datePublished: new Date(article.date).toISOString(),
     dateModified: new Date(article.date).toISOString(),
     articleSection: article.category,
-    keywords: [
-      article.category,
-      article.productA.name,
-      article.productB.name,
-      `${article.productA.name} vs ${article.productB.name}`,
-    ],
+    keywords: getComparisonKeywords(article),
   };
 
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": compareUrl,
     },
     headline: article.title,
-    description: article.intro,
+    description: metaDescription,
+    abstract: metaDescription,
     image: [ogImageUrl],
     itemReviewed: {
       "@type": "ProductGroup",
@@ -230,6 +253,7 @@ export default async function ComparisonArticlePage({
       bestRating: "5",
     },
     reviewBody: article.verdict.summary,
+    keywords: getComparisonKeywords(article),
     publisher: {
       "@type": "Organization",
       name: SITE_CONFIG.name,
@@ -353,7 +377,7 @@ export default async function ComparisonArticlePage({
 
         {/* Detailed Sections */}
         <div className="space-y-16">
-          {article.sections.map((section: any, i: number) => (
+          {article.sections.map((section: (typeof article.sections)[number], i: number) => (
             <section
               key={i}
               className="prose prose-zinc dark:prose-invert max-w-none"
@@ -471,7 +495,7 @@ export default async function ComparisonArticlePage({
               ❓ Frequently Asked Questions
             </h2>
             <div className="space-y-6">
-              {article.faqs.map((faq: any, index: number) => (
+              {article.faqs.map((faq: NonNullable<typeof article.faqs>[number], index: number) => (
                 <div 
                   key={index} 
                   className="bg-card rounded-2xl border border-border p-6 md:p-8 hover:border-accent/20 transition-all"
