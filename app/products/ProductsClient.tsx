@@ -13,14 +13,23 @@ interface ProductsClientProps {
 
 export default function ProductsClient({ allProducts }: ProductsClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredProducts = useMemo(() => {
-    return allProducts.filter((product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.highlight.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  }, [searchQuery, allProducts]);
+    const lowercaseQuery = searchQuery.toLowerCase();
+
+    return allProducts.filter((product) => {
+      const matchesCategory =
+        activeCategory === "all" ||
+        product.category.toLowerCase() === activeCategory;
+      const matchesSearch =
+        product.name.toLowerCase().includes(lowercaseQuery) ||
+        product.category.toLowerCase().includes(lowercaseQuery) ||
+        product.highlight.toLowerCase().includes(lowercaseQuery);
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [searchQuery, activeCategory, allProducts]);
 
   return (
     <main>
@@ -47,20 +56,26 @@ export default function ProductsClient({ allProducts }: ProductsClientProps) {
       {/* Categories Bar */}
       <section className="sticky top-[72px] bg-background/80 backdrop-blur-md border-b border-border/40 z-10 py-4 overflow-x-auto no-scrollbar">
         <div className="container flex items-center justify-center gap-3 md:gap-6 min-w-max">
-          <Link 
-            href="/products"
+          <button
+            type="button"
+            onClick={() => setActiveCategory("all")}
             className="px-6 py-2 rounded-full bg-primary text-primary-foreground font-bold text-sm shadow-sm transition-all"
           >
             All Products
-          </Link>
+          </button>
           {categories.map((cat) => (
-            <Link 
+            <button
               key={cat.slug}
-              href={`/category/${cat.slug}`}
-              className="px-6 py-2 rounded-full bg-secondary border border-border/40 hover:border-accent/40 text-foreground font-semibold text-sm transition-all hover:bg-accent/5"
+              type="button"
+              onClick={() => setActiveCategory(cat.name.toLowerCase())}
+              className={`px-6 py-2 rounded-full border text-foreground font-semibold text-sm transition-all hover:bg-accent/5 ${
+                activeCategory === cat.name.toLowerCase()
+                  ? "bg-primary text-primary-foreground border-primary shadow-sm"
+                  : "bg-secondary border-border/40 hover:border-accent/40"
+              }`}
             >
               {cat.name}
-            </Link>
+            </button>
           ))}
         </div>
       </section>
@@ -74,7 +89,9 @@ export default function ProductsClient({ allProducts }: ProductsClientProps) {
             </h2>
             <p className="text-muted-foreground flex items-center gap-2 uppercase tracking-widest text-xs font-bold">
               <span className="w-12 h-0.5 bg-accent/30 inline-block"></span>
-              {searchQuery ? `Found ${filteredProducts.length} results` : `Showing ${allProducts.length} products`}
+              {activeCategory === "all" && !searchQuery
+                ? `Showing ${allProducts.length} products`
+                : `Found ${filteredProducts.length} results`}
             </p>
           </div>
           

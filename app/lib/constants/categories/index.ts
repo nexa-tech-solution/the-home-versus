@@ -2,6 +2,7 @@ import { CLEANING_CATEGORY } from "./cleaning";
 import { KITCHEN_CATEGORY } from "./kitchen";
 import { BABY_KIDS_CATEGORY } from "./baby-kids";
 import { PETS_CATEGORY } from "./pets";
+import { ELECTRONICS_CATEGORY } from "./electronics";
 import { Category } from "../types";
 
 export const RAW_CATEGORIES: Category[] = [
@@ -9,9 +10,11 @@ export const RAW_CATEGORIES: Category[] = [
   KITCHEN_CATEGORY,
   BABY_KIDS_CATEGORY,
   PETS_CATEGORY,
+  ELECTRONICS_CATEGORY,
 ];
 
 export * from "./cleaning";
 export * from "./kitchen";
 export * from "./baby-kids";
 export * from "./pets";
+export * from "./electronics";

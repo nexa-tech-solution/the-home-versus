@@ -40,7 +40,7 @@ const SiteHeader = () => {
           >
             Products
           </Link>
-          {categories.slice(0, 3).map((cat) => (
+          {categories.map((cat) => (
             <Link
               key={cat.name}
               href={`/category/${cat.slug}`}

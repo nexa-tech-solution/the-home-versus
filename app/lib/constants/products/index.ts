@@ -31,6 +31,9 @@ import { NINJA_KITCHEN_SYSTEM_BR601AMZ } from "./ninja-kitchen-system-smoothie-f
 import { WANTJOIN_COMMERCIAL_BLENDER } from "./wantjoin-professional-commercial-blender-1800w";
 import { KITCHENAID_WIRE_MASHER } from "./kitchenaid-gourmet-stainless-steel-wire-masher";
 import { KITCHEN_SHEARS_3PACK } from "./all-purpose-kitchen-shears-heavy-duty-3-pack";
+import { NEW_AMAZON_KINDLE } from "./new-amazon-kindle-glare-free-16gb";
+import { KINDLE_PAPERWHITE_12TH_GEN } from "./kindle-paperwhite-12th-gen-2024-review";
+import { KINDLE_FABRIC_COVER_MATCHA } from "./kindle-fabric-cover-2024-matcha-review";
 
 export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "dyson-v15-detect": DYSON_V15_PRODUCT,
@@ -65,6 +68,9 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "wantjoin-professional-commercial-blender-1800w": WANTJOIN_COMMERCIAL_BLENDER,
   "kitchenaid-gourmet-stainless-steel-wire-masher": KITCHENAID_WIRE_MASHER,
   "all-purpose-kitchen-shears-heavy-duty-3-pack": KITCHEN_SHEARS_3PACK,
+  "new-amazon-kindle-glare-free-16gb": NEW_AMAZON_KINDLE,
+  "amazon-kindle-paperwhite-12th-gen-2024-review": KINDLE_PAPERWHITE_12TH_GEN,
+  "amazon-kindle-fabric-cover-2024-matcha-review": KINDLE_FABRIC_COVER_MATCHA,
 };
 
 export * from "./dyson-v15";
@@ -99,3 +105,6 @@ export * from "./ninja-kitchen-system-smoothie-food-processor-br601amz";
 export * from "./wantjoin-professional-commercial-blender-1800w";
 export * from "./kitchenaid-gourmet-stainless-steel-wire-masher";
 export * from "./all-purpose-kitchen-shears-heavy-duty-3-pack";
+export * from "./new-amazon-kindle-glare-free-16gb";
+export * from "./kindle-paperwhite-12th-gen-2024-review";
+export * from "./kindle-fabric-cover-2024-matcha-review";
