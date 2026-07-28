@@ -23,6 +23,10 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
   "bfpethome-orthopedic-vs-standard-dog-bed": Pets.BFPETHOME_VS_STANDARD_BED,
   "kitchen-shears-vs-wire-masher": Kitchen.KITCHEN_SHEARS_VS_WIRE_MASHER,
   "kindle-paperwhite-vs-new-amazon-kindle": Electronics.KINDLE_PAPERWHITE_VS_NEW_KINDLE,
+  "best-kindle-for-travel-kindle-paperwhite-vs-new-amazon-kindle":
+    Electronics.BEST_KINDLE_FOR_TRAVEL,
+  "best-kindle-for-reading-in-bed-kindle-paperwhite-vs-new-amazon-kindle":
+    Electronics.BEST_KINDLE_FOR_READING_IN_BED,
 };
 
 export * from "./cleaning";
