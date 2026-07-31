@@ -12,6 +12,8 @@ import { ROBOROCK_FLEXI_PRO_PRODUCT } from "./roborock-flexi-pro";
 import { SPLATYPUS_JAR_SCRAPER } from "./ototo-splatypus-jar-scraper";
 import { OXO_SOAP_DISPENSER_STAINLESS } from "./oxo-good-grips-stainless-steel-soap-dispenser";
 import { THE_PINK_STUFF_PASTE } from "./stardrops-the-pink-stuff-cleaning-paste";
+import { THE_PINK_STUFF_MIRACLE_CLEANING_PASTE_REVIEW } from "./the-pink-stuff-miracle-cleaning-paste-review";
+import { THE_PINK_STUFF_BATHROOM_FOAM } from "./the-pink-stuff-miracle-bathroom-foam-cleaner-review";
 import { PAMPERS_SENSITIVE_WIPES } from "./pampers-sensitive-baby-wipes-bulk-pack";
 import { HUGGIES_NATURAL_CARE_WIPES } from "./huggies-natural-care-sensitive-baby-wipes";
 import { LYSOL_DISINFECTANT_WIPES } from "./lysol-disinfectant-cleaning-wipes-lemon-lime";
@@ -50,6 +52,10 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
   "ototo-splatypus-jar-scraper": SPLATYPUS_JAR_SCRAPER,
   "oxo-good-grips-stainless-steel-soap-dispenser": OXO_SOAP_DISPENSER_STAINLESS,
   "stardrops-the-pink-stuff-cleaning-paste": THE_PINK_STUFF_PASTE,
+  "the-pink-stuff-miracle-cleaning-paste-review":
+    THE_PINK_STUFF_MIRACLE_CLEANING_PASTE_REVIEW,
+  "the-pink-stuff-miracle-bathroom-foam-cleaner-review":
+    THE_PINK_STUFF_BATHROOM_FOAM,
   "pampers-sensitive-baby-wipes-bulk-pack": PAMPERS_SENSITIVE_WIPES,
   "huggies-natural-care-sensitive-baby-wipes": HUGGIES_NATURAL_CARE_WIPES,
   "lysol-disinfectant-cleaning-wipes-lemon-lime": LYSOL_DISINFECTANT_WIPES,
@@ -87,6 +93,8 @@ export * from "./roborock-flexi-pro";
 export * from "./ototo-splatypus-jar-scraper";
 export * from "./oxo-good-grips-stainless-steel-soap-dispenser";
 export * from "./stardrops-the-pink-stuff-cleaning-paste";
+export * from "./the-pink-stuff-miracle-cleaning-paste-review";
+export * from "./the-pink-stuff-miracle-bathroom-foam-cleaner-review";
 export * from "./pampers-sensitive-baby-wipes-bulk-pack";
 export * from "./huggies-natural-care-sensitive-baby-wipes";
 export * from "./lysol-disinfectant-cleaning-wipes-lemon-lime";
