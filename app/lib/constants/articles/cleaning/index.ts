@@ -2,11 +2,15 @@ import { TINECO_S5_VS_ROBOROCK_FLEXI_PRO } from "./tineco-s5-vs-roborock-flexi-p
 import { DYSON_V15_VS_SHARK_STRATOS } from "./dyson-v15-vs-shark-stratos";
 import { ROBOROCK_VS_DYSON } from "./roborock-vs-dyson";
 import { PINK_STUFF_VS_SPRAYS } from "./pink-stuff-vs-sprays";
+import { PINK_STUFF_PASTE_VS_BATHROOM_FOAM } from "./pink-stuff-paste-vs-bathroom-foam-cleaner";
+import { PINK_STUFF_BATHROOM_FOAM_VS_MULTIPURPOSE_SPRAY } from "./pink-stuff-bathroom-foam-vs-multipurpose-spray";
 import { SCRUB_DADDY_VS_MOMMY } from "./scrub-daddy-vs-scrub-mommy";
 import { ELECTRIC_SCRUBBER_COMPARISON } from "./electric-scrubber-comparison";
 export * from "./tineco-s5-vs-roborock-flexi-pro";
 export * from "./dyson-v15-vs-shark-stratos";
 export * from "./roborock-vs-dyson";
 export * from "./pink-stuff-vs-sprays";
+export * from "./pink-stuff-paste-vs-bathroom-foam-cleaner";
+export * from "./pink-stuff-bathroom-foam-vs-multipurpose-spray";
 export * from "./scrub-daddy-vs-scrub-mommy";
 export * from "./electric-scrubber-comparison";

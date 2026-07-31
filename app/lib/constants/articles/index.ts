@@ -15,6 +15,10 @@ export const ARTICLE_DATA: Record<string, ArticleData> = {
   "litter-robot-4-vs-petlibro-air": Pets.LITTER_ROBOT_VS_PETLIBRO,
   "roborock-flexi-pro-vs-dyson-v15-detect": Cleaning.ROBOROCK_VS_DYSON,
   "the-pink-stuff-vs-multipurpose-sprays": Cleaning.PINK_STUFF_VS_SPRAYS,
+  "the-pink-stuff-paste-vs-bathroom-foam-cleaner":
+    Cleaning.PINK_STUFF_PASTE_VS_BATHROOM_FOAM,
+  "the-pink-stuff-bathroom-foam-vs-multipurpose-spray":
+    Cleaning.PINK_STUFF_BATHROOM_FOAM_VS_MULTIPURPOSE_SPRAY,
   "scrub-daddy-vs-scrub-mommy": Cleaning.SCRUB_DADDY_VS_MOMMY,
   "purina-tidy-care-alert-vs-lightweight-glade": Pets.PURINA_TIDY_CARE_VS_LIGHTWEIGHT,
   "airrobo-pg100-vs-oneisall-7in1": Pets.AIRROBO_VS_ONEISALL,

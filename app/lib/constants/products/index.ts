@@ -14,6 +14,7 @@ import { OXO_SOAP_DISPENSER_STAINLESS } from "./oxo-good-grips-stainless-steel-s
 import { THE_PINK_STUFF_PASTE } from "./stardrops-the-pink-stuff-cleaning-paste";
 import { THE_PINK_STUFF_MIRACLE_CLEANING_PASTE_REVIEW } from "./the-pink-stuff-miracle-cleaning-paste-review";
 import { THE_PINK_STUFF_BATHROOM_FOAM } from "./the-pink-stuff-miracle-bathroom-foam-cleaner-review";
+import { LYSOL_ALL_PURPOSE_SPRAY } from "./lysol-all-purpose-cleaner-spray-lemon-breeze-review";
 import { PAMPERS_SENSITIVE_WIPES } from "./pampers-sensitive-baby-wipes-bulk-pack";
 import { HUGGIES_NATURAL_CARE_WIPES } from "./huggies-natural-care-sensitive-baby-wipes";
 import { LYSOL_DISINFECTANT_WIPES } from "./lysol-disinfectant-cleaning-wipes-lemon-lime";
@@ -56,6 +57,8 @@ export const PRODUCT_DATA: Record<string, SingleProductData> = {
     THE_PINK_STUFF_MIRACLE_CLEANING_PASTE_REVIEW,
   "the-pink-stuff-miracle-bathroom-foam-cleaner-review":
     THE_PINK_STUFF_BATHROOM_FOAM,
+  "lysol-all-purpose-cleaner-spray-lemon-breeze-review":
+    LYSOL_ALL_PURPOSE_SPRAY,
   "pampers-sensitive-baby-wipes-bulk-pack": PAMPERS_SENSITIVE_WIPES,
   "huggies-natural-care-sensitive-baby-wipes": HUGGIES_NATURAL_CARE_WIPES,
   "lysol-disinfectant-cleaning-wipes-lemon-lime": LYSOL_DISINFECTANT_WIPES,
@@ -95,6 +98,7 @@ export * from "./oxo-good-grips-stainless-steel-soap-dispenser";
 export * from "./stardrops-the-pink-stuff-cleaning-paste";
 export * from "./the-pink-stuff-miracle-cleaning-paste-review";
 export * from "./the-pink-stuff-miracle-bathroom-foam-cleaner-review";
+export * from "./lysol-all-purpose-cleaner-spray-lemon-breeze-review";
 export * from "./pampers-sensitive-baby-wipes-bulk-pack";
 export * from "./huggies-natural-care-sensitive-baby-wipes";
 export * from "./lysol-disinfectant-cleaning-wipes-lemon-lime";
