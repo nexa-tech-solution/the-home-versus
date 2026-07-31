@@ -28,6 +28,35 @@ const GENERIC_BRAND_PREFIXES = new Set([
   "traditional",
 ]);
 
+function getProductKeywords(product: (typeof PRODUCT_DATA)[string]) {
+  const keywords = new Set<string>([
+    product.category,
+    product.name,
+    product.name.toLowerCase(),
+    product.name.split(" ")[0] || product.name,
+    `${product.name} review`,
+    `${product.name} pros and cons`,
+    `${product.name} worth it`,
+    `${product.name} buy`,
+    "review",
+    "buying guide",
+    "best price",
+    "home product review",
+  ]);
+
+  if (product.category.toLowerCase().includes("clean")) {
+    [
+      "cleaning product review",
+      "best cleaning product",
+      "home cleaning",
+      "bathroom cleaning",
+      "kitchen cleaning",
+    ].forEach((keyword) => keywords.add(keyword));
+  }
+
+  return [...keywords];
+}
+
 function getBrandName(productName: string) {
   const firstWord = productName.split(" ")[0]?.toLowerCase();
   if (!firstWord || GENERIC_BRAND_PREFIXES.has(firstWord)) {
@@ -55,14 +84,7 @@ export async function generateMetadata(
   return {
     title: `${product.name} Review | ${SITE_CONFIG.name}`,
     description: product.intro,
-    keywords: [
-      product.category,
-      product.name,
-      product.name.split(" ")[0], // Brand name usually
-      "review",
-      "home testing",
-      "best price",
-    ],
+    keywords: getProductKeywords(product),
     openGraph: {
       title: `${product.name} Review`,
       description: product.intro,
@@ -115,6 +137,7 @@ export default async function ProductPage({
     name: product.name,
     image: product.image,
     description: product.intro,
+    category: product.category,
     brand: brandName
       ? {
           "@type": "Brand",
@@ -167,14 +190,37 @@ export default async function ProductPage({
       {
         "@type": "ListItem",
         position: 2,
-        name: product.category,
-        item: `${SITE_CONFIG.url}/category/${CATEGORIES.find((c) => c.name.toLowerCase().replace(" guides", "").trim() === product.category.toLowerCase().replace(" guides", "").trim())?.slug || product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`,
+        name: "Products",
+        item: `${SITE_CONFIG.url}/products`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: product.name,
         item: `${SITE_CONFIG.url}/product/${slug}`,
+      },
+    ],
+  };
+
+  const categorySlug =
+    CATEGORIES.find(
+      (c) =>
+        c.name.toLowerCase().replace(" guides", "").trim() ===
+        product.category.toLowerCase().replace(" guides", "").trim(),
+    )?.slug || product.category.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-");
+
+  const productPageItemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${product.category} products`,
+    itemListOrder: "https://schema.org/ItemListUnordered",
+    numberOfItems: 1,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        url: `${SITE_CONFIG.url}/product/${slug}`,
+        name: product.name,
       },
     ],
   };
@@ -188,6 +234,10 @@ export default async function ProductPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productPageItemList) }}
       />
       {product.faqs && (
         <script
@@ -214,10 +264,10 @@ export default async function ProductPage({
       <main className="container max-w-5xl py-8 md:py-20 px-4 md:px-0">
         {/* Breadcrumb */}
         <Link
-          href="/"
+          href={`/category/${categorySlug}`}
           className="inline-flex items-center gap-2 text-base font-bold text-accent hover:gap-3 transition-all mb-10"
         >
-          <ArrowLeft className="h-4 w-4" /> Back to all reviews
+          <ArrowLeft className="h-4 w-4" /> Back to {product.category.toLowerCase()} guides
         </Link>
 
         {/* Product Hero */}
