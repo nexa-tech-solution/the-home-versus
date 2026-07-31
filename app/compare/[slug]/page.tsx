@@ -39,29 +39,36 @@ function getBrandName(productName: string) {
 }
 
 function getComparisonKeywords(article: (typeof ARTICLE_DATA)[string]) {
-  const baseKeywords = [
+  const baseKeywords = new Set([
     article.category,
+    article.title,
+    article.snippet,
     article.productA.name,
     article.productB.name,
     `${article.productA.name} vs ${article.productB.name}`,
+    `${article.productA.name} versus ${article.productB.name}`,
     `${article.productA.name} review`,
     `${article.productB.name} review`,
+    `${article.productA.name} comparison`,
+    `${article.productB.name} comparison`,
+    "which is better",
+    "best for cleaning",
     "comparison",
     "review",
-  ];
+  ]);
 
   if (article.category.toLowerCase() === "electronics") {
-    baseKeywords.push(
+    [
       "kindle paperwhite vs kindle",
       "best kindle for travel",
       "best kindle for reading in bed",
       "best kindle 2026",
       "e-reader comparison",
       "amazon kindle comparison",
-    );
+    ].forEach((keyword) => baseKeywords.add(keyword));
   }
 
-  return baseKeywords;
+  return [...baseKeywords];
 }
 
 function getMetaDescription(article: (typeof ARTICLE_DATA)[string]) {
